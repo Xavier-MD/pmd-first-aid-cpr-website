@@ -8,6 +8,7 @@ import Courses from './pages/Courses';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 import Error from './pages/Error';
+import Footer from './components/common/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/contact-us' element={<Contact />} />
         <Route path='*' element={<Error />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
