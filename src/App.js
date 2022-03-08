@@ -1,14 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/common/Navbar/Navbar';
+import Navbar from './pages/Navbar';
 import Landing from './pages/Landing';
 import About from './pages/About';
 import Courses from './pages/Courses';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 import Error from './pages/Error';
-import Footer from './components/common/Footer/Footer';
+import Footer from './pages/Footer';
 
 function App() {
   return (

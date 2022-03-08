@@ -1,7 +1,7 @@
-import HomeButton from './HomeButton';
-import CoursesDropdown from './CoursesDropdown';
-import Tab from './Tab';
-import TabButton from './TabButton';
+import HomeButton from '../components/common/Navbar/HomeButton';
+import CoursesDropdown from '../components/common/Navbar/CoursesDropdown';
+import Tab from '../components/common/Navbar/Tab';
+import TabButton from '../components/common/Navbar/TabButton';
 
 const tabsInfo = {
   aboutUs: { name: 'About Us', href: '/about-us' },
