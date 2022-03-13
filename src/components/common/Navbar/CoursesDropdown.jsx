@@ -27,13 +27,13 @@ const solutions = [
     icon: HeartIcon
   },
   {
-    name: 'Basic Life Support (BLS)',
+    name: 'Basic Life Support',
     href: '/courses',
     icon: SupportIcon
   }
 ];
 
-const CoursesDropdown = function () {
+const CoursesDropdown = function({ setCourse }) {
   return (
     <Popover className='relative'>
       {({ open }) => (
@@ -99,9 +99,9 @@ const CoursesDropdown = function () {
                       <div className='flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12'>
                         <ViewGridIcon className='h-6 w-6' aria-hidden='true' />
                       </div>
-                      <span className='ml-4 text-lg font-medium text-gray-900'>
+                      <p className='c-all-courses ml-4 text-lg font-medium text-gray-900'>
                         All Courses
-                      </span>
+                      </p>
                     </div>
                   </a>
                 </div>

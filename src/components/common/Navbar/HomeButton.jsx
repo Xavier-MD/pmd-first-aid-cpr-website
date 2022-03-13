@@ -5,8 +5,8 @@ const HomeButton = function () {
     <a href='/'>
       <span className='sr-only'>Workflow</span>
       <img
-        className='h-10 w-auto'
-        src='/images/logo-no-text-192.png'
+        className='h-14 w-14'
+        src='/images/logo-no-text-white-192.png'
         alt='PMD Logo'
       />
     </a>
