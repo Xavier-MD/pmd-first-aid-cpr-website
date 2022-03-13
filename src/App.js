@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Navbar from './pages/Navbar';
@@ -11,13 +11,18 @@ import Error from './pages/Error';
 import Footer from './pages/Footer';
 
 function App() {
+  const [course, setCourse] = useState('Standard First Aid');
+
   return (
     <div className='App'>
-      <Navbar />
+      <Navbar setCourse={setCourse} />
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/about-us' element={<About />} />
-        <Route path='/courses' element={<Courses />} />
+        <Route
+          path='/courses'
+          element={<Courses course={course} setCourse={setCourse} />}
+        />
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/contact-us' element={<Contact />} />
         <Route path='*' element={<Error />} />
