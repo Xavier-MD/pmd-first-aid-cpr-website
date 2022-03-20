@@ -60,23 +60,17 @@ const courseDetails = {
       'Airway emergencies',
       'Breathing and Circulation emergencies',
       'First aid for respiratory and cardiac arrest',
-      'Wound care',
-      'Head, neck and spinal injuries',
-      'Bone, muscle and joint injuries',
-      'Sudden Medical Emergencies',
-      'Environmental Illnesses',
-      'Poisons',
-      'Includes any other content required by specific legislation'
+      'Wound care'
     ],
     materials: [
       'First Aid & CPR (print and/or eBook)',
       'Comprehensive Guide to First Aid & CPR (eBook)',
-      'Standard First Aid CPR A/C – Online access',
-      'Standard First Aid certificate (digital certificate issued upon successful completion)'
+      'Emergency First Aid – Online (Blended only)',
+      'Emergency First Aid certificate (digital certificate issued upon successful completion)'
     ],
     duration: [
-      'CPR A: 13 hours in-class OR 5.5 hours in-class + 8 hours online learning',
-      'CPR C: 14 hours in-class OR 7.5 hours in-class + 8 hours online learning'
+      'CPR A: 6.5 hours in-class OR 3.5 hours in-class + 4 hours online learning',
+      'CPR C: 7.5 hours in-class OR 4.5 hours in-class + 4 hours online learning'
     ],
     instructor: ['First Aid Instructor'],
     prerequisite: ['None'],
@@ -86,11 +80,11 @@ const courseDetails = {
       'Attend and participate in 100% of the course'
     ],
     certification: [
-      '3-year certification in Standard First Aid and CPR Level A or C'
+      '3-year certification in Emergency First Aid and CPR Level A or C'
     ],
     recertification: [
-      'CPR A: 6.5 hours in-class OR 3 hours in-class + 4 hours online learning',
-      'CPR C: 7.5 hours in-class OR 4 hours in-class + 4 hours online learning'
+      'CPR A: 4 hours in-class OR 3 hours in-class + 4 hours online learning',
+      'CPR C: 5 hours in-class OR 4 hours in-class + 4 hours online learning'
     ]
   },
   cprAed: {
