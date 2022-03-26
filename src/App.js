@@ -12,10 +12,9 @@ import Footer from './pages/Footer';
 
 function App() {
   const [course, setCourse] = useState('Standard First Aid');
-
   return (
     <div className='App'>
-      <Navbar setCourse={setCourse} />
+      <Navbar />
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/about-us' element={<About />} />
