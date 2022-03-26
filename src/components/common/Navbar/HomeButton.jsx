@@ -3,10 +3,10 @@ import React from 'react';
 const HomeButton = function () {
   return (
     <a href='/'>
-      <span className='sr-only'>Workflow</span>
+      <span className='sr-only'>PMD First Aid & CPR</span>
       <img
-        className='h-14 w-14'
-        src='/images/logo-no-text-white-192.png'
+        className='w-36 md:w-44'
+        src='/images/large-font-logo-3.png'
         alt='PMD Logo'
       />
     </a>

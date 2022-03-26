@@ -33,22 +33,26 @@ const solutions = [
   }
 ];
 
-const CoursesDropdown = function({ setCourse }) {
+const CoursesDropdown = function ({ setCourse }) {
   return (
     <Popover className='relative'>
       {({ open }) => (
         <>
           <Popover.Button
             className={classNames(
-              open ? 'text-indigo-100' : 'text-white',
-              'group flex items-center text-base font-medium hover:text-indigo-100'
+              window.location.pathname === '/courses'
+                ? 'border-blue-400 text-gray-900'
+                : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
+              'group inline-flex font-header items-center border-b-2 text-xl transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 delay-25'
             )}
           >
             <span>Courses</span>
             <ChevronDownIcon
               className={classNames(
-                open ? 'text-indigo-100' : 'text-white animate-pulse',
-                'ml-2 -mr-2 h-5 w-5 group-hover:text-indigo-100 transition ease-in-out duration-150'
+                window.location.pathname === '/courses'
+                  ? 'text-gray-900'
+                  : 'text-gray-500 group-hover:text-gray-700',
+                'h-5 w-5 ml-1 -mr-1 transition ease-in-out duration-150'
               )}
               aria-hidden='true'
             />

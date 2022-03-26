@@ -2,7 +2,7 @@ const TabButton = function ({ tabInfo }) {
   return (
     <a
       href={tabInfo.href}
-      className='inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75'
+      className='inline-flex bg-blue-500 py-2 px-4 rounded text-lg font-header text-blue-50 shadow-md shadow-blue-400 hover:bg-blue-500 focus:bg-blue-600 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 delay-25'
     >
       {tabInfo.name}
     </a>
