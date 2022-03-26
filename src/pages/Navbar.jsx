@@ -30,7 +30,7 @@ const Navbar = function ({ currentTab, setCurrentTab, setCourse }) {
             <div className='relative flex justify-between h-24'>
               <div className='absolute inset-y-0 left-0 flex items-center md:hidden'>
                 {/* Mobile menu button */}
-                <Disclosure.Button className='inline-flex items-center justify-center ml-10 mt-10 p-2 rounded-md text-blue-500 hover:text-blue-400 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 '>
+                <Disclosure.Button className='inline-flex items-center justify-center ml-4 mt-6 py-2 px-4 rounded-md text-blue-500 bg-blue-200 border-2 border-blue-500 border-opacity-50 focus:border-opacity-90 bg-opacity-50'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
                     <XIcon className='block h-6 w-6' aria-hidden='true' />
@@ -43,7 +43,7 @@ const Navbar = function ({ currentTab, setCurrentTab, setCourse }) {
                 <div className='flex items-center mt-12'>
                   <HomeButton />
                 </div>
-                <div className='hidden md:flex w-full justify-between px-[10%] mt-8'>
+                <div className='hidden md:flex w-full justify-between lg:px-[5%] xl:px-[10%] mt-[4.25rem]'>
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <Tab tabInfo={tabsInfo.homepage} />
                   <Tab tabInfo={tabsInfo.aboutUs} />
@@ -51,10 +51,10 @@ const Navbar = function ({ currentTab, setCurrentTab, setCourse }) {
                   <Tab tabInfo={tabsInfo.testimonials} />
                 </div>
               </div>
-              <div className='hidden md:flex items-center ml-3 mt-8'>
+              <div className='hidden md:flex items-center ml-3 mt-[4.25rem]'>
                 <TabButton tabInfo={tabsInfo.contactUs} />
               </div>
-              <div className='absolute inset-y-0 right-0 flex items-center mr-10 mt-10 md:hidden'>
+              <div className='absolute inset-y-0 right-0 flex items-center mr-4 mt-6 md:hidden'>
                 <TabIcon tabInfo={tabsInfo.contactUs} />
               </div>
             </div>
