@@ -2,15 +2,19 @@ const About = function () {
   return (
     <div className='bg-white overflow-hidden'>
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex flex-col items-center py-10'>
-          <p className='font-bold text-[3em]'>About Us</p>
+        <div className='flex justify-center w-full'>
+          <div className='flex w-1/2 flex-col items-center pt-14 pb-5 mb-10'>
+            <p className='font-bold font-header text-5xl'>About Us</p>
+            <div className='h-[2px] w-full mt-3 bg-gradient-to-r from-transparent via-blue-400 to-transparent'></div>
+          </div>
         </div>
         <div className='hidden lg:block bg-gray-50 absolute top-0 bottom-0 right-[120%] w-screen' />
-        <div className='mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none'>
-          <div>
-            <h3 className=' font-extrabold tracking-tight text-gray-900 text-3xl'>
-              Meet Your Instructor
+        <div className='mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none -mb-8'>
+          <div className='flex flex-col'>
+            <h3 className='font-header font-semibold tracking-tight text-gray-900 text-3xl w-fit'>
+              Meet Our Founder
             </h3>
+            <div className='hidden lg:block h-[2px] w-2/3 mt-3 bg-gradient-to-r from-blue-400'></div>
           </div>
         </div>
         <div className='mt-8 lg:grid lg:grid-cols-2 lg:gap-8'>
@@ -63,13 +67,13 @@ const About = function () {
             </div>
           </div>
           <div className='mt-8 lg:mt-0'>
-            <div className='text-base bg-indigo-500 max-w-prose lg:max-w-fit rounded-full flex justify-center px-3'>
-              <p className='text-lg text-white font-semibold'>
-                Paul Martin Demers – (HBPHE, CEP, FAI)
-              </p>
-            </div>
             <div className='mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1'>
-              <p>
+              <div className='text-lg bg-blue-400 max-w-fit rounded-xl flex justify-center px-3'>
+                <p className='text-lg text-white font-header my-1'>
+                  Paul Martin Demers – (HBPHE, CEP, FAI)
+                </p>
+              </div>
+              <p className='text-slate-600'>
                 As the founder of PMD First Aid & CPR Paul has been a Bilingual
                 Certified Instructor since 1993 and Teaching Experience
                 Supervisor with the Canadian Red Cross. A graduate of Laurentian
@@ -79,35 +83,11 @@ const About = function () {
                 provide learners with strategies to increase skill retention and
                 application.
               </p>
-              <h3 className=' font-extrabold tracking-tight text-gray-900 text-2xl'>
-                Mission
+              <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
+                We Specialize In:
               </h3>
-              <p>
-                Community driven and proud to offer First Aid and CPR courses in
-                Canada’s official languages - French and English. We meet people
-                at their level and excel in providing knowledge and confidence.
-              </p>
-              <h3 className=' font-extrabold tracking-tight text-gray-900 text-2xl'>
-                Vision
-              </h3>
-              <p>
-                Making First Aid and CPR accessible to all. To inspire learners
-                to gain first-hand knowledge and confidence and to be able to
-                help others with a compassionate lens.
-              </p>
-              <h3 className=' font-extrabold tracking-tight text-gray-900 text-2xl'>
-                Values
-              </h3>
-              <p>
-                As a key operating principle PMD First Aid and CPR provides a
-                safe and welcoming space to learn. We are committed to
-                diversity, equity and inclusion in all of our courses while
-                building a psychologically safe learning environment.{' '}
-              </p>
-              <h3 className=' font-extrabold tracking-tight text-gray-900 text-2xl'>
-                We Specialize In...
-              </h3>
-              <ul>
+              <div className='h-[2px] w-2/3 bg-gradient-to-r from-blue-400 -mt-2'></div>
+              <ul className='text-slate-600'>
                 <li>High quality bilingual training – French and English</li>
                 <li>Flexible scheduling and tailored to the learner</li>
                 <li>Red Cross Certification valid for 3 years</li>
@@ -115,6 +95,34 @@ const About = function () {
                 <li>Official Red Cross Training Partner</li>
                 <li>Blended learning</li>
               </ul>
+              <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
+                Mission
+              </h3>
+              <div className='h-[2px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
+              <p className='text-slate-600'>
+                Community driven and proud to offer First Aid and CPR courses in
+                Canada’s official languages - French and English. We meet people
+                at their level and excel in providing knowledge and confidence.
+              </p>
+              <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
+                Vision
+              </h3>
+              <div className='h-[2px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
+              <p className='text-slate-600'>
+                Making First Aid and CPR accessible to all. To inspire learners
+                to gain first-hand knowledge and confidence and to be able to
+                help others with a compassionate lens.
+              </p>
+              <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
+                Values
+              </h3>
+              <div className='h-[2px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
+              <p className='text-slate-600'>
+                As a key operating principle PMD First Aid and CPR provides a
+                safe and welcoming space to learn. We are committed to
+                diversity, equity and inclusion in all of our courses while
+                building a psychologically safe learning environment.{' '}
+              </p>
             </div>
           </div>
         </div>
