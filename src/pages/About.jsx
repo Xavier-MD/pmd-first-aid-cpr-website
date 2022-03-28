@@ -1,13 +1,7 @@
 const About = function () {
   return (
     <div className='bg-white overflow-hidden'>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-center w-full'>
-          <div className='flex w-1/3 flex-col items-center pt-14 pb-5 mb-10'>
-            <p className='font-bold font-header text-5xl'>About Us</p>
-            <div className='h-[2px] w-full mt-3 bg-gradient-to-r from-transparent via-blue-400 to-transparent'></div>
-          </div>
-        </div>
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20'>
         <div className='hidden lg:block bg-gray-50 absolute top-0 bottom-0 right-[120%] w-screen' />
         <div className='mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none -mb-8'>
           <div className='flex flex-col'>

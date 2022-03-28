@@ -35,14 +35,14 @@ const solutions = [
 
 const CoursesDropdown = function ({ setCourse }) {
   return (
-    <Popover className='flex'>
+    <Popover className='relative'>
       {({ open }) => (
         <>
           <Popover.Button
             className={classNames(
               window.location.pathname === '/courses'
-                ? 'border-blue-400 hover:border-blue-500 text-gray-900 font-semibold text-2xl'
-                : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 text-xl',
+                ? 'border-blue-400 hover:border-blue-500 text-gray-900 font-semibold text-3xl'
+                : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 text-xl pt-2',
               'group inline-flex px-3 py-1 font-header items-center border-b-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 delay-25'
             )}
           >
