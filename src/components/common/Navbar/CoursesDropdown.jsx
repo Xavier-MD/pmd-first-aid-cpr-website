@@ -43,7 +43,7 @@ const CoursesDropdown = function ({ setCourse }) {
               window.location.pathname === '/courses'
                 ? 'border-blue-400 hover:border-blue-500 text-gray-900 font-semibold text-3xl'
                 : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 text-xl pt-2',
-              'group inline-flex px-3 py-1 font-header items-center border-b-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 delay-25'
+              'group inline-flex px-3 py-1 font-header items-center border-b-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 delay-25 focus:outline-none'
             )}
           >
             <span>Courses</span>
@@ -67,11 +67,11 @@ const CoursesDropdown = function ({ setCourse }) {
             leaveFrom='opacity-100 translate-y-0'
             leaveTo='opacity-0 translate-y-1'
           >
-            <Popover.Panel className='absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-xl bg-gradient-to-b from-white to-blue-200 rounded-xl outline outline-slate-300 shadow-lg'>
+            <Popover.Panel className='absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-xl bg-gradient-to-b from-white to-blue-200 rounded-xl outline outline-1 outline-slate-300 shadow-lg'>
               <div className='rounded-lg shadow-lg overflow-hidden'>
                 <div className='pl-5 sm:px-8 sm:pt-6 w-full'>
-                  <div className='border-b pb-4'>
-                    <p className='text-slate-700 text-xl font-semibold font-header text-center'>
+                  <div className='border-b pb-4 border-slate-300'>
+                    <p className='text-slate-700 text-2xl font-semibold font-header text-center'>
                       Popular Courses
                     </p>
                   </div>
@@ -81,7 +81,7 @@ const CoursesDropdown = function ({ setCourse }) {
                     <a
                       key={item.name}
                       href={item.href}
-                      className='-m-3 p-3 flex rounded-md shadow-md shadow-slate-400 hover:bg-slate-50 transition ease-in-out duration-150 border-2 border-slate-200'
+                      className='-m-3 p-3 flex rounded-md shadow-md shadow-slate-400 hover:bg-slate-50 transition ease-in-out duration-150 outline outline-1 outline-slate-300'
                     >
                       <div className='flex flex-col items-center w-full'>
                         <div className='flex-shrink-0 flex items-center justify-center rounded-md bg-blue-400 text-white h-12 w-12 mb-2'>
@@ -94,10 +94,10 @@ const CoursesDropdown = function ({ setCourse }) {
                     </a>
                   ))}
                 </div>
-                <div className='flex justify-center mx-24 mb-8 pt-8 border-t border-slate-300'>
+                <div className='flex justify-center mx-5 mb-8 pt-8 border-t border-slate-300'>
                   <a
                     href='/courses'
-                    className='w-full -m-3 p-3 flow-root rounded-md shadow-md shadow-slate-400 hover:bg-slate-50 transition ease-in-out duration-150 border-2 border-slate-200'
+                    className='w-full -m-3 p-3 flow-root rounded-md shadow-md shadow-slate-400 hover:bg-slate-50 transition ease-in-out duration-150 outline outline-1 outline-slate-300'
                   >
                     <div className='flex flex-col items-center'>
                       <div className='flex-shrink-0 flex items-center justify-center rounded-md bg-blue-400 text-white h-12 w-12 mb-2'>
