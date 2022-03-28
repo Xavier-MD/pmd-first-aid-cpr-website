@@ -3,7 +3,7 @@ const About = function () {
     <div className='bg-white overflow-hidden'>
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-center w-full'>
-          <div className='flex w-1/2 flex-col items-center pt-14 pb-5 mb-10'>
+          <div className='flex w-1/3 flex-col items-center pt-14 pb-5 mb-10'>
             <p className='font-bold font-header text-5xl'>About Us</p>
             <div className='h-[2px] w-full mt-3 bg-gradient-to-r from-transparent via-blue-400 to-transparent'></div>
           </div>
