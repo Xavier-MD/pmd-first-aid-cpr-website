@@ -30,7 +30,7 @@ const Navbar = function ({ currentTab, setCurrentTab, setCourse }) {
             <div className='relative flex justify-between h-24'>
               <div className='absolute inset-y-0 left-0 flex items-center md:hidden'>
                 {/* Mobile menu button */}
-                <Disclosure.Button className='inline-flex items-center justify-center ml-4 mt-6 py-2 px-4 rounded-md text-blue-500 bg-blue-200 border-2 border-blue-500 border-opacity-50 focus:border-opacity-90 bg-opacity-50'>
+                <Disclosure.Button className='inline-flex items-center justify-center ml-4 mt-6 py-2 px-4 rounded-md text-blue-500 bg-blue-200 border-2 border-blue-400 border-opacity-50 focus:border-opacity-90 bg-opacity-25'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
                     <XIcon className='block h-6 w-6' aria-hidden='true' />
