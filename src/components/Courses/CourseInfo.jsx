@@ -1,4 +1,5 @@
 import CourseView from './CourseView';
+import Error from '../../pages/Error';
 
 const courseDetails = {
   standardFirstAid: {
@@ -429,7 +430,7 @@ const CourseInfo = function ({ course }) {
     } else if (window.location.pathname === '/courses/workshops') {
       return <CourseView courseDetails={courseDetails.workshops} />;
     } else {
-      return <div></div>;
+      return <Error />;
     }
   };
   return courseSelector();
