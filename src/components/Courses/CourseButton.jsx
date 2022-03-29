@@ -1,17 +1,11 @@
-const CourseButton = function({ courseName, setCourse }) {
-  
-  const handleClick = function() {
-    setCourse(courseName);
-  }
-
+const CourseButton = function ({ course }) {
   return (
-    <button
-      type='button'
-      onClick={handleClick}
-      className='inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-slate-900 bg-slate-200 hover:bg-slate-300 w-[90%] justify-center'
+    <a
+      href={course.href}
+      className='inline-flex items-center py-8 border border-transparent text-xl tracking-tighter font-medium rounded-md text-slate-700 bg-blue-200 hover:bg-blue-300 w-[90%] justify-center font-header shadow-lg shadow-blue-300'
     >
-      {courseName}
-    </button>
+      {course.name}
+    </a>
   );
 };
 

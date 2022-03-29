@@ -1,37 +1,65 @@
 import CourseButton from './CourseButton';
-import CourseInfo from './CourseInfo';
 
-const courseNames = [
-  'Standard First Aid',
-  'Emergency First Aid',
-  'CPR & AED',
-  'Basic Life Support',
-  'Marine Basic First Aid',
-  'Standard First Aid (Child Care)',
-  'Emergency First Aid (Child Care)',
-  'Oxygen Therapy',
-  'Airway Management',
-  'Workshops'
+const courses = [
+  {
+    name: 'Standard First Aid',
+    href: '/courses/standard-first-aid'
+  },
+  {
+    name: 'Emergency First Aid',
+    href: '/courses/emergency-first-aid'
+  },
+  {
+    name: 'CPR & AED',
+    href: '/courses/cpr-aed'
+  },
+  {
+    name: 'Basic Life Support',
+    href: '/courses/basic-life-support'
+  },
+  {
+    name: 'Standard First Aid Child Care',
+    href: '/courses/standard-first-aid-child-care'
+  },
+  {
+    name: 'Emergency First Aid Child Care',
+    href: '/courses/emergency-first-aid-child-care'
+  },
+  {
+    name: 'Marine Basic First Aid',
+    href: '/courses/marine-basic-first-aid'
+  },
+  {
+    name: 'Oxygen Therapy',
+    href: '/courses/oxygen-therapy'
+  },
+  {
+    name: 'Airway Management',
+    href: '/courses/airway-management'
+  },
+  {
+    name: 'Workshops',
+    href: '/courses/workshops'
+  }
 ];
 
-const ButtonPane = function ({ course, setCourse }) {
+const ButtonPane = function () {
   return (
-    <div className='bg-white'>
-      <div className='max-w-[1500px] mx-auto py-10 px-4 sm:px-6 lg:px-8'>
-        <p className='text-center text-base font-semibold uppercase text-gray-600 tracking-wider'>
-          Trusted by health & wellness institutions across the GTA
-        </p>
-        <div className='mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-5 lg:mt-8'>
-          {courseNames.map((courseName) => (
+    <div className='bg-white mt-11'>
+      <p className='text-center text-base font-semibold uppercase text-gray-600 tracking-wider mb-6'>
+        Choose Your Course
+      </p>
+      <div className='max-w-full mb-6'>
+        <div className='grid grid-cols-2 gap-0.5'>
+          {courses.map((course) => (
             <div
-              key={courseName}
-              className='col-span-1 flex justify-center py-8 px-8 bg-gray-50'
+              key={course.name}
+              className='col-span-1 flex justify-center py-4'
             >
-              <CourseButton courseName={courseName} setCourse={setCourse} />
+              <CourseButton course={course} />
             </div>
           ))}
         </div>
-        <CourseInfo course={course} />
       </div>
     </div>
   );
