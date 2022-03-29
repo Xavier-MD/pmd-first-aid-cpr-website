@@ -13,22 +13,22 @@ import classNames from 'classnames';
 const solutions = [
   {
     name: 'Standard First Aid',
-    href: '/courses',
+    href: '/courses/standard-first-aid',
     icon: ExclamationCircleIcon
   },
   {
     name: 'Emergency First Aid',
-    href: '/courses',
+    href: '/courses/emergency-first-aid',
     icon: ExclamationIcon
   },
   {
     name: 'CPR & AED',
-    href: '/courses',
+    href: '/courses/cpr-aed',
     icon: HeartIcon
   },
   {
     name: 'Basic Life Support',
-    href: '/courses',
+    href: '/courses/basic-life-support',
     icon: SupportIcon
   }
 ];
@@ -84,7 +84,7 @@ const CoursesDropdown = function ({ setCourse }) {
                       className='-m-3 p-3 flex rounded-md shadow-md shadow-slate-400 hover:bg-slate-50 transition ease-in-out duration-150 outline outline-1 outline-slate-300'
                     >
                       <div className='flex flex-col items-center w-full'>
-                        <div className='flex-shrink-0 flex items-center justify-center rounded-md bg-blue-400 text-white h-12 w-12 mb-2'>
+                        <div className='flex-shrink-0 flex items-center justify-center rounded-md bg-blue-400 text-slate-200 h-12 w-12 mb-2'>
                           <item.icon className='h-6 w-6' aria-hidden='true' />
                         </div>
                         <p className='text-xl font-semibold text-gray-900 font-header'>
@@ -100,7 +100,7 @@ const CoursesDropdown = function ({ setCourse }) {
                     className='w-full -m-3 p-3 flow-root rounded-md shadow-md shadow-slate-400 hover:bg-slate-50 transition ease-in-out duration-150 outline outline-1 outline-slate-300'
                   >
                     <div className='flex flex-col items-center'>
-                      <div className='flex-shrink-0 flex items-center justify-center rounded-md bg-blue-400 text-white h-12 w-12 mb-2'>
+                      <div className='flex-shrink-0 flex items-center justify-center rounded-md bg-blue-400 text-slate-200 h-12 w-12 mb-2'>
                         <ViewGridIcon className='h-6 w-6' aria-hidden='true' />
                       </div>
                       <p className='text-xl font-semibold text-gray-900 font-header'>
