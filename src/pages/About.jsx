@@ -6,9 +6,9 @@ const About = function () {
         <div className='mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none -mb-8'>
           <div className='flex flex-col'>
             <h3 className='font-header font-semibold tracking-tight text-gray-900 text-3xl w-fit'>
-              Meet Our Founder
+              Meet The Founder
             </h3>
-            <div className='hidden lg:block h-[2px] w-2/3 mt-3 bg-gradient-to-r from-blue-400'></div>
+            <div className='lg:block mb-8 md:mb-0 h-[1px] w-2/3 mt-2 bg-gradient-to-r from-blue-400'></div>
           </div>
         </div>
         <div className='mt-8 lg:grid lg:grid-cols-2 lg:gap-8'>
@@ -51,7 +51,7 @@ const About = function () {
                 <div className='aspect-none'>
                   <img
                     className=''
-                    src='/images/paul-picture.png'
+                    src='/images/paul-transparent-picture.png'
                     alt=''
                     width={1184}
                     height={1376}
@@ -61,8 +61,8 @@ const About = function () {
             </div>
           </div>
           <div className='mt-8 lg:mt-0'>
-            <div className='mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1'>
-              <div className='text-lg bg-blue-400 max-w-fit rounded-xl flex justify-center px-3'>
+            <div className='mt-4 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1'>
+              <div className='text-lg bg-blue-400 max-w-fit rounded-full flex justify-center px-3'>
                 <p className='text-lg text-white font-header my-1'>
                   Paul Martin Demers – (HBPHE, CEP, FAI)
                 </p>
@@ -80,7 +80,7 @@ const About = function () {
               <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
                 We Specialize In:
               </h3>
-              <div className='h-[2px] w-2/3 bg-gradient-to-r from-blue-400 -mt-2'></div>
+              <div className='h-[1px] w-2/3 bg-gradient-to-r from-blue-400 -mt-2'></div>
               <ul className='text-slate-600'>
                 <li>High quality bilingual training – French and English</li>
                 <li>Flexible scheduling and tailored to the learner</li>
@@ -92,7 +92,7 @@ const About = function () {
               <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
                 Mission
               </h3>
-              <div className='h-[2px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
+              <div className='h-[1px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
               <p className='text-slate-600'>
                 Community driven and proud to offer First Aid and CPR courses in
                 Canada’s official languages - French and English. We meet people
@@ -101,7 +101,7 @@ const About = function () {
               <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
                 Vision
               </h3>
-              <div className='h-[2px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
+              <div className='h-[1px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
               <p className='text-slate-600'>
                 Making First Aid and CPR accessible to all. To inspire learners
                 to gain first-hand knowledge and confidence and to be able to
@@ -110,7 +110,7 @@ const About = function () {
               <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
                 Values
               </h3>
-              <div className='h-[2px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
+              <div className='h-[1px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
               <p className='text-slate-600'>
                 As a key operating principle PMD First Aid and CPR provides a
                 safe and welcoming space to learn. We are committed to
