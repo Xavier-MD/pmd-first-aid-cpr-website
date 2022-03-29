@@ -400,31 +400,38 @@ const courseDetails = {
 
 const CourseInfo = function ({ course }) {
   const courseSelector = function () {
-    if (course === 'Standard First Aid') {
+    if (window.location.pathname === '/courses/standard-first-aid') {
       return <CourseView courseDetails={courseDetails.standardFirstAid} />;
-    } else if (course === 'Emergency First Aid') {
+    } else if (window.location.pathname === '/courses/emergency-first-aid') {
       return <CourseView courseDetails={courseDetails.emergencyFirstAid} />;
-    } else if (course === 'CPR & AED') {
+    } else if (window.location.pathname === '/courses/cpr-aed') {
       return <CourseView courseDetails={courseDetails.cprAed} />;
-    } else if (course === 'Basic Life Support') {
+    } else if (window.location.pathname === '/courses/basic-life-support') {
       return <CourseView courseDetails={courseDetails.basicLifeSupport} />;
-    } else if (course === 'Marine Basic First Aid') {
+    } else if (
+      window.location.pathname === '/courses/marine-basic-first-aid'
+    ) {
       return <CourseView courseDetails={courseDetails.marineBasicFirstAid} />;
-    } else if (course === 'Standard First Aid (Child Care)') {
+    } else if (
+      window.location.pathname === '/courses/standard-first-aid-child-care'
+    ) {
       return <CourseView courseDetails={courseDetails.standardFirstAidChild} />;
-    } else if (course === 'Emergency First Aid (Child Care)') {
+    } else if (
+      window.location.pathname === '/courses/emergency-first-aid-child-care'
+    ) {
       return (
         <CourseView courseDetails={courseDetails.emergencyFirstAidChild} />
       );
-    } else if (course === 'Oxygen Therapy') {
+    } else if (window.location.pathname === '/courses/oxygen-therapy') {
       return <CourseView courseDetails={courseDetails.oxygenTherapy} />;
-    } else if (course === 'Airway Management') {
+    } else if (window.location.pathname === '/courses/airway-management') {
       return <CourseView courseDetails={courseDetails.airwayManagement} />;
-    } else if (course === 'Workshops') {
+    } else if (window.location.pathname === '/courses/workshops') {
       return <CourseView courseDetails={courseDetails.workshops} />;
+    } else {
+      return <div></div>;
     }
   };
-
   return courseSelector();
 };
 
