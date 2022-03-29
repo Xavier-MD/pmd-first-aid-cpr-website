@@ -8,7 +8,7 @@ const pages = [
 const CoursesBreadcrumbs = function () {
   return (
     <nav className='flex' aria-label='Breadcrumb'>
-      <l role='list' className='flex items-center space-x-4'>
+      <ol className='flex items-center space-x-4'>
         <li>
           <div>
             <a href='/courses' className='text-gray-400 hover:text-gray-500'>
@@ -34,7 +34,9 @@ const CoursesBreadcrumbs = function () {
             </div>
           </li>
         ))}
-      </l>
+      </ol>
     </nav>
   );
 }
+
+export default CoursesBreadcrumbs;
