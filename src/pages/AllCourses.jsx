@@ -8,7 +8,7 @@ function AllCourses({ course, setCourse }) {
       <div className='pt-10 bg-white sm:pt-16 lg:pt-8 lg:pb-14 flex flex-col items-center'>
         <div className='mx-auto max-w-7xl flex flex-col items-center'>
           <h1 className='mt-4 text-4xl tracking-tight font-extrabold sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl mb-5'>
-            <span className='block text-slate-00'>View All</span>
+            <span className='block text-slate-800'>View All</span>
             <span className='block text-blue-400'>Courses</span>
           </h1>
           <div className='lg:block mb-10 h-[1px] w-[125%] mt-2 lg:bg-gradient-to-r from-transparent via-blue-300 to-transparent'></div>

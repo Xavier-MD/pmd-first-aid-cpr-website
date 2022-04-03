@@ -71,7 +71,7 @@ const Landing = function () {
                 <img
                   className='h-full w-full object-cover'
                   src='/images/group-cpr-picture.jpg'
-                  alt='People working on laptops'
+                  alt='People taking a cpr course'
                 />
                 <div className='absolute inset-0 bg-gradient-to-r from-indigo-800 to-indigo-200 mix-blend-multiply' />
               </div>
