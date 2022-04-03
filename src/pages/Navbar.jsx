@@ -22,7 +22,7 @@ const Navbar = function ({ currentTab, setCurrentTab, setCourse }) {
   return (
     <Disclosure
       as='nav'
-      className='bg-gradient-to-b from-blue-400 via-blue-200 to-transparent'
+      className='bg-gradient-to-b from-blue-400 via-blue-200 to-white'
     >
       {({ open }) => (
         <>

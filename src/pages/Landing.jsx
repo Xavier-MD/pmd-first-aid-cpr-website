@@ -84,7 +84,7 @@ const Landing = function () {
                 <h1 className='text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl'>
                   <span className='block text-white'>PMD First Aid & CPR</span>
                   <span className='block text-indigo-200 text-[50%] font-light mt-2'>
-                    Equity Driven & Bilingual
+                    Bilingual & Equity Driven
                   </span>
                 </h1>
                 <div className='mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center'>
