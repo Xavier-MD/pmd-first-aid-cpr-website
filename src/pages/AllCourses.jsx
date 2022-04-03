@@ -13,7 +13,7 @@ function AllCourses({ course, setCourse }) {
           </h1>
           <div className='lg:block mb-10 h-[1px] w-[125%] mt-2 lg:bg-gradient-to-r from-transparent via-blue-300 to-transparent'></div>
           <div className='p-4 xl:p-0 lg:grid lg:grid-cols-2 lg:gap-8'>
-            <div className='mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-4 lg:text-left lg:flex lg:items-center rounded-xl border-2 border-blue-300 lg:shadow-xl lg:shadow-blue-300'>
+            <div className='mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-4 lg:text-left lg:flex lg:items-center rounded-xl lg:border-2 lg:border-blue-300 lg:shadow-xl lg:shadow-blue-300'>
               <div className='h-full flex flex-col items-left justify-center px-4'>
                 <h1 className='block text-4xl text-blue-400 font-header font-semibold'>
                   Course Structure
@@ -45,7 +45,7 @@ function AllCourses({ course, setCourse }) {
                 />
               </div>
             </div>
-            <div className='max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-4 rounded-xl border-2 border-blue-300 lg:shadow-xl lg:shadow-blue-300'>
+            <div className='max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-4 rounded-xl lg:border-2 lg:border-blue-300 lg:shadow-xl lg:shadow-blue-300'>
               <ButtonPane />
             </div>
           </div>
