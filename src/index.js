@@ -1,14 +1,10 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-
-import './styles/index.css';
-import 'swiper/css/bundle';
 import App from './App';
 
+import 'swiper/css/bundle';
+import './styles/index.css';
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <App />,
   document.getElementById('root')
 );
