@@ -11,19 +11,17 @@ function App() {
   const { id } = useParams();
 
   return (
-    <div className='min-h-screen flex flex-col justify-between'>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Landing />} />
-          <Route path='/about-us' element={<About />} />
-          <Route path='/courses' element={<AllCourses />} />
-          <Route path='/courses/:id' element={<CourseInfo course={id} />} />
-          <Route path='/testimonials' element={<Testimonials />} />
-          <Route path='/contact-us' element={<Contact />} />
-          <Route path='*' element={<Error />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Landing />} />
+        <Route path='/about-us' element={<About />} />
+        <Route path='/courses' element={<AllCourses />} />
+        <Route path='/courses/:id' element={<CourseInfo course={id} />} />
+        <Route path='/testimonials' element={<Testimonials />} />
+        <Route path='/contact-us' element={<Contact />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
