@@ -1,14 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
   mode: 'jit',
   content: ['./src/**/*.{js,jsx,ts,tsx}', './node_modules/flowbite/**/*.js'],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        header: ['Source Sans Pro']
-      }
+    fontFamily: {
+      sans: ['Inter var'],
+      header: ['Slabo 27px'],
+      body: ['Source Sans Pro']
     }
   },
   plugins: [
