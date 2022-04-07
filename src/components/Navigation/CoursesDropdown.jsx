@@ -41,9 +41,9 @@ const CoursesDropdown = function ({ setCourse }) {
           <Popover.Button
             className={classNames(
               window.location.pathname === '/courses'
-                ? 'border-blue-400 hover:border-blue-500 text-gray-900 font-semibold text-3xl'
-                : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 text-xl pt-2',
-              'group inline-flex px-3 py-1 font-header items-center border-b-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 delay-25 focus:outline-none'
+                ? 'border-blue-400 hover:border-blue-500 text-gray-900 font-semibold'
+                : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 pt-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 delay-25 focus:outline-none',
+              'group inline-flex px-3 py-1 font-header items-center border-b-2 tracking-tighter text-xl'
             )}
           >
             <span>Courses</span>
@@ -67,7 +67,7 @@ const CoursesDropdown = function ({ setCourse }) {
             leaveFrom='opacity-100 translate-y-0'
             leaveTo='opacity-0 translate-y-1'
           >
-            <Popover.Panel className='absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-xl bg-gradient-to-b from-white to-blue-200 rounded-xl outline outline-1 outline-slate-300 shadow-lg'>
+            <Popover.Panel className='absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 w-screen max-w-md bg-gradient-to-b from-white to-blue-200 rounded-xl outline outline-1 outline-slate-300 shadow-lg'>
               <div className='rounded-lg shadow-lg overflow-hidden'>
                 <div className='pl-5 sm:px-8 sm:pt-6 w-full'>
                   <div className='border-b pb-4 border-slate-300'>
@@ -76,7 +76,7 @@ const CoursesDropdown = function ({ setCourse }) {
                     </p>
                   </div>
                 </div>
-                <div className='relative grid gap-8 sm:p-8 lg:grid-cols-2'>
+                <div className='relative grid gap-8 p-8'>
                   {solutions.map((item) => (
                     <a
                       key={item.name}
