@@ -16,12 +16,12 @@ const tabsInfo = {
   contactUs: { name: 'Contact Us', href: '/contact-us' }
 };
 
-const NavigationBar = function ({ currentTab, setCurrentTab, setCourse }) {
+const NavigationBar = function () {
   return (
     <>
       <Disclosure
         as='nav'
-        className='bg-gradient-to-b from-blue-400 via-blue-200 to-white'
+        className='bg-gradient-to-b from-blue-400 via-blue-200 to-transparent'
       >
         {({ open }) => (
           <>
@@ -39,19 +39,19 @@ const NavigationBar = function ({ currentTab, setCurrentTab, setCourse }) {
                   </Disclosure.Button>
                 </div>
                 <div className='flex-1 flex items-center justify-center'>
-                  <div className='flex items-center mt-12'>
-                    <HomeButton />
-                  </div>
-                  <div className='hidden md:flex w-full justify-between lg:px-[5%] xl:px-[10%] mt-[4.25rem]'>
+                  <div className='hidden md:flex w-full lg:px-[5%] xl:px-[10%] mt-[4.25rem]'>
                     {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                     <Tab tabInfo={tabsInfo.homepage} />
                     <Tab tabInfo={tabsInfo.aboutUs} />
                     <CoursesDropdown />
                     <Tab tabInfo={tabsInfo.testimonials} />
                   </div>
-                </div>
-                <div className='hidden md:flex items-center ml-3 mt-[4.25rem]'>
-                  <TabButton tabInfo={tabsInfo.contactUs} />
+                  <div className='flex items-center mt-12'>
+                    <HomeButton />
+                  </div>
+                  <div className='hidden md:flex items-center ml-3 mt-[4.25rem]'>
+                    <TabButton tabInfo={tabsInfo.contactUs} />
+                  </div>
                 </div>
                 <div className='absolute inset-y-0 right-0 flex items-center mr-4 mt-6 md:hidden'>
                   <TabIcon tabInfo={tabsInfo.contactUs} />

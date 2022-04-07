@@ -2,7 +2,7 @@ import CoursesPageDropdown from '../components/Courses/CoursesPageDropdown';
 import ButtonPane from '../components/Courses/ButtonPane';
 import { ChevronRightIcon } from '@heroicons/react/solid';
 
-function AllCourses({ course, setCourse }) {
+function CourseSelect({ course, setCourse }) {
   return (
     <main>
       <div className='pt-10 bg-white sm:pt-16 lg:pt-8 lg:pb-14 flex flex-col items-center'>
@@ -56,4 +56,4 @@ function AllCourses({ course, setCourse }) {
   );
 }
 
-export default AllCourses;
+export default CourseSelect;

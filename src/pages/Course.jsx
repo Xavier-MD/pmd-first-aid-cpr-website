@@ -1,5 +1,5 @@
-import CourseView from './CourseView';
-import Error from '../../pages/Error';
+import CourseView from '../components/Courses/CourseView';
+import Error from './Error';
 
 const courseDetails = {
   standardFirstAid: {
@@ -399,7 +399,7 @@ const courseDetails = {
   }
 };
 
-const CourseInfo = function ({ course }) {
+const Course = function () {
   const courseSelector = function () {
     if (window.location.pathname === '/courses/standard-first-aid') {
       return <CourseView courseDetails={courseDetails.standardFirstAid} />;
@@ -409,9 +409,7 @@ const CourseInfo = function ({ course }) {
       return <CourseView courseDetails={courseDetails.cprAed} />;
     } else if (window.location.pathname === '/courses/basic-life-support') {
       return <CourseView courseDetails={courseDetails.basicLifeSupport} />;
-    } else if (
-      window.location.pathname === '/courses/marine-basic-first-aid'
-    ) {
+    } else if (window.location.pathname === '/courses/marine-basic-first-aid') {
       return <CourseView courseDetails={courseDetails.marineBasicFirstAid} />;
     } else if (
       window.location.pathname === '/courses/standard-first-aid-child-care'
@@ -436,4 +434,4 @@ const CourseInfo = function ({ course }) {
   return courseSelector();
 };
 
-export default CourseInfo;
+export default Course;

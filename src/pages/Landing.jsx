@@ -1,4 +1,4 @@
-import Navbar from '../components/Navigation/Navbar';
+import NavigationBar from '../components/Navigation/NavigationBar';
 import Footer from '../components/Navigation/Footer';
 import {
   ExclamationCircleIcon,
@@ -63,7 +63,6 @@ const metrics = [
 const Landing = function () {
   return (
     <>
-      <Navbar />
       <div className='bg-white pt-10'>
         <main>
           {/* Hero section */}
@@ -202,7 +201,6 @@ const Landing = function () {
           </div>
         </main>
       </div>
-      <Footer />
     </>
   );
 };
