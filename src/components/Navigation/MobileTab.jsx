@@ -1,20 +1,23 @@
-import { Disclosure } from '@headlessui/react';
 import classNames from 'classnames';
 
-const MobileTab = function ({ tabInfo }) {
+const MobileTab = function ({ tabInfo, tabIcon }) {
   return (
-    <Disclosure.Button
-      as='a'
+    <a
       href={tabInfo.href}
       className={classNames(
         tabInfo.href === window.location.pathname
-          ? 'bg-gradient-to-r from-lime-600 to-transparent border-slate-100 text-slate-50 border-l-lime-700'
-          : 'border-transparent text-slate-600 focus:bg-gradient-to-r from-blue-300 to-transparent border-l-blue-400 focus:border-l-blue-500 focus:text-slate-700',
-        'block pl-4 border-l-4 pr-4 py-2 text-base font-semibold font-header border-y-2'
+          ? ''
+          : 'focus:bg-gradient-to-tr from-blue-300 to-slate-200 focus:text-slate-900',
+        'h-12 w-full block pl-4 pr-4 py-2 text-lg font-header border-2 rounded-md shadow-md shadow-slate-400 tracking-tight'
       )}
     >
-      {tabInfo.name}
-    </Disclosure.Button>
+      <div className='flex'>
+        <div className='h-6 w-6 mr-3 text-blue-500' aria-hidden='true'>
+          {tabIcon}
+        </div>
+        {tabInfo.name}
+      </div>
+    </a>
   );
 };
 
