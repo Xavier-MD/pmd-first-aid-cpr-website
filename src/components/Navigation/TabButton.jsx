@@ -1,8 +1,15 @@
-const TabButton = function ({ tabInfo }) {
+import classNames from "classnames";
+
+const TabButton = function({ tabInfo }) {
   return (
     <a
       href={tabInfo.href}
-      className='inline-flex bg-blue-500 py-2 px-4 rounded text-lg font-header tracking-tighter text-blue-50 shadow-md shadow-blue-400 hover:bg-blue-600 focus:bg-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 delay-25'
+      className={classNames(
+        window.location.pathname === tabInfo.href
+          ? 'bg-gradient-to-br from-green-500 to-lime-300 text-slate-700 shadow-lime-600 hover:bg-gradient-to-tl active:bg-gradient-to-bl'
+          : 'bg-blue-500 text-slate-50 shadow-blue-400 hover:bg-blue-600',
+        'inline-flex py-2 px-4 rounded font-header text-lg shadow-md active:bg-blue-700 transition ease-in-out hover:-translate-y-[1px] hover:scale-110 duration-200'
+      )}
     >
       {tabInfo.name}
     </a>
