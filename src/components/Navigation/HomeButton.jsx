@@ -1,12 +1,9 @@
-import React from 'react';
-
 const HomeButton = function () {
   return (
     <a href='/'>
-      <span className='sr-only'>PMD First Aid & CPR</span>
       <img
-        className='w-36 md:w-44'
-        src='/images/large-font-logo-3.png'
+        className='w-24 h-auto rotate-180'
+        src='/images/logo-small-text.png'
         alt='PMD Logo'
       />
     </a>
