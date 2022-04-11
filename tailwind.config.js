@@ -4,7 +4,8 @@ module.exports = {
     fontFamily: {
       sans: ['Inter var'],
       header: ['Source Sans Pro'],
-      body: ['Inter var']
+      body: ['Roboto'],
+      bodyAlt:['Work Sans']
     }
   },
   plugins: [

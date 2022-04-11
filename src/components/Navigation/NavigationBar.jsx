@@ -26,7 +26,7 @@ const NavigationBar = function () {
 
   return (
     <nav className='w-full h-auto fixed z-20'>
-      <div className='h-[85px] px-8 xl:px-20 bg-gradient-to-b from-blue-400 via-blue-200 to-blue-50 shadow-md shadow-slate-300'>
+      <div className='h-[85px] px-8 xl:px-20 bg-gradient-to-b from-blue-400 via-blue-200 to-blue-50 border-b-[3px] border-blue-300'>
         {/* Mobile menu button */}
         <div className='absolute inset-y-0 left-0 pl-6 flex items-center lg:hidden'>
           <MobileDropdown open={open} setOpen={setOpen} tabsInfo={tabsInfo} />
@@ -40,7 +40,7 @@ const NavigationBar = function () {
             <Tab tabInfo={tabsInfo.testimonials} moveLeft='16' />
           </div>
           <div className='mt-2 -mb-[47px] flex justify-center'>
-            <div className='mx-2 p-3 bg-gradient-to-b from-blue-300 to-white border-[3px] border-slate-200 rounded-full shadow-md shadow-slate-300'>
+            <div className='mx-2 p-3 bg-gradient-to-b from-blue-300 to-white border-[3px] border-blue-300 rounded-full shadow-md shadow-slate-400'>
               <HomeButton />
             </div>
           </div>
