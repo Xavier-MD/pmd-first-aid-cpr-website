@@ -6,13 +6,19 @@ const MobileTab = function ({ tabInfo, tabIcon }) {
       href={tabInfo.href}
       className={classNames(
         tabInfo.href === window.location.pathname
-          ? ''
-          : 'focus:bg-gradient-to-tr from-blue-300 to-slate-200 focus:text-slate-900',
-        'h-12 w-full block pl-4 pr-4 py-2 text-lg font-header border-2 rounded-md shadow-md shadow-slate-400 tracking-tight'
+          ? 'text-slate-500 shadow-inner shadow-slate-400 pointer-events-none'
+          : 'shadow-md shadow-slate-400',
+        'h-12 w-full flex justify-start items-center px-6 py-2 text-lg font-header border-2 rounded-md active:bg-slate-200 focus:text-slate-900'
       )}
     >
       <div className='flex'>
-        <div className='h-6 w-6 mr-3 text-blue-500' aria-hidden='true'>
+        <div
+          className={classNames(
+            tabInfo.href === window.location.pathname ? 'text-blue-400' : 'text-blue-500',
+            'mr-4 flex'
+          )}
+          aria-hidden='true'
+        >
           {tabIcon}
         </div>
         {tabInfo.name}
