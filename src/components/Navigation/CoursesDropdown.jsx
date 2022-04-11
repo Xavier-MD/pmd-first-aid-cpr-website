@@ -10,7 +10,8 @@ import {
   faUserNurse,
   faHeartCircleBolt,
   faKitMedical,
-  faFolderClosed
+  faFolderClosed,
+  faCalendar
 } from '@fortawesome/free-solid-svg-icons';
 
 const popularCourses = [
@@ -34,11 +35,6 @@ const popularCourses = [
     href: '/courses/basic-life-support',
     icon: faKitMedical
   }
-];
-
-const callsToAction = [
-  { name: 'Browse All Courses', href: '#', icon: faKitMedical },
-  { name: 'Book Now', href: '#', icon: faKitMedical }
 ];
 
 const CoursesDropdown = function ({ setCourse, moveLeft }) {
@@ -146,14 +142,14 @@ const CoursesDropdown = function ({ setCourse, moveLeft }) {
                     </a>
                   ))}
                 </div>
-                <div className='px-5 py-5 bg-gradient-to-bl from-blue-300 to-blue-500 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8'>
+                <div className='px-5 py-5 bg-gradient-to-br from-blue-500 to-sky-300 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8'>
                   <div key={'Browse All Courses'} className='flow-root'>
                     <a
                       href={'/courses'}
-                      className='-m-3 p-3 flex items-center rounded-md text-base font-medium text-white hover:bg-blue-500 transition ease-in-out duration-150'
+                      className='-m-3 p-[11px] flex items-center rounded-md text-base text-white hover:bg-blue-300 transition ease-in-out duration-150'
                     >
                       <FontAwesomeIcon
-                        icon={faKitMedical}
+                        icon={faFolderClosed}
                         className='flex-shrink-0 h-6 w-6 text-white'
                         aria-hidden='true'
                       />
@@ -161,13 +157,13 @@ const CoursesDropdown = function ({ setCourse, moveLeft }) {
                     </a>
                   </div>
                   <div className='w-[1px] h-[24px] bg-blue-200' />
-                  <div key={'Browse All Courses'} className='flow-root'>
+                  <div key={'Book Now'} className='flow-root'>
                     <a
                       href={'/contact-us'}
-                      className='-m-3 p-3 flex items-center rounded-md text-base font-medium text-white hover:bg-blue-500 transition ease-in-out duration-150'
+                      className='-m-3 p-3 flex items-center rounded-md text-base text-white hover:bg-blue-300 transition ease-in-out duration-150'
                     >
                       <FontAwesomeIcon
-                        icon={faKitMedical}
+                        icon={faCalendar}
                         className='flex-shrink-0 h-6 w-6 text-white'
                         aria-hidden='true'
                       />
