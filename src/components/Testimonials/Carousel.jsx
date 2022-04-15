@@ -5,7 +5,7 @@ import TestimonialCard from './TestimonialCard';
 const Carousel = function () {
   return (
     <Swiper
-      className='w-[90%] max-w-[75rem] h-[100%]  shadow-2xl rounded-xl '
+      className='w-[90%] md:w-[80%] xl:w-[70%] 2xl:w-[60%] shadow-lg shadow-slate-600 rounded-xl'
       style={{
         '--swiper-navigation-color': '#000',
         '--swiper-pagination-color': '#000'
@@ -26,13 +26,13 @@ const Carousel = function () {
         slot='container-start'
         className='absolute left-0 top-0 w-[130%] h-[100%]'
         style={{
-          'background-image': 'url(/images/testimonials-picture.jpg)',
-          '-webkit-background-size': 'cover',
-          'background-size': 'cover',
-          'background-position': 'center'
+          backgroundImage: 'url(/images/testimonials-picture.jpg)',
+          WebkitBackgroundSize: 'cover',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
         data-swiper-parallax='-23%'
-      ></div>
+      />
       <SwiperSlide>
         <TestimonialCard />
       </SwiperSlide>
