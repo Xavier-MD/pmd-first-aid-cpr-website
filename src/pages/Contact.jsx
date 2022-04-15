@@ -15,7 +15,7 @@ const Contact = function () {
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        process.env.REACT_APP_CONTACT_TEMPLATE_ID,
         form.current,
         process.env.REACT_APP_USER_ID
       )
@@ -32,7 +32,7 @@ const Contact = function () {
   };
 
   return (
-    <div className='bg-white mt-20'>
+    <div className='bg-white mt-24'>
       <main>
         {/* Contact Section */}
         <div className='relative bg-gradient-to-t from-blue-300 to-white'>
@@ -186,6 +186,8 @@ const Contact = function () {
                   </label>
                   <div className='mt-1'>
                     <textarea
+                      required
+                      type='text'
                       id='message'
                       name='message'
                       rows={4}
