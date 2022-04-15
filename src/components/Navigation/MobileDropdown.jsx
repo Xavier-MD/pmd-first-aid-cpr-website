@@ -14,7 +14,15 @@ import {
   faEnvelope
 } from '@fortawesome/free-solid-svg-icons';
 
-export default function Example({ open, setOpen, tabsInfo }) {
+const MobileDropdown = function({ open, setOpen }) {
+
+  const tabsInfo = [
+    { name: 'Home', href: '/', icon: faHouse },
+    { name: 'About Us', href: '/about-us', icon: faPeopleGroup },
+    { name: 'Courses', href: '/courses', icon: faFolderClosed },
+    { name: 'Testimonials', href: '/testimonials', icon: faSquareCheck },
+    { name: 'Contact Us', href: '/contact-us', icon: faEnvelope }
+  ];
 
   return (
     <>
@@ -75,56 +83,23 @@ export default function Example({ open, setOpen, tabsInfo }) {
                           src='/images/logo-no-text.png'
                           alt='PMD logo no text'
                         />
-                        <div className='w-6' />
+                        <div className='w-14' />
                       </div>
                     </div>
                     <div className='relative mt-6 flex-1 px-6'>
                       <div className='flex flex-col justify-center items-center pt-2 pb-4 space-y-3'>
-                        <MobileTab
-                          tabInfo={tabsInfo.homepage}
-                          tabIcon={
-                            <FontAwesomeIcon
-                              icon={faHouse}
-                              className='w-5 h-auto'
-                            />
-                          }
-                        />
-                        <MobileTab
-                          tabInfo={tabsInfo.aboutUs}
-                          tabIcon={
-                            <FontAwesomeIcon
-                              icon={faPeopleGroup}
-                              className='w-5 h-auto'
-                            />
-                          }
-                        />
-                        <MobileTab
-                          tabInfo={tabsInfo.courses}
-                          tabIcon={
-                            <FontAwesomeIcon
-                              icon={faFolderClosed}
-                              className='w-5 h-auto'
-                            />
-                          }
-                        />
-                        <MobileTab
-                          tabInfo={tabsInfo.testimonials}
-                          tabIcon={
-                            <FontAwesomeIcon
-                              icon={faSquareCheck}
-                              className='w-5 h-auto'
-                            />
-                          }
-                        />
-                        <MobileTab
-                          tabInfo={tabsInfo.contactUs}
-                          tabIcon={
-                            <FontAwesomeIcon
-                              icon={faEnvelope}
-                              className='w-5 h-auto'
-                            />
-                          }
-                        />
+                        {tabsInfo.map((tabInfo) => (
+                          <MobileTab
+                            key={tabInfo.name}
+                            tabInfo={tabInfo}
+                            tabIcon={
+                              <FontAwesomeIcon
+                                icon={tabInfo.icon}
+                                className='w-5 h-auto'
+                              />
+                            }
+                          />
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -137,3 +112,5 @@ export default function Example({ open, setOpen, tabsInfo }) {
     </>
   );
 }
+
+export default MobileDropdown;
