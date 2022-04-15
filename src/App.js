@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import NavigationBar from './components/Navigation/NavigationBar';
 import Footer from './components/Navigation/Footer';
-
 import Landing from './pages/Landing';
 import About from './pages/About';
 import CourseSelect from './pages/CourseSelect';
@@ -14,7 +13,7 @@ import Error from './pages/Error';
 function App() {
   return (
     <BrowserRouter>
-      <div className='h-full flex flex-col'>
+      <div className='w-full h-full min-h-screen flex flex-col justify-between'>
         <NavigationBar />
         <Routes>
           <Route path='/' element={<Landing />} />

@@ -38,14 +38,14 @@ const navigation = [
 
 const Footer = function () {
   return (
-    <footer className='mt-6 w-full bg-gradient-to-t from-blue-400 via-blue-200 to-white'>
-      <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
+    <footer className='w-full bg-slate-900 border-t-4 border-blue-300'>
+      <div className='h-24 max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
         <div className='flex justify-center space-x-6 md:order-2'>
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className='text-blue-500 hover:text-blue-600'
+              className='text-slate-200 hover:text-blue-300'
             >
               <span className='sr-only'>{item.name}</span>
               <item.icon className='h-6 w-6' aria-hidden='true' />
@@ -53,7 +53,7 @@ const Footer = function () {
           ))}
         </div>
         <div className='mt-8 md:mt-0 md:order-1'>
-          <p className='text-center text-base text-slate-600'>
+          <p className='text-center text-base text-slate-200'>
             &copy; 2022 PMD First Aid & CPR. All rights reserved.
           </p>
         </div>
