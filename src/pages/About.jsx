@@ -1,8 +1,8 @@
 const About = function () {
   return (
-    <div className='bg-white overflow-hidden'>
+    <div className='flex flex-col grow bg-white mt-24 pb-20'>
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20'>
-        <div className='hidden lg:block bg-gray-50 absolute top-0 bottom-0 right-[120%] w-screen' />
+        
         <div className='mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none -mb-8'>
           <div className='flex flex-col'>
             <h3 className='font-header font-semibold tracking-tight text-gray-900 text-3xl w-fit'>
@@ -35,7 +35,7 @@ const About = function () {
                     y={0}
                     width={4}
                     height={4}
-                    className='text-gray-200'
+                    className='text-slate-200'
                     fill='currentColor'
                   />
                 </pattern>
