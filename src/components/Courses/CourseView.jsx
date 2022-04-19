@@ -2,7 +2,7 @@ import CoursesBreadcrumbs from './CoursesBreadcrumbs';
 
 const CourseView = function ({ courseDetails }) {
   return (
-    <div className='relative py-16 bg-white overflow-hidden mt-4'>
+    <div className='py-20 bg-white overflow-hidden mt-24'>
       <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
         <div
           className='relative h-full text-lg max-w-prose mx-auto'
