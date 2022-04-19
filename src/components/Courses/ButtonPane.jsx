@@ -18,7 +18,7 @@ const courses = [
     href: '/courses/basic-life-support'
   },
   {
-    name: 'Standard First Aid Child Care',
+    name: `Standard First Aid Child Care`,
     href: '/courses/standard-first-aid-child-care'
   },
   {
@@ -45,16 +45,16 @@ const courses = [
 
 const ButtonPane = function () {
   return (
-    <div className='bg-white mt-11'>
+    <div className='mt-10'>
       <p className='text-center text-base font-semibold uppercase text-gray-600 tracking-wider mb-6'>
         Choose Your Course
       </p>
       <div className='max-w-full mb-6'>
-        <div className='grid grid-cols-2 gap-0.5'>
+        <div className='grid grid-cols-2 gap-0'>
           {courses.map((course) => (
             <div
               key={course.name}
-              className='col-span-1 flex justify-center py-4'
+              className='col-span-1 flex justify-center py-3'
             >
               <CourseButton course={course} />
             </div>
