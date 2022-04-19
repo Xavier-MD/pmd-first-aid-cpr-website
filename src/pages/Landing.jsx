@@ -76,26 +76,26 @@ const Landing = function () {
                     src='/images/group-cpr-picture.jpg'
                     alt='People taking a cpr course'
                   />
-                  <div className='absolute inset-0 bg-gradient-to-r from-indigo-800 to-indigo-200 mix-blend-multiply' />
+                  <div className='absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-200 mix-blend-multiply' />
                 </div>
                 <div className='relative px-4 py-16 sm:px-6 sm:py-24 lg:pt-16 lg:px-8 flex flex-col items-center'>
                   <img
-                    className='h-64 w-64'
-                    src='/images/logo-no-text-white-192.png'
+                    className='h-40 w-32'
+                    src='/images/logo-no-text.png'
                     alt=''
                   />
                   <h1 className='text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl'>
                     <span className='block text-white'>
                       PMD First Aid & CPR
                     </span>
-                    <span className='block text-indigo-200 text-[50%] font-light mt-2'>
+                    <span className='block text-blue-200 text-[50%] font-light mt-2'>
                       Bilingual & Equity Driven
                     </span>
                   </h1>
                   <div className='mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center'>
                     <a
                       href='/about-us'
-                      className='flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8'
+                      className='flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8'
                     >
                       Learn More
                     </a>
@@ -119,7 +119,7 @@ const Landing = function () {
             </div>
           </div>
           {/* Gradient Feature Section */}
-          <div className='bg-gradient-to-r from-indigo-600 to-indigo-400'>
+          <div className='bg-gradient-to-r from-blue-600 to-blue-400'>
             <div className='max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8 flex flex-col items-center'>
               <h2 className='text-3xl font-extrabold text-white tracking-tight'>
                 Popular Courses
