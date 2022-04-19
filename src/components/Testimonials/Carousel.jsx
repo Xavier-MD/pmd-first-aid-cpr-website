@@ -5,7 +5,7 @@ import TestimonialCard from './TestimonialCard';
 const Carousel = function () {
   return (
     <Swiper
-      className='w-[90%] md:w-[80%] xl:w-[70%] 2xl:w-[60%] shadow-lg shadow-slate-600 rounded-xl'
+      className='w-[90%] md:w-[80%] xl:w-[70%] 2xl:w-[60%] shadow-xl rounded-xl'
       style={{
         '--swiper-navigation-color': '#000',
         '--swiper-pagination-color': '#000'
