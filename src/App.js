@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 import NavigationBar from './components/Navigation/NavigationBar';
 import Footer from './components/Navigation/Footer';
@@ -26,6 +27,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      <Toaster />
     </BrowserRouter>
   );
 }

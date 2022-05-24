@@ -1,11 +1,9 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import EmailSuccess from '../Contact/EmailSuccess';
-import EmailFailure from '../Contact/EmailFailure';
 import { Dialog, Transition } from '@headlessui/react';
 import { RadioGroup } from '@headlessui/react';
 import classNames from 'classnames';
+import toast from 'react-hot-toast';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -38,11 +36,17 @@ const TestimonialForm = function ({ open, setOpen }) {
       )
       .then(
         (result) => {
-          alert(<EmailSuccess />);
+          setOpen(false);
+          toast.success('Testimonial Sent Successfully!', {
+            className: 'font-header rounded-md bg-green-100'
+          });
           console.log(result.text);
         },
         (error) => {
-          alert(<EmailFailure />);
+          setOpen(false);
+          toast.error('Unable To Send Testimonial.', {
+            className: 'font-header rounded-md bg-red-100'
+          });
           console.log(error.text);
         }
       );

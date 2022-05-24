@@ -1,7 +1,5 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import EmailSuccess from '../components/Contact/EmailSuccess';
-import EmailFailure from '../components/Contact/EmailFailure';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -21,11 +19,9 @@ const Contact = function () {
       )
       .then(
         (result) => {
-          alert(<EmailSuccess />);
           console.log(result.text);
         },
         (error) => {
-          alert(<EmailFailure />);
           console.log(error.text);
         }
       );

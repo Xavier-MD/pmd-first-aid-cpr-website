@@ -1,16 +1,58 @@
-const TestimonialCard = function() {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+const TestimonialCard = function ({
+  avatar,
+  avatarSourceUrl,
+  avatarSourceText,
+  message,
+  name,
+  title,
+  company,
+  rating
+}) {
+  const identityFormatter = function (title, company) {
+    if (title && company) {
+      return `${title}, ${company}`;
+    } else {
+      return;
+    }
+  };
+
+  const ratingTextFormatter = function (rating) {
+    if (rating) {
+      return `${rating}/5`;
+    }
+  };
+
+  const ratingIconFormatter = function (rating) {
+    if (rating) {
+      return [...Array(rating)].map((e, i) => (
+        <FontAwesomeIcon icon={faStar} className='w-10 h-10 text-yellow-300' />
+      ));
+    }
+  };
+
   return (
     <section>
       <div className='relative max-w-7xl mx-auto pt-20 pb-12 px-20 lg:py-20'>
         <div className='relative lg:flex lg:items-center'>
-          <div className='hidden lg:block lg:flex-shrink-0'>
+          <div className='hidden lg:flex flex-col items-center lg:flex-shrink-0'>
             <img
               className='h-60 w-60 rounded-full xl:h-80 xl:w-80 border-8 border-white border-opacity-25 shadow-2xl shadow-slate-500'
-              src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-              alt=''
+              src={avatar}
+              alt='Person avatar'
             />
+            <p className='mt-4 text-2xl font-sans font-bold text-slate-800 sm:text-3xl sm:tracking-tight lg:text-4xl'>
+              {ratingTextFormatter(rating)}
+            </p>
+            <div className='mt-2 flex space-x-2'>
+              {ratingIconFormatter(rating)}
+            </div>
+            <a className='mt-4 text-xs' href={avatarSourceUrl}>
+              {avatarSourceText}
+            </a>
           </div>
-
           <div className='relative lg:ml-10'>
             <svg
               className='absolute top-0 left-0 transform -translate-x-8 -translate-y-24 h-36 w-36 text-white opacity-50'
@@ -26,27 +68,23 @@ const TestimonialCard = function() {
             </svg>
             <blockquote className='relative p-4 rounded-xl bg-blue-100 bg-opacity-80 shadow-xl'>
               <div className='text-2xl leading-9 font-medium text-gray-900'>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis.
-                </p>
+                <p>{message}</p>
               </div>
               <footer className='mt-8'>
                 <div className='flex'>
                   <div className='flex-shrink-0 lg:hidden'>
                     <img
                       className='h-12 w-12 rounded-full'
-                      src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-                      alt=''
+                      src={avatar}
+                      alt='Person avatar'
                     />
                   </div>
                   <div className='ml-4 lg:ml-0'>
                     <div className='text-base font-medium text-gray-900'>
-                      Judith Black
+                      {name}
                     </div>
                     <div className='text-base font-medium text-blue-700'>
-                      CEO, Tuple
+                      {identityFormatter(title, company)}
                     </div>
                   </div>
                 </div>
@@ -57,5 +95,5 @@ const TestimonialCard = function() {
       </div>
     </section>
   );
-}
+};
 export default TestimonialCard;

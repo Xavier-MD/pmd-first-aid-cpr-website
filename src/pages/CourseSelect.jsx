@@ -13,17 +13,44 @@ function CourseSelect({ course, setCourse }) {
         <div className='p-4 xl:p-0 lg:grid lg:grid-cols-2 lg:gap-8'>
           <div className='mx-auto max-w-lg px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-4 lg:text-left lg:flex lg:items-center rounded-xl lg:border-2 lg:border-blue-400 lg:shadow-xl lg:shadow-blue-400'>
             <div className='h-full flex flex-col items-left justify-center px-4'>
-              <h1 className='block text-4xl text-blue-500 font-thick font-semibold'>
+              <h1 className='block mt-4 text-4xl text-blue-500 font-thick font-semibold'>
                 Course Structure
               </h1>
-              <p className='mt-3 text-base text-slate-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl mb-8'>
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat.
+              <p className='block mt-4 text-2xl text-blue-400'>
+                What is a blended learning first aid course?
+              </p>
+              <p className='mt-3 text-base text-slate-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
+                Blended learning is a combination of in-class, face-to-face
+                instruction with online instruction. Typically, theory and
+                information are conveyed to participants outside of the
+                classroom through an online component. This allows for the
+                in-class component to concentrate on skill development and the
+                application of theory.
+              </p>
+              <p className='block mt-4 text-2xl text-blue-400'>
+                Benefits of blended learning:
+              </p>
+              <ol className='mt-4 ml-10 space-y-2 text-slate-600 sm:text-xl lg:text-lg xl:text-xl'>
+                <li className='list-item list-decimal'>
+                  Better information retention and ease of review
+                </li>
+                <li className='list-item list-decimal'>
+                  Enables students to learn at their own pace
+                </li>
+                <li className='list-item list-decimal'>
+                  Helps to manage systemic inequalities
+                </li>
+                <li className='list-item list-decimal'>
+                  Improves time efficiency Provides flexibility
+                </li>
+              </ol>
+              <p className='mt-4 text-slate-600 sm:text-lg lg:text-md xl:text-lg'>
+                Need Help to access your online learning modules contact our
+                support team at 1-877-356-3226.
               </p>
               <a
                 href='/contact-us'
-                className='inline-flex items-center text-white bg-slate-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-slate-400 w-fit mb-14'
+                className='mt-4 inline-flex items-center text-white bg-slate-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:bg-slate-400 w-fit mb-14'
               >
                 <span className='px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-blue-500 rounded-full'>
                   Ready to Skip Ahead?
@@ -37,7 +64,7 @@ function CourseSelect({ course, setCourse }) {
                 />
               </a>
               <img
-                className='rounded-lg'
+                className='rounded-lg mb-4'
                 src='/images/group-cpr-picture.jpg'
                 alt=''
               />

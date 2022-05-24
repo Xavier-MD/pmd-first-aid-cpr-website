@@ -10,7 +10,7 @@ const Carousel = function () {
         '--swiper-navigation-color': '#000',
         '--swiper-pagination-color': '#000'
       }}
-      speed={1000}
+      speed={1500}
       modules={[Parallax, Pagination, Navigation, Autoplay]}
       parallax={true}
       pagination={{
@@ -18,7 +18,7 @@ const Carousel = function () {
       }}
       navigation={true}
       autoplay={{
-        delay: 8000,
+        delay: 10000,
         disableOnInteraction: false
       }}
     >
@@ -34,13 +34,25 @@ const Carousel = function () {
         data-swiper-parallax='-23%'
       />
       <SwiperSlide>
-        <TestimonialCard />
+        <TestimonialCard
+          avatar='/images/female-avatar-1.jpg'
+          avatarSourceText='Avatar Vectors by Vecteezy'
+          avatarSourceUrl='https://www.vecteezy.com/free-vector/female-avatar'
+          message='Paul is a very passionate and knowledgeable instructor that made the Basic Life Support Course fun and engaging. As a nursing student, I particularly enjoyed how he incorporated quick thinking scenario-based situations. This has allowed me to expand my critical thinking skills and feel more confident in my CPR skills. Overall, I highly recommend Paul as an instructor to anyone who is seeking to get certified in CPR and first-aid!'
+          name='Jasmine Kim'
+          title='Student'
+          company='Centennial College'
+          rating={5}
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <TestimonialCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <TestimonialCard />
+        <TestimonialCard
+          avatar='/images/female-avatar-2.jpg'
+          avatarSourceText='Avatar Vectors by Vecteezy'
+          avatarSourceUrl='https://www.vecteezy.com/free-vector/female-avatar'
+          message='Be one of the first to share your experience with PMD!'
+          name='New Client'
+        />
       </SwiperSlide>
     </Swiper>
   );
