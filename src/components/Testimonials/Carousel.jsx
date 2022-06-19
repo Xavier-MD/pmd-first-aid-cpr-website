@@ -1,8 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Parallax, Pagination, Navigation, Autoplay } from 'swiper';
 import TestimonialCard from './TestimonialCard';
+import { useTranslation } from 'react-i18next';
 
 const Carousel = function () {
+  const { t } = useTranslation();
+
+  const testimonials_sample_text_1 = t('testimonials_sample_text_1');
+  const testimonials_sample_name_1 = t('testimonials_sample_name_1');
+
   return (
     <Swiper
       className='w-[90%] md:w-[80%] xl:w-[70%] 2xl:w-[60%] shadow-xl rounded-xl'
@@ -50,8 +56,8 @@ const Carousel = function () {
           avatar='/images/female-avatar-2.jpg'
           avatarSourceText='Avatar Vectors by Vecteezy'
           avatarSourceUrl='https://www.vecteezy.com/free-vector/female-avatar'
-          message='Be one of the first to share your experience with PMD!'
-          name='New Client'
+          message={testimonials_sample_text_1}
+          name={testimonials_sample_name_1}
         />
       </SwiperSlide>
     </Swiper>

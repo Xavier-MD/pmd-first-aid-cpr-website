@@ -1,8 +1,17 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Carousel from '../components/Testimonials/Carousel';
 import TestimonialForm from '../components/Testimonials/TestimonialForm';
 
-const Testimonial = function () {
+const Testimonial = function() {
+  const { t } = useTranslation();
+
+  const testimonials_header_1 = t('testimonials_header_1');
+  const testimonials_title_1 = t('testimonials_title_1');
+  const testimonials_text_1 = t('testimonials_text_1');
+  const testimonials_text_2 = t('testimonials_text_2');
+  const testimonials_text_3 = t('testimonials_text_3');
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -11,15 +20,13 @@ const Testimonial = function () {
         <div className='max-w-7xl mx-auto pt-16 pb-7 px-4 sm:px-6 lg:px-8'>
           <div className='text-center'>
             <h2 className='font-thick font-semibold text-lg text-sky-600 tracking-wide uppercase'>
-              Testimonials
+              {testimonials_header_1}
             </h2>
             <p className='mt-1 text-4xl font-thick font-extrabold text-slate-900 sm:text-5xl sm:tracking-tight lg:text-6xl'>
-              Tell us what you thought.
+              {testimonials_title_1}
             </p>
             <p className='max-w-xl mt-5 mx-auto text-xl font-body text-slate-700'>
-              Your feedback gives us the unique opportunity to further enhance
-              our courses in their content and delivery. Here, you can see some
-              of the feeback we have received from our clients.
+              {testimonials_text_1}
             </p>
           </div>
         </div>
@@ -29,10 +36,10 @@ const Testimonial = function () {
         <Carousel />
         <div className='mt-12 mb-10 text-center'>
           <h3 className='my-2 font-thick font-bold text-2xl text-slate-900'>
-            Want to be featured on this page?
+            {testimonials_text_2}
           </h3>
           <p className='mt-2 font- text-xl text-slate-700'>
-            Send us a testimonial today!
+            {testimonials_text_3}
           </p>
           <div className='m-4'>
             <TestimonialForm open={open} setOpen={setOpen} />

@@ -4,8 +4,22 @@ import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-regular-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const Contact = function () {
+  const { t } = useTranslation();
+
+  const contact_us_title_1 = t('contact_us_title_1');
+  const contact_us_title_2 = t('contact_us_title_2');
+  const contact_us_text_1 = t('contact_us_text_1');
+  const contact_us_input_1 = t('contact_us_input_1');
+  const contact_us_input_2 = t('contact_us_input_2');
+  const contact_us_input_3 = t('contact_us_input_3');
+  const contact_us_input_4 = t('contact_us_input_4');
+  const contact_us_input_5 = t('contact_us_input_5');
+  const contact_us_input_6 = t('contact_us_input_6');
+  const contact_us_button_1 = t('contact_us_button_1');
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -48,16 +62,14 @@ const Contact = function () {
                   icon={faComments}
                   className='mr-10 text-blue-500'
                 />
-                Contact Us
+                {contact_us_title_1}
                 <FontAwesomeIcon
                   icon={faComments}
                   className='ml-10 opacity-0'
                 />
               </h2>
               <p className='mt-4 text-lg text-center font-body text-gray-500 sm:mt-5 sm:mb-10'>
-                We’d love to hear from you! Send us a message using the form
-                below and include any business inquiries or requests you may
-                have.
+                {contact_us_text_1}
               </p>
               <form
                 ref={form}
@@ -69,7 +81,7 @@ const Contact = function () {
                     htmlFor='first-name'
                     className='block text-sm font-medium text-gray-700'
                   >
-                    First name
+                    {contact_us_input_1}
                   </label>
                   <div className='mt-1'>
                     <input
@@ -87,7 +99,7 @@ const Contact = function () {
                     htmlFor='last-name'
                     className='block text-sm font-medium text-gray-700'
                   >
-                    Last name
+                    {contact_us_input_2}
                   </label>
                   <div className='mt-1'>
                     <input
@@ -105,7 +117,7 @@ const Contact = function () {
                     htmlFor='subject'
                     className='block text-sm font-medium text-gray-700'
                   >
-                    Subject
+                    {contact_us_input_3}
                   </label>
                   <div className='mt-1'>
                     <input
@@ -123,7 +135,7 @@ const Contact = function () {
                     htmlFor='email'
                     className='block text-sm font-medium text-gray-700'
                   >
-                    Email
+                    {contact_us_input_4}
                   </label>
                   <div className='mt-1'>
                     <input
@@ -142,11 +154,8 @@ const Contact = function () {
                       htmlFor='phone'
                       className='block text-sm font-medium text-gray-700'
                     >
-                      Phone Number
+                      {contact_us_input_5}
                     </label>
-                    <span className='ml-2 block text-sm font-medium text-gray-700'>
-                      (Optional)
-                    </span>
                   </div>
                   <div className='mt-1 relative rounded-md '>
                     <div className='absolute inset-y-0 left-0 flex items-center'>
@@ -178,7 +187,7 @@ const Contact = function () {
                     htmlFor='message'
                     className='block text-sm font-medium text-gray-700'
                   >
-                    Message
+                    {contact_us_input_6}
                   </label>
                   <div className='mt-1'>
                     <textarea
@@ -197,7 +206,7 @@ const Contact = function () {
                     type='submit'
                     className='w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md  text-base font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
                   >
-                    Send
+                    {contact_us_button_1}
                   </button>
                 </div>
               </form>
@@ -209,11 +218,11 @@ const Contact = function () {
         <div className='bg-blue-500'>
           <div className='flex flex-col max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 space-y-2'>
             <h2 className='text-blue-50 text-3xl font-header font-light sm:text-4xl mb-4'>
-              Additional Contact Details
+              {contact_us_title_2}
             </h2>
             <span className='text-blue-50 text-lg font-body font-light sm:text-xl'>
               <FontAwesomeIcon icon={faEnvelope} className='mr-4' />
-              pmd.firstaidcpr@gmail.com
+              paul@pmdcpr.com
             </span>
             <span className='text-blue-50 text-lg font-body font-light sm:text-xl'>
               <FontAwesomeIcon icon={faPhone} className='mr-4' />

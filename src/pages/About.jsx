@@ -1,12 +1,33 @@
-const About = function () {
+import { useTranslation } from "react-i18next";
+
+
+const About = function() {
+  const { t } = useTranslation();
+
+  const about_us_title_1 = t('about_us_title_1');
+  const about_us_title_2 = t('about_us_title_2');
+  const about_us_mission_title = t('about_us_mission_title');
+  const about_us_vision_title = t('about_us_vision_title');
+  const about_us_values_title = t('about_us_values_title');
+
+  const about_us_text_1 = t('about_us_text_1');
+  const about_us_text_2_item_1 = t('about_us_text_2_item_1');
+  const about_us_text_2_item_2 = t('about_us_text_2_item_2');
+  const about_us_text_2_item_3 = t('about_us_text_2_item_3');
+  const about_us_text_2_item_4 = t('about_us_text_2_item_4');
+  const about_us_text_2_item_5 = t('about_us_text_2_item_5');
+  const about_us_text_2_item_6 = t('about_us_text_2_item_6');
+  const about_us_mission_text = t('about_us_mission_text');
+  const about_us_vision_text = t('about_us_vision_text');
+  const about_us_values_text = t('about_us_values_text');
+
   return (
     <div className='flex flex-col grow bg-white mt-24 pb-20'>
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20'>
-        
         <div className='mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none -mb-8'>
           <div className='flex flex-col'>
             <h3 className='font-header font-semibold tracking-tight text-gray-900 text-3xl w-fit'>
-              Meet The Founder
+              {about_us_title_1}
             </h3>
             <div className='lg:block mb-8 md:mb-0 h-[1px] w-2/3 mt-2 bg-gradient-to-r from-blue-400'></div>
           </div>
@@ -67,56 +88,34 @@ const About = function () {
                   Paul Martin Demers – (HBPHE, CEP, FAI)
                 </p>
               </div>
-              <p className='text-slate-600'>
-                As the founder of PMD First Aid & CPR Paul has been a Bilingual
-                Certified Instructor since 1993 and Teaching Experience
-                Supervisor with the Canadian Red Cross. A graduate of Laurentian
-                University with an Honours Bachelor of Physical and Health
-                Education and is a Certified Exercise Physiologist. Paul also
-                has over 11 years of Adult Education knowledge which he uses to
-                provide learners with strategies to increase skill retention and
-                application.
-              </p>
+              <p className='text-slate-600'>{about_us_text_1}</p>
               <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
-                We Specialize In:
+                {about_us_title_2}
               </h3>
               <div className='h-[1px] w-2/3 bg-gradient-to-r from-blue-400 -mt-2'></div>
               <ul className='text-slate-600'>
-                <li>High quality bilingual training – French and English</li>
-                <li>Flexible scheduling and tailored to the learner</li>
-                <li>Red Cross Certification valid for 3 years</li>
-                <li>Emphasis on Diversity and inclusion</li>
-                <li>Official Red Cross Training Partner</li>
-                <li>Blended learning</li>
+                <li>{about_us_text_2_item_1}</li>
+                <li>{about_us_text_2_item_2}</li>
+                <li>{about_us_text_2_item_3}</li>
+                <li>{about_us_text_2_item_4}</li>
+                <li>{about_us_text_2_item_5}</li>
+                <li>{about_us_text_2_item_6}</li>
               </ul>
               <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
-                Mission
+                {about_us_mission_title}
               </h3>
               <div className='h-[1px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
-              <p className='text-slate-600'>
-                Community driven and proud to offer First Aid and CPR courses in
-                Canada’s official languages - French and English. We meet people
-                at their level and excel in providing knowledge and confidence.
-              </p>
+              <p className='text-slate-600'>{about_us_mission_text}</p>
               <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
-                Vision
+                {about_us_vision_title}
               </h3>
               <div className='h-[1px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
-              <p className='text-slate-600'>
-                Making First Aid and CPR accessible to all. To inspire learners
-                to gain first-hand knowledge and confidence and to be able to
-                help others with a compassionate lens.
-              </p>
+              <p className='text-slate-600'>{about_us_vision_text}</p>
               <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
-                Values
+                {about_us_values_title}
               </h3>
               <div className='h-[1px] w-1/2 bg-gradient-to-r from-blue-400 -mt-2 -mb-2'></div>
-              <p className='text-slate-600'>
-                As a key operating principle PMD First Aid and CPR provides a
-                safe and welcoming space to learn. We are committed to
-                diversity, equity and inclusion in all of our courses while
-                building a psychologically safe learning environment.{' '}
-              </p>
+              <p className='text-slate-600'>{about_us_values_text}</p>
             </div>
           </div>
         </div>

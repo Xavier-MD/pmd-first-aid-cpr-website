@@ -12,6 +12,7 @@ import {
   faStar,
   faPlusCircle
 } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const ratings = [
   { name: 'rating-1', value: '1' },
@@ -21,7 +22,18 @@ const ratings = [
   { name: 'rating-5', value: '5' }
 ];
 
-const TestimonialForm = function ({ open, setOpen }) {
+const TestimonialForm = function({ open, setOpen }) {
+  const { t } = useTranslation();
+
+  const testimonials_button_1 = t('testimonials_button_1');
+  const testimonials_modal_title_1 = t('testimonials_modal_title_1');
+  const testimonials_modal_input_1 = t('testimonials_modal_input_1');
+  const testimonials_modal_input_2 = t('testimonials_modal_input_2');
+  const testimonials_modal_input_3 = t('testimonials_modal_input_3');
+  const testimonials_modal_input_4 = t('testimonials_modal_input_4');
+  const testimonials_modal_input_5 = t('testimonials_modal_input_5');
+  const testimonials_modal_button_1 = t('testimonials_modal_button_1');
+
   const form = useRef();
   const [selectedRating, setSelectedRating] = useState(null);
 
@@ -61,7 +73,7 @@ const TestimonialForm = function ({ open, setOpen }) {
       >
         <span className='sr-only'>Close panel</span>
         <FontAwesomeIcon icon={faAnglesUp} className='mr-[6px] h-4' />
-        <h2>Create</h2>
+        <h2>{testimonials_button_1}</h2>
       </button>
       <Transition.Root show={open} as={Fragment}>
         <Dialog
@@ -114,7 +126,7 @@ const TestimonialForm = function ({ open, setOpen }) {
                             aria-hidden='true'
                           />
                           <h2 className='text-slate-800 font-header text-3xl'>
-                            New Testimonial
+                            {testimonials_modal_title_1}
                           </h2>
                           <div className='w-6 ml-4'></div>
                         </div>
@@ -130,7 +142,7 @@ const TestimonialForm = function ({ open, setOpen }) {
                             htmlFor='first-name'
                             className='block text-sm font-medium text-gray-700'
                           >
-                            First name
+                            {testimonials_modal_input_1}
                           </label>
                           <div className='mt-1'>
                             <input
@@ -148,7 +160,7 @@ const TestimonialForm = function ({ open, setOpen }) {
                             htmlFor='last-name'
                             className='block text-sm font-medium text-gray-700'
                           >
-                            Last name
+                            {testimonials_modal_input_2}
                           </label>
                           <div className='mt-1'>
                             <input
@@ -166,7 +178,7 @@ const TestimonialForm = function ({ open, setOpen }) {
                             htmlFor='company'
                             className='block text-sm font-medium text-gray-700'
                           >
-                            Company
+                            {testimonials_modal_input_3}
                           </label>
                           <div className='mt-1'>
                             <input
@@ -185,7 +197,7 @@ const TestimonialForm = function ({ open, setOpen }) {
                             onChange={setSelectedRating}
                           >
                             <RadioGroup.Label className='block text-sm font-medium text-gray-700'>
-                              Rating
+                              {testimonials_modal_input_4}
                             </RadioGroup.Label>
                             <div className='mt-4 flex items-center space-x-3'>
                               {ratings.map((rating) => (
@@ -232,7 +244,7 @@ const TestimonialForm = function ({ open, setOpen }) {
                             htmlFor='message'
                             className='block text-sm font-medium text-gray-700'
                           >
-                            Message
+                            {testimonials_modal_input_5}
                           </label>
                           <div className='mt-1'>
                             <textarea
@@ -251,7 +263,7 @@ const TestimonialForm = function ({ open, setOpen }) {
                             type='submit'
                             className='w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md  text-base font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
                           >
-                            Send
+                            {testimonials_modal_button_1}
                           </button>
                         </div>
                       </form>
