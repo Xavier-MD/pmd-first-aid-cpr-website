@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import i18n from 'i18next';
 import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLanguage, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
 import i18next from 'i18next';
 
@@ -25,14 +25,14 @@ const LanguagesDropdown = function () {
   return (
     <Menu as='div' className='relative inline-block text-left'>
       <div>
-        <Menu.Button className='inline-flex items-center mt-[12px] transition ease-in-out hover:-translate-y-[1px] hover:scale-110 duration-200'>
+        <Menu.Button className='inline-flex items-center mt-[8px] transition ease-in-out hover:-translate-y-[1px] hover:scale-110 duration-200'>
           <FontAwesomeIcon
             className='mr-3'
-            size='3x'
+            size='2x'
             color='#3b82f6'
-            icon={faLanguage}
+            icon={faGlobe}
           />
-          <FontAwesomeIcon size='lg' color='#3b82f6' icon={faChevronDown} />
+          <FontAwesomeIcon size='md' color='#3b82f6' icon={faChevronDown} />
         </Menu.Button>
       </div>
 
