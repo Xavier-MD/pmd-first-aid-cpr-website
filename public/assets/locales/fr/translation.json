@@ -1,4 +1,32 @@
 {
   "navigation_bar": "",
-  "home_tab": "Accueil"
+  "home_tab": "Accueil",
+  "about_us_tab": "Découvrez-Nous",
+  "courses_tab": "Formations",
+  "testimonials_tab": "Témoignages",
+  "contact_us_tab": "Contactez-Nous",
+
+  "navigation_footer": "",
+  "copyright_text": "2022 PMD Premiers Soins & RCR. Tous droits réservés.",
+
+  "home page": "",
+  "pmd_company_name": "PMD Premiers Soins & RCR",
+  "pmd_company_slogan": "Bilingue — Accessible — Équitable",
+  "browse_courses_button": "Voir Tous Les Formations",
+  "book_course_button": "Réserver Une Formation",
+  "pop_courses_section_title": "Formations Populaires",
+  "pop_courses_section_text": "Nos clients nous ont parlé et nous les avons écoutés. Voici leurs formations préférées de 2022.",
+  "pop_course_1_title": "Secourisme Général",
+  "pop_course_2_title": "Secourisme D'Urgence",
+  "pop_course_3_title": "RCR/DEA",
+  "pop_course_4_title": "Soins Vitaux En Réanimation",
+  "pop_course_1_text": "Cours complet de deux jours permettant d’acquérir des techniques vitales en matière de secourisme et de réanimation cardiorespiratoire (RCR)...",
+  "pop_course_2_text": "Cours de base d’une journée qui permet d’acquérir des techniques vitales en matière de secourisme et de réanimation cardiorespiratoire (RCR) pour le milieu de travail ou le domicile...",
+  "pop_course_3_text": "Les cours de réanimation cardiorespiratoire (RCR) permettent d’acquérir les compétences nécessaires pour reconnaître et intervenir lors d’urgences cardiovasculaires et d’obstructions des voies respiratoires chez les adultes, les enfants et les bébés en fonction du niveau de RCR choisi...",
+  "pop_course_4_text": "Ce cours aide les participants à acquérir la confiance nécessaire pour exécuter des techniques de réanimation cardiorespiratoire (RCR) dans un contexte d’équipe de professionnels ayant le mandat d’intervenir en cas d’urgence...",
+  "contact_redirect_section_title": "Savez ce que vous cherchez?",
+  "contact_redirect_section_text": "Réservez une formation avec nous aujourd'hui!",
+  "contact_redirect_section_button": "Contactez-nous pour une réservation",
+  "authorizations_section_title": "Autorisations",
+  "authorizations_section_text": "PMD Premiers Soins & RCR est un partenaire d'êntrainement autorisé par la Croix-Rouge canadienne. Nous nous spécialisons dans les formations de secourisme et RCR. Grâce à ce partenariat, PMD est autorisé par la CSPAAT sous la croix rouge."
 }

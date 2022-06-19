@@ -13,15 +13,24 @@ import {
   faSquareCheck,
   faEnvelope
 } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const MobileDropdown = function({ open, setOpen }) {
 
+  const { t } = useTranslation();
+
+  const home_tab = t('home_tab');
+  const about_us_tab = t('about_us_tab');
+  const courses_tab = t('courses_tab');
+  const testimonials_tab = t('testimonials_tab');
+  const contact_us_tab = t('contact_us_tab');
+
   const tabsInfo = [
-    { name: 'Home', href: '/', icon: faHouse },
-    { name: 'About Us', href: '/about-us', icon: faPeopleGroup },
-    { name: 'Courses', href: '/courses', icon: faFolderClosed },
-    { name: 'Testimonials', href: '/testimonials', icon: faSquareCheck },
-    { name: 'Contact Us', href: '/contact-us', icon: faEnvelope }
+    { name: home_tab, href: '/', icon: faHouse },
+    { name: about_us_tab, href: '/about-us', icon: faPeopleGroup },
+    { name: courses_tab, href: '/courses', icon: faFolderClosed },
+    { name: testimonials_tab, href: '/testimonials', icon: faSquareCheck },
+    { name: contact_us_tab, href: '/contact-us', icon: faEnvelope }
   ];
 
   return (

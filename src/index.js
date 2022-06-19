@@ -15,7 +15,6 @@ i18n
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
-    supportedLngs: ['en', 'fr'],
     fallbackLng: 'en',
     detection: {
       order: ['cookie', 'querystring', 'localStorage', 'path', 'subdomain'],
@@ -27,9 +26,12 @@ i18n
   });
 
 const loadingMarkup = (
-  <div className='py-4 text-center'>
-    PMD First Aid & CPR
-  </div>
+  <>
+    <div className='py-4 text-center'>
+      PMD First Aid & CPR | PMD Premiers Soins & RCR
+    </div>
+    <div className='py-4 text-center'>Loading... | Chargement en cours...</div>
+  </>
 );
 
 ReactDOM.render(

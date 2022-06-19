@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 const navigation = [
   {
     name: 'LinkedIn',
@@ -36,7 +38,11 @@ const navigation = [
   }
 ];
 
-const Footer = function () {
+const Footer = function() {
+  const { t } = useTranslation();
+
+  const copyright_text = t('copyright_text');
+
   return (
     <footer className='w-full bg-slate-900 border-t-4 border-blue-300'>
       <div className='h-24 max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
@@ -54,7 +60,7 @@ const Footer = function () {
         </div>
         <div className='mt-8 md:mt-0 md:order-1'>
           <p className='text-center text-base text-slate-200'>
-            &copy; 2022 PMD First Aid & CPR. All rights reserved.
+            &copy; { copyright_text }
           </p>
         </div>
       </div>

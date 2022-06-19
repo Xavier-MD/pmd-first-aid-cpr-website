@@ -13,31 +13,43 @@ import {
   faFolderClosed,
   faCalendar
 } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
-const popularCourses = [
-  {
-    name: 'Standard First Aid',
-    href: '/courses/standard-first-aid',
-    icon: faHandHoldingMedical
-  },
-  {
-    name: 'Emergency First Aid',
-    href: '/courses/emergency-first-aid',
-    icon: faUserNurse
-  },
-  {
-    name: 'CPR & AED',
-    href: '/courses/cpr-aed',
-    icon: faHeartCircleBolt
-  },
-  {
-    name: 'Basic Life Support',
-    href: '/courses/basic-life-support',
-    icon: faKitMedical
-  }
-];
+const CoursesDropdown = function({ setCourse, moveLeft }) {
+  const { t } = useTranslation();
 
-const CoursesDropdown = function ({ setCourse, moveLeft }) {
+  const pop_course_1_title = t('pop_course_1_title');
+  const pop_course_2_title = t('pop_course_2_title');
+  const pop_course_3_title = t('pop_course_3_title');
+  const pop_course_4_title = t('pop_course_4_title');
+
+  const browse_courses_button = t('browse_courses_button');
+  const book_course_button = t('book_course_button');
+
+  const popularCourses = [
+    {
+      name: pop_course_1_title,
+      href: '/courses/standard-first-aid',
+      icon: faHandHoldingMedical
+    },
+    {
+      name: pop_course_2_title,
+      href: '/courses/emergency-first-aid',
+      icon: faUserNurse
+    },
+    {
+      name: pop_course_3_title,
+      href: '/courses/cpr-aed',
+      icon: faHeartCircleBolt
+    },
+    {
+      name: pop_course_4_title,
+      href: '/courses/basic-life-support',
+      icon: faKitMedical
+    }
+  ];
+
+
   const [isShowing, setIsShowing] = useState(false);
 
   return (
@@ -75,7 +87,7 @@ const CoursesDropdown = function ({ setCourse, moveLeft }) {
                     'text-lg transition ease-in-out duration-500'
                   )}
                 >
-                  <span>Courses</span>
+                  <span>{t('courses_tab')}</span>
                 </h2>
               </div>
               <div
@@ -153,7 +165,7 @@ const CoursesDropdown = function ({ setCourse, moveLeft }) {
                         className='flex-shrink-0 h-6 w-6 text-white'
                         aria-hidden='true'
                       />
-                      <span className='ml-3'>{'Browse All Courses'}</span>
+                      <span className='ml-3'>{browse_courses_button}</span>
                     </a>
                   </div>
                   <div className='w-[1px] h-[24px] bg-blue-200' />
@@ -167,7 +179,7 @@ const CoursesDropdown = function ({ setCourse, moveLeft }) {
                         className='flex-shrink-0 h-6 w-6 text-white'
                         aria-hidden='true'
                       />
-                      <span className='ml-3'>{'Book Now'}</span>
+                      <span className='ml-3'>{book_course_button}</span>
                     </a>
                   </div>
                 </div>

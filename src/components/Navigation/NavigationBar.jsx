@@ -7,16 +7,25 @@ import TabButton from './TabButton';
 import TabIcon from './TabIcon';
 import MobileDropdown from './MobileDropdown';
 import LanguagesDropdown from './LanguagesDropdown';
-
-const tabsInfo = {
-  homepage: { name: 'Home', href: '/' },
-  aboutUs: { name: 'About Us', href: '/about-us' },
-  courses: { name: 'Courses', href: '/courses' },
-  testimonials: { name: 'Testimonials', href: '/testimonials' },
-  contactUs: { name: 'Contact Us', href: '/contact-us' }
-};
+import { useTranslation } from 'react-i18next';
 
 const NavigationBar = function () {
+  const { t } = useTranslation();
+
+  const home_tab = t('home_tab');
+  const about_us_tab = t('about_us_tab');
+  const courses_tab = t('courses_tab');
+  const testimonials_tab = t('testimonials_tab');
+  const contact_us_tab = t('contact_us_tab');
+
+  const tabsInfo = {
+    homepage: { name: home_tab, href: '/' },
+    aboutUs: { name: about_us_tab, href: '/about-us' },
+    courses: { name: courses_tab, href: '/courses' },
+    testimonials: { name: testimonials_tab, href: '/testimonials' },
+    contactUs: { name: contact_us_tab, href: '/contact-us' }
+  };
+
   const [open, setOpen] = useState(false);
   let currentCourseTab = {};
   if (window.location.pathname === '/courses') {

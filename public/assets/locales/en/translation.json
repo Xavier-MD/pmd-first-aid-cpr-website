@@ -1,4 +1,32 @@
 {
-  "navigation_bar": "",
-  "home_tab": "Home"
+  "navigation_bar": "/////////////////////////////////////////////////////////////////",
+  "home_tab": "Home",
+  "about_us_tab": "About Us",
+  "courses_tab": "Courses",
+  "testimonials_tab": "Testimonials",
+  "contact_us_tab": "Contact Us",
+
+  "navigation_footer": "//////////////////////////////////////////////////////////////",
+  "copyright_text": "2022 PMD First Aid & CPR. All rights reserved.",
+
+  "home page": "//////////////////////////////////////////////////////////////////////",
+  "pmd_company_name": "PMD First Aid & CPR",
+  "pmd_company_slogan": "Bilingual — Accessible — Equitable",
+  "browse_courses_button": "Browse All Courses",
+  "book_course_button": "Book Now",
+  "pop_courses_section_title": "Popular Courses",
+  "pop_courses_section_text": "Our clients spoke and we listened. Here are their favourite courses of 2022.",
+  "pop_course_1_title": "Standard First Aid",
+  "pop_course_2_title": "Emergency First Aid",
+  "pop_course_3_title": "CPR & AED",
+  "pop_course_4_title": "Basic Life Support",
+  "pop_course_1_text": "A comprehensive two-day course offering first aid and cardiopulmonary resuscitation (CPR) skills for those who need training due to work requirements or who want more knowledge to respond to emergencies at home...",
+  "pop_course_2_text": "A basic one-day course offering lifesaving first aid and cardiopulmonary resuscitation (CPR) skills for the workplace or home...",
+  "pop_course_3_text": "Courses on cardiopulmonary resuscitation (CPR) provide the skills needed to recognize and respond to cardiovascular emergencies and choking for adults, children, and babies depending on the level of CPR chosen...",
+  "pop_course_4_text": "Designed to build participant confidence in performing cardiopulmonary resuscitation (CPR) skills in a team environment for professionals with a duty to respond...",
+  "contact_redirect_section_title": "Know what you're looking for?",
+  "contact_redirect_section_text": "Book with us today!",
+  "contact_redirect_section_button": "Contact for booking",
+  "authorizations_section_title": "Authorizations",
+  "authorizations_section_text": "PMD First Aid & CPR is a proud and authorized First Aid/CPR training partner of the Canadian Red Cross. Through this partnership, PMD is fully recognized by the WSIB under the red cross."
 }

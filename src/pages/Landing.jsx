@@ -1,39 +1,63 @@
-const courses = [
-  {
-    name: 'Standard First Aid',
-    href: '/courses/standard-first-aid',
-    imageSrc: '/images/standard-first-aid-picture.jpg',
-    imageAlt: 'SFA Picture',
-    description:
-      'A comprehensive two-day course offering first aid and cardiopulmonary resuscitation (CPR) skills for those who need training due to work requirements or who want more knowledge to respond to emergencies at home...'
-  },
-  {
-    name: 'Emergency First Aid',
-    href: '/courses/emergency-first-aid',
-    imageSrc: '/images/emergency-first-aid-picture.jpg',
-    imageAlt: 'EFA Picture',
-    description:
-      'A basic one-day course offering lifesaving first aid and cardiopulmonary resuscitation (CPR) skills for the workplace or home...'
-  },
-  {
-    name: 'CPR & AED',
-    href: '/courses/cpr-aed',
-    imageSrc: '/images/cpr-aed-picture.jpg',
-    imageAlt: 'CPR AED Picture',
-    description:
-      'Courses on cardiopulmonary resuscitation (CPR) provide the skills needed to recognize and respond to cardiovascular emergencies and choking for adults, children, and babies depending on the level of CPR chosen...'
-  },
-  {
-    name: 'Basic Life Support',
-    href: '/courses/basic-life-support',
-    imageSrc: '/images/bls-picture.jpg',
-    imageAlt: 'BLS Picture',
-    description:
-      'Designed to build participant confidence in performing cardiopulmonary resuscitation (CPR) skills in a team environment for professionals with a duty to respond...'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const Landing = function () {
+  const { t } = useTranslation();
+
+  const pmd_company_name = t('pmd_company_name');
+  const pmd_company_slogan = t('pmd_company_slogan');
+
+  const browse_courses_button = t('browse_courses_button');
+  const book_course_button = t('book_course_button')
+
+  const pop_courses_section_title = t('pop_courses_section_title');
+  const pop_courses_section_text = t('pop_courses_section_text');
+  const pop_course_1_title = t('pop_course_1_title');
+  const pop_course_2_title = t('pop_course_2_title');
+  const pop_course_3_title = t('pop_course_3_title');
+  const pop_course_4_title = t('pop_course_4_title');
+  const pop_course_1_text = t('pop_course_1_text');
+  const pop_course_2_text = t('pop_course_2_text');
+  const pop_course_3_text = t('pop_course_3_text');
+  const pop_course_4_text = t('pop_course_4_text');
+
+  const contact_redirect_section_title = t('contact_redirect_section_title');
+  const contact_redirect_section_text = t('contact_redirect_section_text');
+  const contact_redirect_section_button = t('contact_redirect_section_button');
+
+  const authorizations_section_title = t('authorizations_section_title');
+  const authorizations_section_text = t('authorizations_section_text');
+
+  const courses = [
+    {
+      name: pop_course_1_title,
+      href: '/courses/standard-first-aid',
+      imageSrc: '/images/standard-first-aid-picture.jpg',
+      imageAlt: 'SFA Picture',
+      description: pop_course_1_text
+    },
+    {
+      name: pop_course_2_title,
+      href: '/courses/emergency-first-aid',
+      imageSrc: '/images/emergency-first-aid-picture.jpg',
+      imageAlt: 'EFA Picture',
+      description: pop_course_2_text
+    },
+    {
+      name: pop_course_3_title,
+      href: '/courses/cpr-aed',
+      imageSrc: '/images/cpr-aed-picture.jpg',
+      imageAlt: 'CPR AED Picture',
+      description: pop_course_3_text
+    },
+    {
+      name: pop_course_4_title,
+      href: '/courses/basic-life-support',
+      imageSrc: '/images/bls-picture.jpg',
+      imageAlt: 'BLS Picture',
+      description: pop_course_4_text
+    }
+  ];
+
   return (
     <div className='bg-white'>
       {/* Hero section */}
@@ -58,10 +82,10 @@ const Landing = function () {
             className='w-44 mb-24 h-auto object-center'
           />
           <h1 className='text-4xl font-thick font-bold tracking-tight text-white lg:text-6xl'>
-            PMD First Aid & CPR
+            {pmd_company_name}
           </h1>
           <p className='mt-4 text-3xl text-white font-header font-light'>
-            Bilingual — Accessible — Equitable
+            {pmd_company_slogan}
           </p>
           <div className='mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8'>
             <div className='rounded-md shadow'>
@@ -69,7 +93,7 @@ const Landing = function () {
                 href='/courses'
                 className='w-full flex items-center justify-center px-8 py-3 border border-transparent font-header text-lg font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 md:py-4 md:text-xl md:px-10'
               >
-                Browse courses
+                {browse_courses_button}
               </a>
             </div>
             <div className='mt-3 rounded-md shadow sm:mt-0 sm:ml-3'>
@@ -77,7 +101,7 @@ const Landing = function () {
                 href='/contact-us'
                 className='w-full flex items-center justify-center px-8 py-3 border border-transparent font-header text-base font-medium rounded-md text-blue-500 bg-white hover:bg-blue-100 md:py-4 md:text-xl md:px-10'
               >
-                Book now
+                {book_course_button}
               </a>
             </div>
           </div>
@@ -94,11 +118,10 @@ const Landing = function () {
             id='collection-heading'
             className='text-2xl font-extrabold tracking-tight text-gray-900'
           >
-            Popular Courses
+            {pop_courses_section_title}
           </h2>
           <p className='mt-4 text-base text-gray-500'>
-            Our clients spoke and we listened. Here are their favourite courses
-            of 2022.
+            {pop_courses_section_text}
           </p>
 
           <div className='mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-8'>
@@ -148,14 +171,16 @@ const Landing = function () {
                   id='comfort-heading'
                   className='text-3xl font-extrabold tracking-tight text-white sm:text-4xl'
                 >
-                  Know what you're looking for?
+                  {contact_redirect_section_title}
                 </h2>
-                <p className='mt-3 text-xl text-white'>Book with us today!</p>
+                <p className='mt-3 text-xl text-white'>
+                  {contact_redirect_section_text}
+                </p>
                 <a
                   href='/contact-us'
                   className='mt-8 w-full block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto'
                 >
-                  Contact for booking
+                  {contact_redirect_section_button}
                 </a>
               </div>
             </div>
@@ -172,14 +197,12 @@ const Landing = function () {
             </div>
             <div className='relative flex justify-center'>
               <span className='px-3 bg-white font-light text-3xl font-header text-gray-700'>
-                Authorizations
+                {authorizations_section_title}
               </span>
             </div>
           </div>
           <p className='max-w-xl mx-auto text-center mt-10 mb-14'>
-            PMD First Aid & CPR is a proud and authorized First Aid/CPR training
-            partner of the Canadian Red Cross. Through this partnership, PMD is
-            fully recognized by the WSIB under the red cross.
+            {authorizations_section_text}
           </p>
           <div className='max-w-7xl mx-auto mt-6 grid grid-cols-2 md:grid-cols-3 lg:mt-8'>
             <div className='col-span-1 flex justify-center items-center py-8 px-8 border-r-[1px] border-slate-300'>
@@ -198,8 +221,8 @@ const Landing = function () {
             </div>
             <div className='col-span-1 flex justify-center items-center py-8 px-8 border-l-[1px] border-slate-300'>
               <img
-                className='w-64'
-                src='/images/wsib-picture.png'
+                className='w-44'
+                src='/images/wsib-picture.svg'
                 alt='WSIB Logo'
               />
             </div>
