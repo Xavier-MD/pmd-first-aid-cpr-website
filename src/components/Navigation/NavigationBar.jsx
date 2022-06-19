@@ -6,6 +6,7 @@ import Tab from './Tab';
 import TabButton from './TabButton';
 import TabIcon from './TabIcon';
 import MobileDropdown from './MobileDropdown';
+import LanguagesDropdown from './LanguagesDropdown';
 
 const tabsInfo = {
   homepage: { name: 'Home', href: '/' },
@@ -44,7 +45,8 @@ const NavigationBar = function () {
               <HomeButton />
             </div>
           </div>
-          <div className='max-w-xl hidden lg:flex flex-1 justify-center items-center'>
+          <div className='max-w-xl hidden lg:flex flex-1 justify-around items-center'>
+            <LanguagesDropdown />
             <TabButton tabInfo={tabsInfo.contactUs} />
           </div>
         </div>
