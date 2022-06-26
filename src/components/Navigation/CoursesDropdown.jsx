@@ -58,7 +58,7 @@ const CoursesDropdown = function({ setCourse, moveLeft }) {
         <>
           <Popover.Button
             className={classNames(
-              window.location.pathname === '/courses' ? 'mt-2' : 'mt-6',
+              window.location.pathname === '/courses' ? '' : 'mt-[16px]',
               'group inline-flex flex-col font-header justify-center items-center focus:outline-none'
             )}
             onMouseEnter={() => setIsShowing(true)}
@@ -84,7 +84,7 @@ const CoursesDropdown = function({ setCourse, moveLeft }) {
                     isShowing
                       ? 'text-slate-900 -translate-y-[2px] scale-[125%]'
                       : 'text-slate-600 hover:text-slate-900 group-hover:-translate-y-[2px] group-hover:scale-[125%]',
-                    'text-lg transition ease-in-out duration-500'
+                    'text-md transition ease-in-out duration-500'
                   )}
                 >
                   <span>{t('courses_tab')}</span>

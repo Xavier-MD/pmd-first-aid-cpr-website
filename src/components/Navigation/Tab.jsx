@@ -8,7 +8,7 @@ const Tab = function ({ tabInfo, moveLeft }) {
       href={tabInfo.href}
       className={classNames(
         window.location.pathname === tabInfo.href ? 'pointer-events-none' : '',
-        'group mt-2 inline-flex flex-col font-header justify-center items-center focus:outline-none'
+        'group inline-flex flex-col font-header justify-center items-center focus:outline-none'
       )}
     >
       <div className='flex flex-row items-center'>
@@ -26,7 +26,7 @@ const Tab = function ({ tabInfo, moveLeft }) {
             window.location.pathname === tabInfo.href
               ? 'text-slate-900'
               : 'text-slate-600 hover:text-slate-900 transition ease-in-out group-hover:-translate-y-[2px] group-hover:scale-[125%] duration-500',
-            'text-lg'
+            'text-md'
           )}
         >
           {tabInfo.name}

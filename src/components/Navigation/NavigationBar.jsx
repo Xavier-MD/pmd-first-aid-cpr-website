@@ -36,7 +36,7 @@ const NavigationBar = function () {
 
   return (
     <nav className='w-full h-auto fixed z-20'>
-      <div className='h-24 px-8 xl:px-20 bg-gradient-to-b from-blue-400 to-white border-b-[3px] border-blue-300 shadow-md'>
+      <div className='h-16 px-8 xl:px-20 bg-gradient-to-b from-blue-400 to-white border-b-[3px] border-blue-300 shadow-md'>
         {/* Mobile menu button */}
         <div className='absolute inset-y-0 left-0 pl-6 flex items-center lg:hidden'>
           <MobileDropdown open={open} setOpen={setOpen} />
