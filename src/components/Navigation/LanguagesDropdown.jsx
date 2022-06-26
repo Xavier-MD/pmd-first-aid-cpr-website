@@ -51,15 +51,10 @@ const LanguagesDropdown = function () {
                     <button
                       className={classNames(
                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'group flex items-center px-4 py-2 text-sm hover:bg-transparent'
+                        'group flex w-full items-center px-4 py-2 text-sm hover:bg-transparent'
                       )}
                       onClick={() => i18next.changeLanguage(code)}
                     >
-                      <img
-                        className='w-20 h-auto mr-3'
-                        src={`/images/${flagSvg}`}
-                        alt='PMD Logo'
-                      />
                       <p className='text-lg'>{name}</p>
                     </button>
                   )}
