@@ -23,11 +23,11 @@ const languages = [
 
 const LanguagesDropdown = function () {
   return (
-    <Menu as='div' className='relative inline-block text-left'>
+    <Menu as='div' className='relative inline-block text-left mr-5'>
       <div>
         <Menu.Button className='inline-flex items-center mt-[8px] transition ease-in-out hover:-translate-y-[1px] hover:scale-110 duration-200'>
           <h2 className='mr-2 font-thick font-semibold text-blue-500 text-sm'>
-            English | Français
+            En | Fr
           </h2>
           <FontAwesomeIcon size='md' color='#3b82f6' icon={faChevronDown} />
         </Menu.Button>

@@ -61,6 +61,7 @@ const NavigationBar = function () {
         </div>
         {/* Mobile contact button */}
         <div className='absolute inset-y-0 right-0 pr-6 flex items-center lg:hidden'>
+          <LanguagesDropdown />
           <TabIcon tabInfo={tabsInfo.contactUs} />
         </div>
       </div>

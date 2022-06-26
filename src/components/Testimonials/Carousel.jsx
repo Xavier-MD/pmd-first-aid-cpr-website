@@ -11,7 +11,7 @@ const Carousel = function () {
 
   return (
     <Swiper
-      className='w-[90%] md:w-[80%] xl:w-[70%] 2xl:w-[60%] shadow-xl rounded-xl'
+      className='w-[90%] md:w-[80%] xl:w-[70%]  shadow-xl rounded-xl'
       style={{
         '--swiper-navigation-color': '#000',
         '--swiper-pagination-color': '#000'

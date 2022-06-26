@@ -28,7 +28,7 @@ const TestimonialCard = function ({
   const ratingIconFormatter = function (rating) {
     if (rating) {
       return [...Array(rating)].map((e, i) => (
-        <FontAwesomeIcon icon={faStar} className='w-10 h-10 text-yellow-300' />
+        <FontAwesomeIcon icon={faStar} className='w-6 h-6 text-yellow-300' />
       ));
     }
   };
@@ -39,17 +39,17 @@ const TestimonialCard = function ({
         <div className='relative lg:flex lg:items-center'>
           <div className='hidden lg:flex flex-col items-center lg:flex-shrink-0'>
             <img
-              className='h-60 w-60 rounded-full xl:h-80 xl:w-80 border-8 border-white border-opacity-25 shadow-2xl shadow-slate-500'
+              className='h-48 w-48 rounded-full border-8 border-white border-opacity-25 shadow-2xl shadow-slate-500'
               src={avatar}
               alt='Person avatar'
             />
-            <p className='mt-4 text-2xl font-sans font-bold text-slate-800 sm:text-3xl sm:tracking-tight lg:text-4xl'>
+            <p className='mt-4 text-2xl font-sans font-bold text-slate-800 sm:tracking-tight'>
               {ratingTextFormatter(rating)}
             </p>
             <div className='mt-2 flex space-x-2'>
               {ratingIconFormatter(rating)}
             </div>
-            <a className='mt-4 text-xs' href={avatarSourceUrl}>
+            <a className='mt-4 text-[8px]' href={avatarSourceUrl}>
               {avatarSourceText}
             </a>
           </div>
@@ -67,7 +67,7 @@ const TestimonialCard = function ({
               />
             </svg>
             <blockquote className='relative p-4 rounded-xl bg-blue-100 bg-opacity-80 shadow-xl'>
-              <div className='text-2xl leading-9 font-medium text-gray-900'>
+              <div className='text-lg leading-9 font-medium text-gray-900'>
                 <p>{message}</p>
               </div>
               <footer className='mt-8'>
@@ -80,10 +80,10 @@ const TestimonialCard = function ({
                     />
                   </div>
                   <div className='ml-4 lg:ml-0'>
-                    <div className='text-base font-medium text-gray-900'>
+                    <div className='text-md font-medium text-gray-900'>
                       {name}
                     </div>
-                    <div className='text-base font-medium text-blue-700'>
+                    <div className='text-md font-medium text-blue-700'>
                       {identityFormatter(title, company)}
                     </div>
                   </div>

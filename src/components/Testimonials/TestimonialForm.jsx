@@ -68,7 +68,7 @@ const TestimonialForm = function({ open, setOpen }) {
     <>
       <button
         type='button'
-        className='font-header font-light w-24 h-10 inline-flex justify-center items-center bg-blue-500 rounded text-xl text-blue-50 shadow-md shadow-blue-400 hover:bg-blue-600 active:bg-blue-600 focus:outline-none active:ring-2 active:ring-slate-300'
+        className='font-header font-light w-52 h-10 inline-flex justify-center items-center bg-blue-500 rounded text-lg text-blue-50 shadow-md shadow-blue-400 hover:bg-blue-600 active:bg-blue-600 focus:outline-none active:ring-2 active:ring-slate-300'
         onClick={() => setOpen(true)}
       >
         <span className='sr-only'>Close panel</span>
