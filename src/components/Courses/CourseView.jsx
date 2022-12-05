@@ -1,6 +1,19 @@
+import { useTranslation } from 'react-i18next';
 import CoursesBreadcrumbs from './CoursesBreadcrumbs';
 
 const CourseView = function ({ courseDetails }) {
+  const { t } = useTranslation();
+
+  const course_info_title_1 = t('course_info_title_1');
+  const course_info_subtitle_1 = t('course_info_subtitle_1');
+  const course_info_subtitle_2 = t('course_info_subtitle_2');
+  const course_info_subtitle_3 = t('course_info_subtitle_3');
+  const course_info_subtitle_4 = t('course_info_subtitle_4');
+  const course_info_subtitle_5 = t('course_info_subtitle_5');
+  const course_info_subtitle_6 = t('course_info_subtitle_6');
+  const course_info_subtitle_7 = t('course_info_subtitle_7');
+  const course_info_subtitle_8 = t('course_info_subtitle_8');
+
   return (
     <div className='py-20 bg-white overflow-hidden mt-24'>
       <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
@@ -111,7 +124,7 @@ const CourseView = function ({ courseDetails }) {
           <h1>
             <CoursesBreadcrumbs courseName={courseDetails.title} />
             <span className='block text-base text-center text-blue-600 font-semibold tracking-wide uppercase'>
-              Course
+              {course_info_title_1}
             </span>
             <span className='mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
               {courseDetails.title}
@@ -131,49 +144,49 @@ const CourseView = function ({ courseDetails }) {
               height={873}
             />
           </figure>
-          <h2>Course Content</h2>
+          <h2>{course_info_subtitle_1}</h2>
           <ul>
             {courseDetails.content.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h2>Participant Materials</h2>
+          <h2>{course_info_subtitle_2}</h2>
           <ul>
             {courseDetails.materials.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h2>Duration</h2>
+          <h2>{course_info_subtitle_3}</h2>
           <ul>
             {courseDetails.duration.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h2>Instructor</h2>
+          <h2>{course_info_subtitle_4}</h2>
           <ul>
             {courseDetails.instructor.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h2>Prerequisite</h2>
+          <h2>{course_info_subtitle_5}</h2>
           <ul>
             {courseDetails.prerequisite.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h2>Completion</h2>
+          <h2>{course_info_subtitle_6}</h2>
           <ul>
             {courseDetails.completion.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h2>Certification</h2>
+          <h2>{course_info_subtitle_7}</h2>
           <ul>
             {courseDetails.certification.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h2>Recertification</h2>
+          <h2>{course_info_subtitle_8}</h2>
           <ul>
             {courseDetails.recertification.map((item) => (
               <li key={item}>{item}</li>
