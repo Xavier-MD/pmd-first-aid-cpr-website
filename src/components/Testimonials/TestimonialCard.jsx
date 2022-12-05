@@ -7,13 +7,12 @@ const TestimonialCard = function ({
   avatarSourceText,
   message,
   name,
-  title,
   company,
   rating
 }) {
-  const identityFormatter = function (title, company) {
-    if (title && company) {
-      return `${title}, ${company}`;
+  const identityFormatter = function (company) {
+    if (company) {
+      return `${company}`;
     } else {
       return;
     }
@@ -84,7 +83,7 @@ const TestimonialCard = function ({
                       {name}
                     </div>
                     <div className='text-md font-medium text-blue-700'>
-                      {identityFormatter(title, company)}
+                      {identityFormatter(company)}
                     </div>
                   </div>
                 </div>

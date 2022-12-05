@@ -1,5 +1,4 @@
-import CourseView from '../components/Courses/CourseView';
-import CoursesPageDropdown from '../components/Courses/CoursesPageDropdown';
+wimport CourseView from '../components/Courses/CourseView';
 import Error from './Error';
 
 const courseDetails = {
