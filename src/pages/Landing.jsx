@@ -215,7 +215,7 @@ const Landing = function () {
             <div className='col-span-1 flex justify-center items-center py-8 px-8'>
               <img
                 className='w-44 h-fit'
-                src='/images/red-cross-picture-fix.png'
+                src='/images/red-cross-picture.png'
                 alt='Red Cross Logo'
               />
             </div>
