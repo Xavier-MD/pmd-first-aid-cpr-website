@@ -25,11 +25,14 @@ const LanguagesDropdown = function () {
   return (
     <Menu as='div' className='relative inline-block text-left mr-5'>
       <div>
-        <Menu.Button className='inline-flex items-center mt-[8px] transition ease-in-out hover:-translate-y-[1px] hover:scale-110 duration-200'>
-          <h2 className='mr-2 font-thick font-semibold text-blue-500 text-sm'>
-            En | Fr
+        <Menu.Button className='inline-flex items-center mt-[8px] transition ease-in-out hover:-translate-y-[1px] hover:scale-110 duration-200 text-blue-400 hover:text-blue-500'>
+          <h2 className='mr-2 font-thick font-semibold text-sm'>
+            {i18next.language.toUpperCase()}
           </h2>
-          <FontAwesomeIcon size='md' color='#3b82f6' icon={faChevronDown} />
+          <FontAwesomeIcon
+            size='md'
+            icon={faChevronDown}
+          />
         </Menu.Button>
       </div>
 
@@ -42,7 +45,7 @@ const LanguagesDropdown = function () {
         leaveFrom='transform opacity-100 scale-100'
         leaveTo='transform opacity-0 scale-95'
       >
-        <Menu.Items className='origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gradient-to-tr from-blue-300 to-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none'>
+        <Menu.Items className='origin-top-right absolute right-0 mt-2 rounded-md shadow shadow-slate-400 bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-10'>
           <div className='py-1'>
             {languages.map(({ code, name, country_code, flagSvg }) => (
               <div key={country_code}>
@@ -51,11 +54,11 @@ const LanguagesDropdown = function () {
                     <button
                       className={classNames(
                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'group flex w-full items-center px-4 py-2 text-sm hover:bg-transparent'
+                        'group flex w-full items-center px-4 py-2 font-thick hover:bg-transparent'
                       )}
                       onClick={() => i18next.changeLanguage(code)}
                     >
-                      <p className='text-lg'>{name}</p>
+                      <p className='text-[0.95rem]'>{name}</p>
                     </button>
                   )}
                 </Menu.Item>

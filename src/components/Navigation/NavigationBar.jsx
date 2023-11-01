@@ -36,23 +36,23 @@ const NavigationBar = function () {
 
   return (
     <nav className='w-full h-auto fixed z-20'>
-      <div className='h-16 px-8 xl:px-20 bg-gradient-to-b from-blue-400 to-white border-b-[3px] border-blue-300 shadow-md'>
+      <div className='h-16 px-8 xl:px-20 bg-gradient-to-b from-blue-300 to-white'>
         {/* Mobile menu button */}
         <div className='absolute inset-y-0 left-0 pl-6 flex items-center lg:hidden'>
           <MobileDropdown open={open} setOpen={setOpen} />
         </div>
         {/* Desktop nav flexbox */}
         <div className='w-full h-full flex justify-center lg:justify-between'>
+          <div className='flex justify-center'>
+            <div className='p-[0.60vh] bg-transparent'>
+              <HomeButton />
+            </div>
+          </div>
           <div className='hidden max-w-xl lg:flex flex-1 justify-around items-center'>
             <Tab tabInfo={tabsInfo.homepage} moveLeft='8' />
             <Tab tabInfo={tabsInfo.aboutUs} moveLeft='12' />
             {currentCourseTab}
             <Tab tabInfo={tabsInfo.testimonials} moveLeft='16' />
-          </div>
-          <div className='mt-2 -mb-10 flex justify-center'>
-            <div className='mx-2 p-3 bg-gradient-to-b from-blue-300 to-white border-[3px] border-blue-300 rounded-full shadow-md shadow-slate-400'>
-              <HomeButton />
-            </div>
           </div>
           <div className='max-w-xl hidden lg:flex flex-1 justify-around items-center'>
             <LanguagesDropdown />

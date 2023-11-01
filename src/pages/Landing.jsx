@@ -61,18 +61,18 @@ const Landing = function () {
   return (
     <div className='bg-white'>
       {/* Hero section */}
-      <div className='relative bg-gray-900 shadow-lg shadow-slate-500'>
+      <div className='relative bg-gray-900 shadow-lg shadow-slate-500 min-h-screen h-full vh-screen'>
         {/* Decorative image and overlay */}
         <div aria-hidden='true' className='absolute inset-0 overflow-hidden'>
           <img
             src='/images/group-training-picture.jpg'
             alt=''
-            className='w-full h-full object-center object-cover blur-sm'
+            className='w-full h-full object-full blur-sm'
           />
         </div>
         <div
           aria-hidden='true'
-          className='absolute inset-0 bg-blue-900 opacity-40'
+          className='absolute inset-0 bg-slate-900 opacity-40'
         />
 
         <div className='relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0'>
@@ -81,14 +81,14 @@ const Landing = function () {
             alt=''
             className='w-44 mb-24 h-auto object-center'
           />
-          <h1 className='text-4xl font-thick font-bold tracking-tight text-white lg:text-6xl'>
+          <h1 className='text-4xl font-header font-semibold tracking-tight text-white lg:text-6xl'>
             {pmd_company_name}
           </h1>
-          <p className='mt-4 text-3xl text-white font-header font-light'>
+          <p className='mt-4 text-3xl text-white font-thick font-light'>
             {pmd_company_slogan}
           </p>
-          <div className='mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8'>
-            <div className='rounded-md shadow'>
+          <div className='mt-5 mx-auto sm:flex sm:justify-center md:mt-8'>
+            <div className='rounded-md shadow min-w-[15rem]'>
               <a
                 href='/courses'
                 className='w-full flex items-center justify-center px-8 py-3 border border-transparent font-header text-lg font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 md:py-4 md:text-xl md:px-10'
@@ -96,7 +96,7 @@ const Landing = function () {
                 {browse_courses_button}
               </a>
             </div>
-            <div className='mt-3 rounded-md shadow sm:mt-0 sm:ml-3'>
+            <div className='mt-3 rounded-md shadow sm:mt-0 sm:ml-3 min-w-[15rem]'>
               <a
                 href='/contact-us'
                 className='w-full flex items-center justify-center px-8 py-3 border border-transparent font-header text-base font-medium rounded-md text-blue-500 bg-white hover:bg-blue-100 md:py-4 md:text-xl md:px-10'
@@ -215,7 +215,7 @@ const Landing = function () {
             <div className='col-span-1 flex justify-center items-center py-8 px-8'>
               <img
                 className='w-44 h-fit'
-                src='/images/red-cross-picture.png'
+                src='/images/red-cross-picture-fix.png'
                 alt='Red Cross Logo'
               />
             </div>

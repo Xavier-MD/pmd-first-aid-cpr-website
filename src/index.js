@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -34,9 +34,11 @@ const loadingMarkup = (
   </>
 );
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <Suspense fallback={loadingMarkup}>
     <App />
   </Suspense>,
-  document.getElementById('root')
 );

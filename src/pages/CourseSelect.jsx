@@ -1,5 +1,8 @@
 import ButtonPane from '../components/Courses/ButtonPane';
-import { ChevronRightIcon } from '@heroicons/react/solid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChevronRight
+} from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
 function CourseSelect({ course, setCourse }) {
@@ -67,7 +70,8 @@ function CourseSelect({ course, setCourse }) {
                 <span className='ml-4 text-sm font-medium text-slate-700'>
                   {courses_redirect_right}
                 </span>
-                <ChevronRightIcon
+                <FontAwesomeIcon
+                  icon={faChevronRight}
                   className='ml-2 w-5 h-5 text-slate-700'
                   aria-hidden='true'
                 />
