@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
@@ -25,20 +25,15 @@ i18n
     }
   });
 
-const loadingMarkup = (
-  <>
-    <div className='py-4 text-center'>
-      PMD First Aid & CPR | PMD Premiers Soins & RCR
-    </div>
-    <div className='py-4 text-center'>Loading... | Chargement en cours...</div>
-  </>
-);
+function AppWithCallbackAfterRender() {
+  useEffect(() => {
+    console.log('PMD First Aid & CPR | PMD Premiers Soins & RCR');
+  });
+  return <App />;
+}
+
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
-root.render(
-  <Suspense fallback={loadingMarkup}>
-    <App />
-  </Suspense>,
-);
+root.render(<AppWithCallbackAfterRender />);
