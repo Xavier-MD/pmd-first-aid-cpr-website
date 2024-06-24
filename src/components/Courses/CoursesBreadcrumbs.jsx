@@ -1,7 +1,10 @@
-import { ChevronLeftIcon } from '@heroicons/react/solid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChevronLeft
+} from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
-const CoursesBreadcrumbs = function() {
+const CoursesBreadcrumbs = function () {
   const { t } = useTranslation();
   const course_info_tab_1 = t('course_info_tab_1');
 
@@ -10,7 +13,8 @@ const CoursesBreadcrumbs = function() {
       <ol className='flex items-end space-x-4'>
         <li>
           <div className='flex'>
-            <ChevronLeftIcon
+            <FontAwesomeIcon
+              icon={faChevronLeft}
               className='flex-shrink-0 h-5 w-5 text-slate-400'
               aria-hidden='true'
             />
