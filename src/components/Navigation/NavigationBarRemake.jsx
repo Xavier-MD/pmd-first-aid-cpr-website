@@ -1,10 +1,8 @@
-import { Fragment, useState } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { faBars, faBell, faX, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { Disclosure } from '@headlessui/react';
 import Tab from './Tab';
 
 import classNames from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import HomeButton from './HomeButton';
 import TabButton from './TabButton';
