@@ -2,10 +2,7 @@ import { useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import Tab from './Tab';
 
-import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
-import HomeButton from './HomeButton';
-import TabButton from './TabButton';
 import LanguagesDropdown from './LanguagesDropdown';
 import MobileDropdown from './MobileDropdown';
 
@@ -23,41 +20,39 @@ const NavigationBarRemake = function () {
     aboutUs: { name: about_us_tab, href: '/about-us' },
     courses: { name: courses_tab, href: '/courses' },
     testimonials: { name: testimonials_tab, href: '/testimonials' },
-    contactUs: { name: contact_us_tab, href: '/contact-us' }
+    contactUs: { name: contact_us_tab, href: '/contact' }
   };
 
   const [open, setOpen] = useState(false);
 
   return (
-    <Disclosure as='nav' className={classNames('/' === window.location.pathname ? 'bg-opacity-50' : 'bg-opacity-30', 'bg-blue-100 z-10 w-full fixed backdrop-blur-lg')}>
-      <div className='flex justify-between mx-auto max-w-screen-xl px-[1.5rem]'>
-        <div className='flex items-center md:hidden'>
-          <MobileDropdown open={open} setOpen={setOpen} />
-          <LanguagesDropdown />
-        </div>
-        <div className='flex justify-around'>
-          <div className='hidden md:flex justify-center items-center'>
-            <div className='p-[0.80vh] bg-transparent'>
-              <HomeButton />
-            </div>
+    <>
+      {/* Navbar */}
+      <Disclosure as='nav'>
+        <div className='w-full max-w-7xl z-10 mx-auto grid grid-cols-7 bg-transparent'>
+          {/* Mobile Menu */}
+          <div className='flex md:hidden col-span-3'>
+            <MobileDropdown open={open} setOpen={setOpen} />
           </div>
-          <div className='hidden md:ml-6 md:flex md:space-x-8'>
-            {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
+          {/* Desktop Tabs Left */}
+          <div className='pt-[0.8rem] hidden md:grid grid-cols-3 col-span-3'>
             <Tab tabInfo={tabsInfo.homepage} moveLeft='0' />
             <Tab tabInfo={tabsInfo.aboutUs} moveLeft='0' />
             <Tab tabInfo={tabsInfo.courses} moveLeft='0' />
+          </div>
+          {/* Logo */}
+          <div className='py-[0.5rem] z-20 flex justify-center items-end col-span-1'>
+            <img className='w-auto h-[3.5rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
+          </div>
+          {/* Desktop Tabs Right */}
+          <div className='pt-[0.8rem] hidden md:grid grid-cols-3 col-span-3 '>
             <Tab tabInfo={tabsInfo.testimonials} moveLeft='0' />
-          </div>
-        </div>
-        <div className='flex items-center'>
-          <div className='max-w-xl hidden lg:flex flex-1 justify-around items-center'>
+            <Tab tabInfo={tabsInfo.contactUs} moveLeft='0' />
             <LanguagesDropdown />
-            <TabButton tabInfo={tabsInfo.contactUs} />
           </div>
         </div>
-      </div>
-      <div className='w-[75vw] h-[0.05rem] bg-gradient-to-r from-transparent via-slate-400 to-transparent mx-auto' />
-    </Disclosure>
+      </Disclosure>
+    </>
   );
 };
 

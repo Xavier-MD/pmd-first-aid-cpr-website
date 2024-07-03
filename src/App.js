@@ -14,7 +14,7 @@ import Error from './pages/Error';
 function App() {
   return (
     <BrowserRouter>
-      <div className='w-full h-full min-h-screen flex flex-col justify-between'>
+      <div className='w-full min-w-screen h-full min-h-screen flex-col'>
         <NavigationBarRemake />
         <Routes>
           <Route path='/' element={<Landing />} />
@@ -22,7 +22,7 @@ function App() {
           <Route path='/courses' element={<CourseSelect />} />
           <Route path='/courses/:id' element={<Course />} />
           <Route path='/testimonials' element={<Testimonial />} />
-          <Route path='/contact-us' element={<Contact />} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='*' element={<Error />} />
         </Routes>
         <Footer />

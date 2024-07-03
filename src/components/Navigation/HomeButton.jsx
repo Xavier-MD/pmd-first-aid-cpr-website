@@ -1,11 +1,7 @@
 const HomeButton = function () {
   return (
     <a href='/'>
-      <img
-        className='w-[2.5vh] h-auto'
-        src='/images/logo-no-text.png'
-        alt='PMD Logo'
-      />
+      <img className='w-auto h-[3.5rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
     </a>
   );
 };
