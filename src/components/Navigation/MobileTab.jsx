@@ -8,7 +8,7 @@ const MobileTab = function ({ tabInfo, tabIcon }) {
         tabInfo.href === window.location.pathname
           ? 'text-slate-500 shadow-inner shadow-slate-400 pointer-events-none'
           : 'shadow-md shadow-slate-400',
-        'h-12 w-full flex justify-start items-center px-6 py-2 text-lg font-header border-2 rounded-md active:bg-slate-200 focus:text-slate-900'
+        'h-12 w-full flex justify-start items-center px-6 py-2 text-lg font-header border-2 rounded-md active:bg-blue-100 focus:text-slate-900'
       )}
     >
       <div className='flex'>

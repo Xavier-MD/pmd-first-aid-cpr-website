@@ -31,7 +31,7 @@ const NavigationBarRemake = function () {
       <Disclosure as='nav'>
         <div className='w-full max-w-7xl z-10 mx-auto grid grid-cols-7 bg-transparent'>
           {/* Mobile Menu */}
-          <div className='flex md:hidden col-span-3'>
+          <div className='pl-[1rem] pt-[0.8rem] col-span-1 flex justify-center md:hidden'>
             <MobileDropdown open={open} setOpen={setOpen} />
           </div>
           {/* Desktop Tabs Left */}
@@ -41,16 +41,21 @@ const NavigationBarRemake = function () {
             <Tab tabInfo={tabsInfo.courses} moveLeft='0' />
           </div>
           {/* Logo */}
-          <div className='py-[0.5rem] z-20 flex justify-center items-end col-span-1'>
-            <img className='w-auto h-[3.5rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
+          <div className='py-[1rem] md:py-[0.5rem] z-20 flex justify-center items-end col-span-1 col-start-4'>
+            <img className='w-auto h-[4rem] md:h-[3.5rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
           </div>
           {/* Desktop Tabs Right */}
-          <div className='pt-[0.8rem] hidden md:grid grid-cols-3 col-span-3 '>
+          <div className='pt-[0.8rem] hidden md:grid grid-cols-2 col-span-2 '>
             <Tab tabInfo={tabsInfo.testimonials} moveLeft='0' />
             <Tab tabInfo={tabsInfo.contactUs} moveLeft='0' />
+          </div>
+          {/* Language Toggle Dropdown */}
+          <div className='pt-[0.8rem] grid grid-cols-1 col-span-1 col-start-7'>
             <LanguagesDropdown />
           </div>
         </div>
+        {/* Mobile Divider */}
+        <div className='w-full h-[0.07rem] md:hidden bg-gradient-to-r from-transparent via-slate-400 to-transparent' />
       </Disclosure>
     </>
   );

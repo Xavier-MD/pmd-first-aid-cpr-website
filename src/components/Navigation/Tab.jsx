@@ -15,7 +15,7 @@ const Tab = function({ tabInfo, moveLeft }) {
         className={classNames(
           window.location.pathname === tabInfo.href
             ? 'text-slate-900'
-            : 'text-slate-500 hover:text-slate-700 transition ease-in-out group-hover:-translate-y-[2px] group-hover:scale-[125%] duration-500',
+            : 'text-slate-500 hover:text-slate-700 transition ease-in-out group-hover:-translate-y-[0.05rem] group-hover:scale-[110%] duration-200',
           'text-[0.95rem] font-thick'
         )}
       >

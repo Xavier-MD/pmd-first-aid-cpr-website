@@ -30,18 +30,18 @@ const MobileDropdown = function({ open, setOpen }) {
     { name: about_us_tab, href: '/about-us', icon: faPeopleGroup },
     { name: courses_tab, href: '/courses', icon: faFolderClosed },
     { name: testimonials_tab, href: '/testimonials', icon: faSquareCheck },
-    { name: contact_us_tab, href: '/contact-us', icon: faEnvelope }
+    { name: contact_us_tab, href: '/contact', icon: faEnvelope }
   ];
 
   return (
     <>
       <button
         type='button'
-        className='w-14 h-10 inline-flex justify-center items-center bg-blue-500 rounded text-lg text-blue-50 shadow-md shadow-blue-400 active:bg-blue-600 focus:outline-none active:ring-2 active:ring-slate-300'
+        className='inline-flex justify-center items-center rounded text-lg text-blue-400 active:text-blue-600 focus:outline-none'
         onClick={() => setOpen(true)}
       >
         <span className='sr-only'>Close panel</span>
-        <FontAwesomeIcon icon={faBars} className='w-6 h-6' aria-hidden='true' />
+        <FontAwesomeIcon icon={faBars} className='h-[1.8rem]' aria-hidden='true' />
       </button>
       <Transition.Root show={open} as={Fragment}>
         <Dialog
@@ -55,7 +55,7 @@ const MobileDropdown = function({ open, setOpen }) {
               enter='ease-in-out duration-500'
               enterFrom='opacity-0'
               enterTo='opacity-100'
-              leave='ease-in-out duration-500'
+              leave='ease-in-out duration-300'
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
@@ -64,15 +64,15 @@ const MobileDropdown = function({ open, setOpen }) {
             <div className='pointer-events-none fixed inset-y-0 left-0 flex max-w-full'>
               <Transition.Child
                 as={Fragment}
-                enter='transform transition ease-in-out duration-500 sm:duration-700'
+                enter='transform transition ease-in-out duration-500 sm:duration-400'
                 enterFrom='-translate-y-full'
                 enterTo='translate-y-0'
-                leave='transform transition ease-in-out duration-500 sm:duration-700'
+                leave='transform transition ease-in-out duration-500 sm:duration-400'
                 leaveFrom='translate-y-0'
                 leaveTo='-translate-y-full'
               >
                 <div className='pointer-events-auto w-screen h-fit'>
-                  <div className='w-full flex flex-col overflow-y-scroll py-6 bg-gradient-to-bl from-sky-50 to-blue-300 opacity-95 shadow-md shadow-slate-700'>
+                  <div className='w-full flex flex-col py-6 bg-gradient-to-bl from-sky-50 to-blue-300 opacity-95 shadow-md shadow-slate-700 backdrop-blur-sm'>
                     <div className='px-6'>
                       <div className='flex items-center justify-between'>
                         <button
