@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
-import NavigationBarRemake from './components/Navigation/NavigationBarRemake';
+import NavigationBar from './components/Navigation/NavigationBar';
 import Footer from './components/Navigation/Footer';
 import Landing from './pages/Landing';
 import About from './pages/About';
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className='w-full min-w-screen h-full min-h-screen flex-col'>
-        <NavigationBarRemake />
+        <NavigationBar />
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/about-us' element={<About />} />

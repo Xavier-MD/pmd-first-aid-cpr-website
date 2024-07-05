@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-const Tab = function({ tabInfo, moveLeft }) {
+const DesktopTab = function({ tabInfo, moveLeft }) {
   return (
     <a
       href={tabInfo.href}
@@ -25,4 +25,4 @@ const Tab = function({ tabInfo, moveLeft }) {
   );
 };
 
-export default Tab;
+export default DesktopTab;

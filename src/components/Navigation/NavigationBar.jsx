@@ -1,13 +1,10 @@
 import { useState } from 'react';
+import { Disclosure } from '@headlessui/react';
+import DesktopTab from './DesktopTab';
 
-import HomeButton from './HomeButton';
-import CoursesDropdown from './CoursesDropdown';
-import Tab from './Tab';
-import TabButton from './TabButton';
-import TabIcon from './TabIcon';
-import MobileDropdown from './MobileDropdown';
-import LanguagesDropdown from './LanguagesDropdown';
 import { useTranslation } from 'react-i18next';
+import LanguagesDropdown from './LanguagesDropdown';
+import MobileDropdown from './MobileDropdown';
 
 const NavigationBar = function () {
   const { t } = useTranslation();
@@ -23,49 +20,44 @@ const NavigationBar = function () {
     aboutUs: { name: about_us_tab, href: '/about-us' },
     courses: { name: courses_tab, href: '/courses' },
     testimonials: { name: testimonials_tab, href: '/testimonials' },
-    contactUs: { name: contact_us_tab, href: '/contact-us' }
+    contactUs: { name: contact_us_tab, href: '/contact' }
   };
 
   const [open, setOpen] = useState(false);
-  let currentCourseTab = {};
-  if (window.location.pathname === '/courses') {
-    currentCourseTab = <Tab tabInfo={tabsInfo.courses} moveLeft='10' />;
-  } else {
-    currentCourseTab = <CoursesDropdown moveLeft='10' />;
-  }
 
   return (
-    <nav className='w-full h-auto fixed z-20'>
-      <div className='h-16 px-8 xl:px-20 bg-gradient-to-b from-blue-300 to-white'>
-        {/* Mobile menu button */}
-        <div className='absolute inset-y-0 left-0 pl-6 flex items-center lg:hidden'>
-          <MobileDropdown open={open} setOpen={setOpen} />
-        </div>
-        {/* Desktop nav flexbox */}
-        <div className='w-full h-full flex justify-center lg:justify-between'>
-          <div className='flex justify-center'>
-            <div className='p-[0.60vh] bg-transparent'>
-              <HomeButton />
-            </div>
+    <>
+      {/* Navbar */}
+      <Disclosure as='nav'>
+        <div className='w-full max-w-7xl z-10 mx-auto grid grid-cols-7 bg-transparent'>
+          {/* Mobile Menu */}
+          <div className='pl-[1rem] pt-[0.8rem] col-span-1 flex justify-center md:hidden'>
+            <MobileDropdown open={open} setOpen={setOpen} />
           </div>
-          <div className='hidden max-w-xl lg:flex flex-1 justify-around items-center'>
-            <Tab tabInfo={tabsInfo.homepage} moveLeft='8' />
-            <Tab tabInfo={tabsInfo.aboutUs} moveLeft='12' />
-            {currentCourseTab}
-            <Tab tabInfo={tabsInfo.testimonials} moveLeft='16' />
+          {/* Desktop Tabs Left */}
+          <div className='pt-[0.8rem] hidden md:grid grid-cols-3 col-span-3'>
+            <DesktopTab tabInfo={tabsInfo.homepage} moveLeft='0' />
+            <DesktopTab tabInfo={tabsInfo.aboutUs} moveLeft='0' />
+            <DesktopTab tabInfo={tabsInfo.courses} moveLeft='0' />
           </div>
-          <div className='max-w-xl hidden lg:flex flex-1 justify-around items-center'>
+          {/* Logo */}
+          <div className='py-[1rem] md:py-[0.5rem] z-20 flex justify-center items-end col-span-1 col-start-4'>
+            <img className='w-auto h-[4rem] md:h-[3.5rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
+          </div>
+          {/* Desktop Tabs Right */}
+          <div className='pt-[0.8rem] hidden md:grid grid-cols-2 col-span-2 '>
+            <DesktopTab tabInfo={tabsInfo.testimonials} moveLeft='0' />
+            <DesktopTab tabInfo={tabsInfo.contactUs} moveLeft='0' />
+          </div>
+          {/* Language Toggle Dropdown */}
+          <div className='pt-[0.8rem] grid grid-cols-1 col-span-1 col-start-7'>
             <LanguagesDropdown />
-            <TabButton tabInfo={tabsInfo.contactUs} />
           </div>
         </div>
-        {/* Mobile contact button */}
-        <div className='absolute inset-y-0 right-0 pr-6 flex items-center lg:hidden'>
-          <LanguagesDropdown />
-          <TabIcon tabInfo={tabsInfo.contactUs} />
-        </div>
-      </div>
-    </nav>
+        {/* Mobile Divider */}
+        <div className='w-full h-[0.07rem] md:hidden bg-gradient-to-r from-transparent via-slate-400 to-transparent' />
+      </Disclosure>
+    </>
   );
 };
 
