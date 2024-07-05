@@ -54,8 +54,6 @@ const NavigationBar = function () {
             <LanguagesDropdown />
           </div>
         </div>
-        {/* Mobile Divider */}
-        <div className='w-full h-[0.07rem] md:hidden bg-gradient-to-r from-transparent via-slate-400 to-transparent' />
       </Disclosure>
     </>
   );
