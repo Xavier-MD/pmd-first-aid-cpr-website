@@ -1,6 +1,6 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-const navigation = [
+const socialIcons = [
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/paul-martin-demers-1730aa215',
@@ -38,33 +38,32 @@ const navigation = [
   }
 ];
 
-const Footer = function() {
+const Footer = function () {
   const { t } = useTranslation();
 
   const copyright_text = t('copyright_text');
 
   return (
-    <footer className='w-full bg-slate-900 border-t-4 border-blue-300'>
-      <div className='h-24 max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
-        <div className='flex justify-center space-x-6 md:order-2'>
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className='text-slate-200 hover:text-blue-300'
-            >
-              <span className='sr-only'>{item.name}</span>
-              <item.icon className='h-6 w-6' aria-hidden='true' />
-            </a>
-          ))}
+    <>
+      {/* Footer */}
+      <footer>
+        <div className='w-full bg-gradient-to-b from-blue-200 to-blue-300'>
+          <div className='max-w-7xl h-[5rem] md:h-[4rem] mx-auto px-[2rem] py-[0.3rem] flex flex-col-reverse md:flex-row items-center justify-evenly md:justify-between'>
+            {/* Copyright Text */}
+            <p className='text-center text-[0.8rem] text-blue-100'>&copy; {copyright_text}</p>
+            {/* Social Icons */}
+            <div className='flex justify-center space-x-[2rem]'>
+              {socialIcons.map((item) => (
+                <a key={item.name} href={item.href} className='text-blue-100 hover:text-blue-500'>
+                  <span className='sr-only'>{item.name}</span>
+                  <item.icon className='w-[1.3rem] h-auto' aria-hidden='true' />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className='mt-8 md:mt-0 md:order-1'>
-          <p className='text-center text-base text-slate-200'>
-            &copy; { copyright_text }
-          </p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 
