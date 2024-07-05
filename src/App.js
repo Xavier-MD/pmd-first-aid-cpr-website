@@ -14,7 +14,7 @@ import Error from './pages/Error';
 function App() {
   return (
     <BrowserRouter>
-      <div className='flex w-full min-w-screen h-full min-h-screen flex-col'>
+      <div className='w-full min-w-screen max-w-screen h-full min-h-screen flex flex-col overflow-x-hidden'>
         <NavigationBar />
         <Routes>
           <Route path='/' element={<Landing />} />
