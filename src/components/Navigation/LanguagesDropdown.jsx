@@ -26,7 +26,7 @@ const LanguagesDropdown = function () {
     <Menu as='div' className='group inline-flex flex-col font-header justify-center items-center'>
       <div>
         <Menu.Button className='inline-flex items-center transition ease-in-out hover:-translate-y-[1px] hover:scale-110 duration-200 text-blue-400 hover:text-blue-500'>
-          <h2 className='mr-[0.7rem] md:mr-[0.5rem] font-thick font-medium text-[1.3rem] md:text-[0.95rem]'>{i18next.language.toUpperCase()}</h2>
+          <h2 className='mr-[0.7rem] md:mr-[0.5rem] font-thick font-medium text-[1.3rem] md:text-[0.95rem] capitalize'>{i18next.language}</h2>
           <FontAwesomeIcon className='w-auto h-[1.5rem] md:h-[1rem] mr-[2rem] md:mr-[0rem] pb-[0.2rem] md:pb-[0.075rem]' icon={faChevronDown} />
         </Menu.Button>
       </div>
