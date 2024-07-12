@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import i18n from 'i18next';
 import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faChevronDown, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
 import i18next from 'i18next';
 
@@ -23,32 +23,57 @@ const languages = [
 
 const LanguagesDropdown = function () {
   return (
-    <Menu as='div' className='group inline-flex flex-col font-header justify-center items-center'>
-      <div>
-        <Menu.Button className='inline-flex items-center transition ease-in-out hover:-translate-y-[1px] hover:scale-110 duration-200 text-blue-400 hover:text-blue-500'>
-          <h2 className='mr-[0.7rem] md:mr-[0.5rem] font-thick font-medium text-[1.3rem] md:text-[0.95rem] capitalize'>{i18next.language}</h2>
-          <FontAwesomeIcon className='w-auto h-[1.5rem] md:h-[1rem] mr-[2rem] md:mr-[0rem] pb-[0.2rem] md:pb-[0.075rem]' icon={faChevronDown} />
-        </Menu.Button>
-      </div>
+    <>
+      <Menu as='div' className='group flex flex-col font-header justify-center items-end md:items-center'>
+        <div>
+          <Menu.Button className='flex items-center transition ease-in-out duration-200 text-blue-400 hover:text-blue-500'>
+            <FontAwesomeIcon
+              className='w-[1.6rem] md:w-[0.9rem] h-auto mt-[0.1rem] md:mt-[0rem] mr-[0.9rem] md:mr-[0.4rem]'
+              icon={faEarthAmericas}
+            />
+            <h2 className='mr-[0.35rem] hidden md:block font-thick text-[0.95rem] capitalize'>
+              {i18next.language}
+            </h2>
+            <FontAwesomeIcon
+              className='w-[0.6rem] h-[auto] hidden md:block'
+              icon={faChevronDown}
+            />
+          </Menu.Button>
+        </div>
 
-      <Transition as={Fragment} enter='transition ease-out duration-100' enterFrom='transform opacity-0 scale-95' enterTo='transform opacity-100 scale-100' leave='transition ease-in duration-75' leaveFrom='transform opacity-100 scale-100' leaveTo='transform opacity-0 scale-95'>
-        <Menu.Items className='absolute mr-[3rem] top-[4rem] rounded-sm shadow shadow-slate-400 bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-10'>
-          <div className=''>
-            {languages.map(({ code, name, country_code, flagSvg }) => (
-              <div key={country_code}>
-                <Menu.Item>
-                  {({ active }) => (
-                    <button className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'group flex w-full items-center px-4 py-2 font-thick hover:bg-transparent')} onClick={() => i18next.changeLanguage(code)}>
-                      <p className='text-[0.95rem]'>{name}</p>
-                    </button>
-                  )}
-                </Menu.Item>
-              </div>
-            ))}
-          </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
+        <Transition
+          as={Fragment}
+          enter='transition ease-out duration-100'
+          enterFrom='transform opacity-0 scale-95'
+          enterTo='transform opacity-100 scale-100'
+          leave='transition ease-in duration-75'
+          leaveFrom='transform opacity-100 scale-100'
+          leaveTo='transform opacity-0 scale-95'
+        >
+          <Menu.Items className='absolute mr-[1rem] md:mr-[1.8rem] top-[4.5rem] md:top-[5.3rem] rounded-md shadow-md shadow-slate-200 bg-white ring-[0.05rem] ring-black ring-opacity-10 z-10'>
+            <div className='flex-col py-[0.5rem]'>
+              {languages.map(({ code, name, country_code, flagSvg }) => (
+                <div key={country_code}>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button
+                        className={classNames(
+                          active ? 'text-slate-800' : 'text-slate-500',
+                          'group flex w-full justify-start px-[1rem] py-[0.2rem] font-thick'
+                        )}
+                        onClick={() => i18next.changeLanguage(code)}
+                      >
+                        <p className='text-[0.9rem]'>{name}</p>
+                      </button>
+                    )}
+                  </Menu.Item>
+                </div>
+              ))}
+            </div>
+          </Menu.Items>
+        </Transition>
+      </Menu>
+    </>
   );
 };
 

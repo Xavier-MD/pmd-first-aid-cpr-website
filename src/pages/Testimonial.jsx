@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Carousel from '../components/Testimonials/Carousel';
 import TestimonialForm from '../components/Testimonials/TestimonialForm';
 
 const Testimonial = function() {
@@ -36,7 +35,7 @@ const Testimonial = function() {
             <TestimonialForm open={open} setOpen={setOpen} />
           </div>
         </div>
-        <Carousel />
+        
       </div>
     </>
   );

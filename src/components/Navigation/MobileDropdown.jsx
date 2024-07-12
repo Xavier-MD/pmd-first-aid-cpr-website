@@ -37,7 +37,7 @@ const MobileDropdown = function({ open, setOpen }) {
     <>
       <button
         type='button'
-        className='inline-flex justify-center items-center rounded text-lg text-blue-400 active:text-blue-600 focus:outline-none'
+        className='flex justify-center items-center rounded text-lg text-blue-400 active:text-blue-600 focus:outline-none'
         onClick={() => setOpen(true)}
       >
         <span className='sr-only'>Close panel</span>

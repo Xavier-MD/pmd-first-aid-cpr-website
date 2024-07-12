@@ -50,7 +50,7 @@ const NavigationBar = function () {
             <DesktopTab tabInfo={tabsInfo.contactUs} moveLeft='0' />
           </div>
           {/* Language Toggle Dropdown */}
-          <div className='pt-[2.5rem] grid grid-cols-1'>
+          <div className='pt-[0rem] md:pt-[2.5rem] grid grid-cols-1'>
             <LanguagesDropdown />
           </div>
         </div>
