@@ -10,8 +10,8 @@ module.exports = {
       font2: ['Lato'],
       font3: ['Merriweather'],
       font4: ['Montserrat'],
-      font5: ['Pontano+Sans'],
-      font6: ['Slabo+27px']
+      font5: ['Pontano Sans'],
+      font6: ['Slabo 27px']
     }
   },
   plugins: [
