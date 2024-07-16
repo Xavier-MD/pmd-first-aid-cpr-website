@@ -1,7 +1,7 @@
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDoubleDownIcon } from '@heroicons/react/solid';
 import { Fragment } from 'react';
-import QuoteForm from './QuoteForm';
+import QuoteForm from '../Testimonials/QuoteForm';
 
 const solutions = [
   {
