@@ -24,23 +24,23 @@ const languages = [
 const LanguagesDropdown = function () {
   return (
     <>
+      {/* Language Dropdown Component */}
       <Menu as='div' className='group flex flex-col font-header justify-center items-end md:items-center'>
+        {/* Language Tab Item */}
         <div>
           <Menu.Button className='flex items-center transition ease-in-out duration-200 text-blue-400 hover:text-blue-500'>
+            {/* Globe Icon */}
             <FontAwesomeIcon
               className='w-[1.6rem] md:w-[0.9rem] h-auto mt-[0.1rem] md:mt-[0rem] mr-[0.9rem] md:mr-[0.4rem]'
               icon={faEarthAmericas}
             />
-            <h2 className='mr-[0.35rem] hidden md:block font-thick text-[0.95rem] capitalize'>
-              {i18next.language}
-            </h2>
-            <FontAwesomeIcon
-              className='w-[0.6rem] h-[auto] hidden md:block'
-              icon={faChevronDown}
-            />
+            {/* Language Text */}
+            <h2 className='mr-[0.35rem] hidden md:block font-thick text-[0.95rem] capitalize'>{i18next.language}</h2>
+            {/* Chevron Icon */}
+            <FontAwesomeIcon className='w-[0.6rem] h-[auto] hidden md:block' icon={faChevronDown} />
           </Menu.Button>
         </div>
-
+        {/* Animation */}
         <Transition
           as={Fragment}
           enter='transition ease-out duration-100'
@@ -50,6 +50,7 @@ const LanguagesDropdown = function () {
           leaveFrom='transform opacity-100 scale-100'
           leaveTo='transform opacity-0 scale-95'
         >
+          {/* Dropdown Menu */}
           <Menu.Items className='absolute mr-[1rem] md:mr-[1.8rem] top-[4.5rem] md:top-[5.3rem] rounded-md shadow-md shadow-slate-200 bg-white ring-[0.05rem] ring-black ring-opacity-10 z-10'>
             <div className='flex-col py-[0.5rem]'>
               {languages.map(({ code, name, country_code, flagSvg }) => (
