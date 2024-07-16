@@ -16,15 +16,17 @@ function App() {
     <BrowserRouter>
       <div className='w-full min-w-screen max-w-screen h-full min-h-screen flex flex-col overflow-x-hidden'>
         <NavigationBar />
-        <Routes>
-          <Route path='/' element={<Landing />} />
-          <Route path='/about-us' element={<About />} />
-          <Route path='/courses' element={<CourseSelect />} />
-          <Route path='/courses/:id' element={<Course />} />
-          <Route path='/testimonials' element={<Testimonial />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='*' element={<Error />} />
-        </Routes>
+        <div className='p-[1.7rem] grow bg-gradient-to-b from-white to-blue-200'>
+          <Routes>
+            <Route path='/' element={<Landing />} />
+            <Route path='/about-us' element={<About />} />
+            <Route path='/courses' element={<CourseSelect />} />
+            <Route path='/courses/:id' element={<Course />} />
+            <Route path='/testimonials' element={<Testimonial />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='*' element={<Error />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
       <Toaster />
