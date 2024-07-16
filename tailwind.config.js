@@ -5,7 +5,13 @@ module.exports = {
       sans: ['Inter var'],
       thick: ['Work Sans'],
       header: ['Source Sans Pro'],
-      body: ['Roboto']
+      body: ['Roboto'],
+      font1: ['Catamaran'],
+      font2: ['Lato'],
+      font3: ['Merriweather'],
+      font4: ['Montserrat'],
+      font5: ['Pontano+Sans'],
+      font6: ['Slabo+27px']
     }
   },
   plugins: [
