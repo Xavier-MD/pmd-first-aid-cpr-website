@@ -1,41 +1,29 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import TestimonialForm from '../components/Testimonials/TestimonialForm';
+import TestimonialGrid from '../components/Testimonials/TestimonialGrid';
 
-const Testimonial = function() {
+const Testimonial = function () {
   const { t } = useTranslation();
 
   const testimonials_header_1 = t('testimonials_header_1');
   const testimonials_title_1 = t('testimonials_title_1');
-  const testimonials_text_1 = t('testimonials_text_1');
 
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div className='flex flex-col grow mt-16 bg-gradient-to-t from-blue-200 to-white'>
-        <div className='max-w-7xl mx-auto pt-14 pb-2 px-4 sm:px-6 lg:px-8'>
-          <div className='text-center'>
-            <h2 className='text-4xl tracking-tight text-center font-thick font-extrabold mb-2 text-blue-500'>
-              {testimonials_header_1}
-            </h2>
-            <div className='w-full h-auto flex justify-center mb-2'>
-              <div className='relative h-[1px] w-2/3 bg-gradient-to-r from-transparent via-blue-500 to-transparent'></div>
-            </div>
-            <p className='text-3xl font-thick font-extrabold text-slate-900 sm:tracking-tight'>
-              {testimonials_title_1}
-            </p>
-            <p className='max-w-xl mt-2 mx-auto text-md font-body text-slate-700'>
-              {testimonials_text_1}
-            </p>
-          </div>
+      {/* Testimonial Page */}
+      <div className='w-full max-w-7xl h-fit mx-auto flex-col items-center text-center'>
+        {/* Title Text */}
+        <div className='mb-[2rem] flex justify-center items-center'>
+          <div className='w-[10rem] h-[0.1rem] bg-gradient-to-r from-transparent to-blue-500' />
+          <h2 className='px-[1rem] text-2xl text-blue-500 font-font4 font-light'>{testimonials_header_1}</h2>
+          <div className='w-[10rem] h-[0.1rem] bg-gradient-to-l from-transparent to-blue-500' />
         </div>
-        <div className='mb-10 text-center'>
-          <div className='mt-2'>
-            <TestimonialForm open={open} setOpen={setOpen} />
-          </div>
-        </div>
-        
+        {/* <p className='text-xl font-thick font-extrabold text-slate-900 tracking-tight'>{testimonials_title_1}</p> */}
+        <TestimonialGrid />
+        {/* <TestimonialForm open={open} setOpen={setOpen} /> */}
       </div>
     </>
   );
