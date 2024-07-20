@@ -35,7 +35,7 @@ const NavigationBar = function () {
             <MobileDropdown open={open} setOpen={setOpen} />
           </div>
           {/* Desktop Tabs Left */}
-          <div className='pt-[2.5rem] hidden md:grid grid-cols-3 col-span-3'>
+          <div className='pt-[2rem] hidden md:grid grid-cols-3 col-span-3'>
             <DesktopTab tabInfo={tabsInfo.homepage} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.aboutUs} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.courses} moveLeft='0' />
@@ -45,12 +45,12 @@ const NavigationBar = function () {
             <img className='w-auto h-[4rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
           </div>
           {/* Desktop Tabs Right */}
-          <div className='pt-[2.5rem] hidden md:grid grid-cols-2 col-span-2'>
+          <div className='pt-[2rem] hidden md:grid grid-cols-2 col-span-2'>
             <DesktopTab tabInfo={tabsInfo.testimonials} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.contactUs} moveLeft='0' />
           </div>
           {/* Language Toggle Dropdown */}
-          <div className='pt-[0rem] md:pt-[2.5rem] grid grid-cols-1'>
+          <div className='pt-[0rem] md:pt-[2rem] grid grid-cols-1'>
             <LanguagesDropdown />
           </div>
         </div>
