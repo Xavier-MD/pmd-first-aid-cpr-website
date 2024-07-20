@@ -17,15 +17,17 @@ function App() {
       <div className='w-full min-w-screen max-w-screen h-full min-h-screen flex flex-col overflow-x-hidden'>
         <NavigationBar />
         <div className='p-[1.7rem] grow bg-gradient-to-b from-white to-blue-200'>
-          <Routes>
-            <Route path='/' element={<Landing />} />
-            <Route path='/about-us' element={<About />} />
-            <Route path='/courses' element={<CourseSelect />} />
-            <Route path='/courses/:id' element={<Course />} />
-            <Route path='/testimonials' element={<Testimonial />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='*' element={<Error />} />
-          </Routes>
+          <div className='w-full max-w-7xl h-fit mx-auto'>
+            <Routes>
+              <Route path='/' element={<Landing />} />
+              <Route path='/about-us' element={<About />} />
+              <Route path='/courses' element={<CourseSelect />} />
+              <Route path='/courses/:id' element={<Course />} />
+              <Route path='/testimonials' element={<Testimonial />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='*' element={<Error />} />
+            </Routes>
+          </div>
         </div>
         <Footer />
       </div>
