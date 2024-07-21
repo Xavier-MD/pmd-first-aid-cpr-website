@@ -17,7 +17,7 @@ function App() {
       <div className='w-full min-w-screen max-w-screen h-full min-h-screen flex flex-col overflow-x-hidden'>
         <NavigationBar />
         <div className='p-[1.7rem] grow bg-gradient-to-b from-white via-blue-100 to-blue-300'>
-          <div className='w-full max-w-7xl h-fit mx-auto'>
+          <div className='w-full max-w-7xl mx-auto'>
             <Routes>
               <Route path='/' element={<Landing />} />
               <Route path='/about-us' element={<About />} />
