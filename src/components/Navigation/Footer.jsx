@@ -47,7 +47,7 @@ const Footer = function () {
     <>
       {/* Footer */}
       <footer>
-        <div className='w-full bg-gradient-to-b from-blue-200 to-blue-300'>
+        <div className='w-full bg-gradient-to-b from-blue-300 to-blue-400'>
           <div className='max-w-7xl h-[5rem] md:h-[4rem] mx-auto px-[2rem] py-[0.3rem] flex flex-col-reverse md:flex-row items-center justify-evenly md:justify-between'>
             {/* Copyright Text */}
             <p className='text-center text-[0.8rem] text-blue-100'>&copy; {copyright_text}</p>
