@@ -3,7 +3,7 @@ import React from 'react';
 const Error = function () {
   return (
     <>
-      <div className='bg-white min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8'>
+      <div className='px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8'>
         <div className='max-w-max mx-auto'>
           <main className='sm:flex'>
             <p className='text-4xl font-extrabold text-blue-600 sm:text-5xl'>
@@ -26,7 +26,7 @@ const Error = function () {
                   Go back home
                 </a>
                 <a
-                  href='/contact-us'
+                  href='/contact'
                   className='inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-blue-200 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
                 >
                   Contact Us
