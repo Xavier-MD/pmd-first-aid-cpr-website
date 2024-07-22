@@ -41,7 +41,7 @@ const ContactForm = function () {
   const contactFormInput = function ({ label, id, type, autoComplete, input, placeholder, required }) {
     let inputField;
     const inputFieldAttributes =
-      'w-full bg-blue-100 border-0 rounded-md text-sm text-slate-700 focus:ring-[0.1rem] focus:ring-blue-500 placeholder:text-blue-300';
+      'w-full bg-sky-100 border-0 rounded-md text-sm text-slate-700 focus:ring-[0.1rem] focus:ring-blue-500 placeholder:text-slate-400 shadow-inner shadow-blue-200';
     switch (input) {
       case 'inputField':
         inputField = (
@@ -75,7 +75,7 @@ const ContactForm = function () {
   return (
     <>
       {/* Contact Form */}
-      <div className='z-10 mx-[2rem] px-[2.5rem] pt-[2rem] pb-[1.5rem] bg-white rounded-md shadow-2xl shadow-blue-800'>
+      <div className='z-10 mx-[2rem] px-[2.5rem] pt-[2rem] pb-[1.5rem] rounded-lg bg-white lg:bg-transparent shadow-2xl lg:shadow-none'>
         <form ref={form} onSubmit={sendEmail} className='w-full grid grid-cols-10 gap-x-[1rem] gap-y-[0.5rem]'>
           {/* Contact Form Fields */}
           <div className='col-span-10 lg:col-span-5'>
