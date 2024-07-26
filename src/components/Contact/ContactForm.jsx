@@ -51,7 +51,7 @@ const ContactForm = function () {
             name={id}
             type={type}
             autoComplete={autoComplete}
-            placeholder={placeholder}
+            //placeholder={placeholder}
             className={inputFieldAttributes}
           />
         );
@@ -75,7 +75,7 @@ const ContactForm = function () {
   return (
     <>
       {/* Contact Form */}
-      <div className='z-10 mx-[2rem] px-[2.5rem] pt-[2rem] pb-[1.5rem] rounded-lg bg-white lg:bg-transparent shadow-2xl lg:shadow-none'>
+      <div className='z-10 mx-[2rem] px-[2.5rem] py-[1.5rem] lg:py-[0rem] rounded-lg bg-gradient-to-b from-blue-100 lg:from-transparent to-blue-300 shadow-2xl lg:shadow-none'>
         <form ref={form} onSubmit={sendEmail} className='w-full grid grid-cols-10 gap-x-[1rem] gap-y-[0.5rem]'>
           {/* Contact Form Fields */}
           <div className='col-span-10 lg:col-span-5'>
