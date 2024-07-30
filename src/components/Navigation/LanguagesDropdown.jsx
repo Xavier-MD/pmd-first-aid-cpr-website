@@ -28,16 +28,19 @@ const LanguagesDropdown = function () {
       <Menu as='div' className='group flex flex-col font-header justify-center items-end md:items-center'>
         {/* Language Tab Item */}
         <div>
-          <Menu.Button className='flex items-center transition ease-in-out duration-200 text-blue-400 hover:text-blue-500'>
+          <Menu.Button className='flex items-center transition ease-in-out duration-200 text-slate-500 group-hover:text-blue-400'>
             {/* Globe Icon */}
             <FontAwesomeIcon
-              className='w-[1.6rem] md:w-[0.9rem] h-auto mt-[0.1rem] md:mt-[0rem] mr-[0.9rem] md:mr-[0.4rem]'
+              className='w-[1.6rem] md:w-[0.9rem] h-auto mt-[0.1rem] md:mt-[0rem] mr-[0.9rem] md:mr-[0.4rem] text-slate-400 transition ease-in-out duration-200 group-hover:text-blue-400'
               icon={faEarthAmericas}
             />
             {/* Language Text */}
-            <h2 className='mr-[0.35rem] hidden md:block font-thick text-[0.95rem] capitalize'>{i18next.language}</h2>
+            <h2 className='mr-[0.35rem] hidden md:block font-font4 text-[0.95rem] capitalize'>{i18next.language}</h2>
             {/* Chevron Icon */}
-            <FontAwesomeIcon className='w-[0.6rem] h-[auto] hidden md:block' icon={faChevronDown} />
+            <FontAwesomeIcon
+              className='w-[0.6rem] h-[auto] hidden md:block text-slate-400 transition ease-in-out duration-200 group-hover:text-blue-400'
+              icon={faChevronDown}
+            />
           </Menu.Button>
         </div>
         {/* Animation */}
@@ -51,7 +54,7 @@ const LanguagesDropdown = function () {
           leaveTo='transform opacity-0 scale-95'
         >
           {/* Dropdown Menu */}
-          <Menu.Items className='absolute mr-[1rem] md:mr-[1.8rem] top-[4.5rem] md:top-[5.3rem] rounded-md shadow-md shadow-slate-200 bg-white ring-[0.05rem] ring-black ring-opacity-10 z-50'>
+          <Menu.Items className='absolute mr-[1rem] md:mr-[1.8rem] top-[4.5rem] md:top-[4rem] rounded-md shadow-md shadow-slate-200 bg-white ring-[0.05rem] ring-black ring-opacity-10 z-50'>
             <div className='flex-col py-[0.5rem]'>
               {languages.map(({ code, name, country_code, flagSvg }) => (
                 <div key={country_code}>
