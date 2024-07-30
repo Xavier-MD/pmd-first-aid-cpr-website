@@ -31,11 +31,11 @@ const NavigationBar = function () {
       <Disclosure as='nav'>
         <div className='w-full max-w-7xl z-50 mx-auto flex bg-transparent'>
           {/* Mobile Menu */}
-          <div className='flex md:hidden justify-start'>
+          <div className='mt-[1rem] ml-[5vw] flex flex-1 md:hidden justify-start'>
             <MobileDropdown open={open} setOpen={setOpen} />
           </div>
           {/* Desktop Tabs Left */}
-          <div className='pt-[1rem] hidden md:flex flex-1 justify-end items-end space-x-[3rem]'>
+          <div className='pt-[1rem] pr-[0.2rem] hidden md:flex flex-1 justify-end items-end space-x-[2rem] lg:space-x-[3.5rem]'>
             <DesktopTab tabInfo={tabsInfo.homepage} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.aboutUs} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.courses} moveLeft='0' />
@@ -43,17 +43,20 @@ const NavigationBar = function () {
           {/* Logo */}
           <a
             href='/'
-            className='pl-[2.5rem] pr-[2.5rem] pt-[0.5rem] transition ease-in-out hover:-translate-y-[0.05rem] hover:scale-[110%] duration-200'
+            className='px-[2rem] lg:px-[3.5rem] pt-[0.5rem] transition ease-in-out hover:-translate-y-[0.05rem] hover:scale-[110%] duration-200'
           >
             <img className='w-auto h-[3.5rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
           </a>
           {/* Desktop Tabs Right */}
-          <div className='pt-[1rem] hidden md:flex flex-1 justify-start items-end space-x-[3rem]'>
+          <div className='pt-[1rem] pr-[0.2rem] hidden md:flex flex-1 justify-start items-end space-x-[2rem] lg:space-x-[3.5rem]'>
             <DesktopTab tabInfo={tabsInfo.testimonials} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.contactUs} moveLeft='0' />
             <LanguagesDropdown />
           </div>
-          {/* Language Toggle Dropdown */}
+          {/* Mobile Language Toggle Dropdown */}
+          <div className='mt-[1rem] mr-[5vw] flex flex-1 md:hidden justify-end'>
+            <LanguagesDropdown />
+          </div>
         </div>
       </Disclosure>
     </>
