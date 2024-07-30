@@ -14,7 +14,7 @@ const DesktopTab = function ({ tabInfo, moveLeft }) {
       <div
         className={classNames(
           window.location.pathname === tabInfo.href
-            ? 'bg-blue-400'
+            ? 'bg-blue-300'
             : 'bg-blue-200 transition ease-in-out duration-700 opacity-0 group-hover:opacity-100',
           'w-[1rem] h-[0.09rem] rounded-lg'
         )}
