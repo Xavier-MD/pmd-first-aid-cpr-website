@@ -6,7 +6,7 @@ const DesktopTab = function ({ tabInfo, moveLeft }) {
       <h2
         className={classNames(
           window.location.pathname === tabInfo.href ? 'text-blue-400' : 'text-slate-500 group-hover:text-blue-400',
-          'text-[0.95rem] font-font4 transition ease-in-out group-hover:-translate-y-[0.05rem] group-hover:scale-[110%] duration-200'
+          'text-[0.9rem] font-font4 font-medium transition ease-in-out group-hover:-translate-y-[0.05rem] group-hover:scale-[110%] duration-200'
         )}
       >
         {tabInfo.name}

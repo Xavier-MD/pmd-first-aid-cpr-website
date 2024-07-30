@@ -29,28 +29,26 @@ const NavigationBar = function () {
     <>
       {/* Navbar */}
       <Disclosure as='nav'>
-        <div className='w-full max-w-7xl z-10 mx-auto grid grid-cols-3 md:grid-cols-7 bg-transparent'>
+        <div className='w-full max-w-7xl z-50 mx-auto px-[2rem] py-[1rem] flex justify-center items-center bg-transparent'>
           {/* Mobile Menu */}
-          <div className='pl-[1rem] flex justify-start md:hidden'>
+          <div className='flex justify-start md:hidden'>
             <MobileDropdown open={open} setOpen={setOpen} />
           </div>
-          {/* Desktop Tabs Left */}
-          <div className='pt-[2rem] hidden md:grid grid-cols-3 col-span-3'>
-            <DesktopTab tabInfo={tabsInfo.homepage} moveLeft='0' />
+          {/* Logo + Desktop Tabs */}
+          <div className='w-fit px-[1.5rem] py-[0.5rem] hidden md:flex justify-center space-x-[2vw] bg-transparent border-[0.09rem] border-blue-300 rounded-lg shadow-lg shadow-blue-100'>
+            <a href={'/'} className='flex'>
+              <div className='z-20 opacity-80'>
+                <img className='w-auto h-[1.7rem] mr-[1.5vw]' src='/images/logo-no-text.png' alt='PMD Logo' />
+              </div>
+              <DesktopTab tabInfo={tabsInfo.homepage} moveLeft='0' />
+            </a>
             <DesktopTab tabInfo={tabsInfo.aboutUs} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.courses} moveLeft='0' />
-          </div>
-          {/* Logo */}
-          <div className='py-[0.8rem] z-20 flex justify-center items-end'>
-            <img className='w-auto h-[4rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
-          </div>
-          {/* Desktop Tabs Right */}
-          <div className='pt-[2rem] hidden md:grid grid-cols-2 col-span-2'>
             <DesktopTab tabInfo={tabsInfo.testimonials} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.contactUs} moveLeft='0' />
           </div>
           {/* Language Toggle Dropdown */}
-          <div className='pt-[0rem] md:pt-[2rem] grid grid-cols-1'>
+          <div className='absolute top-0 right-0'>
             <LanguagesDropdown />
           </div>
         </div>
