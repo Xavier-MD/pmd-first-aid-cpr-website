@@ -29,30 +29,31 @@ const NavigationBar = function () {
     <>
       {/* Navbar */}
       <Disclosure as='nav'>
-        <div className='w-full max-w-7xl z-10 mx-auto grid grid-cols-3 md:grid-cols-7 bg-transparent'>
+        <div className='w-full max-w-7xl z-50 mx-auto flex bg-transparent'>
           {/* Mobile Menu */}
-          <div className='pl-[1rem] flex justify-start md:hidden'>
+          <div className='flex md:hidden justify-start'>
             <MobileDropdown open={open} setOpen={setOpen} />
           </div>
           {/* Desktop Tabs Left */}
-          <div className='pt-[2rem] hidden md:grid grid-cols-3 col-span-3'>
+          <div className='pt-[1rem] hidden md:flex flex-1 justify-end items-end space-x-[3rem]'>
             <DesktopTab tabInfo={tabsInfo.homepage} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.aboutUs} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.courses} moveLeft='0' />
           </div>
           {/* Logo */}
-          <div className='py-[0.8rem] z-20 flex justify-center items-end'>
-            <img className='w-auto h-[4rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
-          </div>
+          <a
+            href='/'
+            className='pl-[2.5rem] pr-[2.5rem] pt-[0.5rem] transition ease-in-out hover:-translate-y-[0.05rem] hover:scale-[110%] duration-200'
+          >
+            <img className='w-auto h-[3.5rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
+          </a>
           {/* Desktop Tabs Right */}
-          <div className='pt-[2rem] hidden md:grid grid-cols-2 col-span-2'>
+          <div className='pt-[1rem] hidden md:flex flex-1 justify-start items-end space-x-[3rem]'>
             <DesktopTab tabInfo={tabsInfo.testimonials} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.contactUs} moveLeft='0' />
-          </div>
-          {/* Language Toggle Dropdown */}
-          <div className='pt-[0rem] md:pt-[2rem] grid grid-cols-1'>
             <LanguagesDropdown />
           </div>
+          {/* Language Toggle Dropdown */}
         </div>
       </Disclosure>
     </>
