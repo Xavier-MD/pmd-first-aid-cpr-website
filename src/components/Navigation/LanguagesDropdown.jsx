@@ -54,7 +54,7 @@ const LanguagesDropdown = function () {
           leaveTo='transform opacity-0 scale-95'
         >
           {/* Dropdown Menu */}
-          <Menu.Items className='absolute mr-[1rem] md:mr-[0rem] top-[5rem] rounded-md drop-shadow-xl bg-white ring-[0.05rem] ring-black ring-opacity-10 z-50'>
+          <Menu.Items className='absolute top-[5rem] rounded-md drop-shadow-xl bg-white ring-[0.05rem] ring-black ring-opacity-10 z-50'>
             <div className='flex-col py-[0.5rem]'>
               {languages.map(({ code, name, country_code, flagSvg }) => (
                 <div key={country_code}>
