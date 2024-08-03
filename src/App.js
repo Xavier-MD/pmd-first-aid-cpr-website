@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <div className='w-full min-w-screen max-w-screen h-full min-h-screen flex flex-col overflow-x-hidden'>
         <NavigationBar />
-        <div className='p-[1.7rem] flex grow justify-center items-center bg-gradient-to-b from-white via-blue-100 to-blue-300'>
+        <div className='px-[4vw] py-[1.7rem] flex grow justify-center items-center bg-gradient-to-b from-white via-blue-100 to-blue-300'>
           <div className='w-full max-w-7xl mx-auto'>
             <Routes>
               <Route path='/' element={<Landing />} />
