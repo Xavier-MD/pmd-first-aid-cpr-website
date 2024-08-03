@@ -39,7 +39,7 @@ const Contact = function () {
           <div className='hidden lg:flex'>{ctaSection()}</div>
         </div>
         {/* Right Side Content */}
-        <div className='w-full h-full pl-[1rem] flex items-center'>
+        <div className='w-full h-full  flex items-center'>
           <ContactForm />
         </div>
         <div className='mt-[2rem] mb-[-1rem] flex lg:hidden justify-center'>{ctaSection()}</div>
