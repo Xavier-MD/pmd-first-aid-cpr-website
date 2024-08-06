@@ -30,10 +30,10 @@ const Contact = function () {
     <>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         {/* Left Side Content */}
-        <div className='h-full mx-[3rem] flex flex-col justify-center items-center lg:items-start space-y-[1rem] text-center lg:text-left'>
+        <div className='h-full mt-[1rem] lg:mt-[0rem] pb-[1.5rem] lg:pb-[0rem] flex flex-col justify-center items-center lg:items-start space-y-[1rem] text-center lg:text-left'>
           {/* Header Text */}
           <h2 className='text-4xl text-slate-700 font-thick font-bold'>{contact_us_title_1}</h2>
-          <p className='max-w-lg pb-[2rem] lg:pb-[0.5rem] font-sans text-gray-500'>{contact_us_text_1}</p>
+          <p className='max-w-lg pb-[2rem] lg:pb-[0.5rem] font-sans text-gray-500 text-pretty '>{contact_us_text_1}</p>
           {/* Divider */}
           <div className='w-full h-[0.2rem] hidden lg:block rounded-lg bg-gradient-to-r from-blue-400 to-50%' />
           <div className='hidden lg:flex'>{ctaSection()}</div>
@@ -42,7 +42,7 @@ const Contact = function () {
         <div className='w-full h-full  flex items-center'>
           <ContactForm />
         </div>
-        <div className='mt-[2rem] mb-[-1rem] flex lg:hidden justify-center'>{ctaSection()}</div>
+        <div className='mt-[3.5rem] mb-[0.5rem] flex lg:hidden justify-center'>{ctaSection()}</div>
       </div>
     </>
   );
