@@ -29,32 +29,24 @@ const NavigationBar = function () {
     <>
       {/* Navbar */}
       <Disclosure as='nav'>
-        <div className='w-full max-w-7xl z-50 mx-auto flex bg-transparent'>
+        <div className='w-full max-w-7xl z-50 mx-auto px-[3rem] grid grid-cols-3 md:grid-cols-7 bg-transparent'>
           {/* Mobile Menu */}
-          <div className='mt-[1rem] ml-[5vw] flex flex-1 md:hidden justify-start'>
+          <div className='mt-[1.5rem] ml-[4vw] flex flex-1 md:hidden justify-start'>
             <MobileDropdown open={open} setOpen={setOpen} />
           </div>
-          {/* Desktop Tabs Left */}
-          <div className='pt-[1rem] pr-[0.2rem] hidden md:flex flex-1 justify-end items-end space-x-[2rem] lg:space-x-[3.5rem]'>
+          {/* Desktop Tabs */}
+          <a href='/' className='flex justify-center md:justify-start'>
+            <img className='w-auto h-[4rem] md:h-[2.5rem] mt-[1rem]' src='/images/logo-no-text.png' alt='PMD Logo' />
+          </a>
+          <div className='mt-[1.5rem] hidden md:flex justify-center items-center space-x-[3rem] col-start-2 col-span-5 text-nowrap'>
             <DesktopTab tabInfo={tabsInfo.homepage} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.aboutUs} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.courses} moveLeft='0' />
-          </div>
-          {/* Logo */}
-          <a
-            href='/'
-            className='px-[2rem] lg:px-[3.5rem] pt-[0.5rem] transition ease-in-out hover:-translate-y-[0.05rem] hover:scale-[110%] duration-200'
-          >
-            <img className='w-auto h-[3.5rem]' src='/images/logo-large-text.png' alt='PMD Logo' />
-          </a>
-          {/* Desktop Tabs Right */}
-          <div className='pt-[1rem] pr-[0.2rem] hidden md:flex flex-1 justify-start items-end space-x-[2rem] lg:space-x-[3.5rem]'>
             <DesktopTab tabInfo={tabsInfo.testimonials} moveLeft='0' />
             <DesktopTab tabInfo={tabsInfo.contactUs} moveLeft='0' />
-            <LanguagesDropdown />
           </div>
           {/* Mobile Language Toggle Dropdown */}
-          <div className='mt-[1rem] mr-[5vw] flex flex-1 md:hidden justify-end'>
+          <div className='mt-[1.5rem] md:mt-[1rem] mr-[4vw] md:mr-[0rem] flex justify-end items-center md:col-start-7'>
             <LanguagesDropdown />
           </div>
         </div>
