@@ -46,7 +46,7 @@ const NavigationBar = function () {
             <DesktopTab tabInfo={tabsInfo.contactUs} moveLeft='0' />
           </div>
           {/* Mobile Language Toggle Dropdown */}
-          <div className='mt-[1.5rem] md:mt-[1rem] mr-[4vw] md:mr-[0rem] flex justify-end items-center md:col-start-7'>
+          <div className='mt-[1.5rem] mr-[4vw] md:mr-[0rem] flex justify-end items-center md:col-start-7'>
             <LanguagesDropdown />
           </div>
         </div>
