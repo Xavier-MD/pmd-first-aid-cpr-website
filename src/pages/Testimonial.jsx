@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import TestimonialForm from '../components/Testimonials/NewTestimonialForm';
+import TestimonialForm from '../components/Testimonials/TestimonialForm';
 import TestimonialCarousel from '../components/Testimonials/TestimonialCarousel';
 
 const Testimonial = function() {
