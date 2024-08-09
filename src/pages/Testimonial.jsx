@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import TestimonialForm from '../components/Testimonials/TestimonialForm';
-import TestimonialGrid from '../components/Testimonials/TestimonialGrid';
+import TestimonialForm from '../components/Testimonials/NewTestimonialForm';
+import TestimonialCarousel from '../components/Testimonials/TestimonialCarousel';
 
 const Testimonial = function() {
   /* Translation Text Variables */
@@ -15,16 +15,16 @@ const Testimonial = function() {
   return (
     <>
       {/* Testimonial Page */}
-      <div className='flex-col items-center text-center'>
+      <div className='flex flex-col items-center text-center'>
         {/* Header Text */}
-        <div className='mb-[2rem] flex justify-center items-center'>
+        {/* <div className='mb-[2rem] flex justify-center items-center'>
           <div className='w-[10rem] h-[0.1rem] bg-gradient-to-r from-transparent to-blue-300' />
           <h2 className='px-[1rem] text-2xl text-slate-600 font-font4 font-light'>{testimonials_header_1}</h2>
           <div className='w-[10rem] h-[0.1rem] bg-gradient-to-l from-transparent to-blue-300' />
-        </div>
+        </div> */}
         {/* <p className='text-xl font-thick font-extrabold text-slate-900 tracking-tight'>{testimonials_title_1}</p> */}
-        <TestimonialGrid />
-        {/* <TestimonialForm open={open} setOpen={setOpen} /> */}
+        <TestimonialCarousel />
+        <TestimonialForm open={open} setOpen={setOpen} />
       </div>
     </>
   );
