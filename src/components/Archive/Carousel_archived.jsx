@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Parallax, Pagination, Navigation, Autoplay } from 'swiper';
-import TestimonialCard from './TestimonialCard';
+import TestimonialCard from './TestimonialCard_archived';
 import { useTranslation } from 'react-i18next';
 
 const Carousel = function () {
