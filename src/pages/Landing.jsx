@@ -1,14 +1,20 @@
 import { useTranslation } from 'react-i18next';
+import { WordFlipAnimation } from '../components/Landing/WordFlipAnimation';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import tailwindGradientMaskImage from 'tailwind-gradient-mask-image';
+import { LandingGrid } from '../components/Landing/LandingGrid';
 
 const Landing = function () {
   const { t } = useTranslation();
-
   const pmd_company_name = t('pmd_company_name');
-  const pmd_company_slogan = t('pmd_company_slogan');
-
+  const pmd_company_slogan_1 = t('pmd_company_slogan_1');
+  const pmd_company_slogan_2 = t('pmd_company_slogan_2');
+  const pmd_company_slogan_3 = t('pmd_company_slogan_3');
   const browse_courses_button = t('browse_courses_button');
-  const book_course_button = t('book_course_button')
-
+  const book_course_button = t('book_course_button');
   const pop_courses_section_title = t('pop_courses_section_title');
   const pop_courses_section_text = t('pop_courses_section_text');
   const pop_course_1_title = t('pop_course_1_title');
@@ -19,11 +25,9 @@ const Landing = function () {
   const pop_course_2_text = t('pop_course_2_text');
   const pop_course_3_text = t('pop_course_3_text');
   const pop_course_4_text = t('pop_course_4_text');
-
   const contact_redirect_section_title = t('contact_redirect_section_title');
   const contact_redirect_section_text = t('contact_redirect_section_text');
   const contact_redirect_section_button = t('contact_redirect_section_button');
-
   const authorizations_section_title = t('authorizations_section_title');
   const authorizations_section_text = t('authorizations_section_text');
 
@@ -58,40 +62,59 @@ const Landing = function () {
     }
   ];
 
-  return (
-    <div className='bg-white'>
-      {/* Hero section */}
-      <div className='relative bg-gray-900 shadow-lg shadow-slate-500 min-h-screen h-full vh-screen'>
-        {/* Decorative image and overlay */}
-        <div aria-hidden='true' className='absolute inset-0 overflow-hidden'>
-          <img
-            src='/images/group-training-picture.jpg'
-            alt=''
-            className='w-full h-full object-full blur-sm'
-          />
-        </div>
-        <div
-          aria-hidden='true'
-          className='absolute inset-0 bg-slate-900 opacity-40'
-        />
+  const [showLogo, setShowLogo] = useState(true);
+  const [showText, setShowText] = useState(false);
 
-        <div className='relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0'>
-          <img
-            src='/images/logo-no-text.png'
-            alt=''
-            className='w-44 mb-24 h-auto object-center'
-          />
-          <h1 className='text-4xl font-header font-semibold tracking-tight text-white lg:text-6xl'>
-            {pmd_company_name}
-          </h1>
-          <p className='mt-4 text-3xl text-white font-thick font-light'>
-            {pmd_company_slogan}
-          </p>
-          <div className='mt-5 mx-auto sm:flex sm:justify-center md:mt-8'>
+  useEffect(() => {
+    // Set a timer to hide the logo after 3 seconds
+    const logoTimer = setTimeout(() => {
+      setShowLogo(false);
+      // Set another timer to show the text after the logo fade-out completes
+      setTimeout(() => {
+        setShowText(true);
+      }, 1000); // This matches the fade-out duration
+    }, 3000); // Show logo for 3 seconds
+
+    return () => clearTimeout(logoTimer);
+  }, []);
+
+  const ratingIconFormatter = function (rating) {
+    if (rating) {
+      return [...Array(rating)].map((e, i) => (
+        <FontAwesomeIcon icon={faStar} className='w-[1.5rem] h-auto text-blue-500' />
+      ));
+    }
+  };
+
+  return (
+    <>
+      <div className='grid grid-cols-2'>
+        <div className='flex flex-col justify-center'>
+          <motion.div
+            key='text1'
+            className='text-4xl font-font2 font-light text-slate-700'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <div className=''>
+              <p className='mr-[0.35rem]'>Your first choice for</p>
+              <WordFlipAnimation
+                words={[pmd_company_slogan_1, pmd_company_slogan_2, pmd_company_slogan_3]}
+                duration={2500}
+              />
+              <p className=''>first aid & cpr training</p>
+            </div>
+          </motion.div>
+          <div className='mt-[1rem] flex'>
+            {ratingIconFormatter(5)} <p className='mt-[0.3rem] ml-[1rem]'>100+ Reviews</p>
+          </div>
+
+          <div className='mt-5 flex'>
             <div className='rounded-md shadow min-w-[15rem]'>
               <a
                 href='/courses'
-                className='w-full flex items-center justify-center px-8 py-3 border border-transparent font-header text-lg font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 md:py-4 md:text-xl md:px-10'
+                className='w-full flex items-center justify-center px-8 py-3 border border-transparent font-header text-lg font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 md:py-4 md:text-xl md:px-10 shadow-md'
               >
                 {browse_courses_button}
               </a>
@@ -99,137 +122,28 @@ const Landing = function () {
             <div className='mt-3 rounded-md shadow sm:mt-0 sm:ml-3 min-w-[15rem]'>
               <a
                 href='/contact-us'
-                className='w-full flex items-center justify-center px-8 py-3 border border-transparent font-header text-base font-medium rounded-md text-blue-500 bg-white hover:bg-blue-100 md:py-4 md:text-xl md:px-10'
+                className='w-full flex items-center justify-center px-8 py-3 border border-transparent font-header text-base font-medium rounded-md text-blue-500 bg-white hover:bg-blue-100 md:py-4 md:text-xl md:px-10 shadow-md'
               >
                 {book_course_button}
               </a>
             </div>
           </div>
         </div>
+        <div>
+          <LandingGrid />
+        </div>
       </div>
-
-      <main>
-        {/* Collection section */}
-        <section
-          aria-labelledby='collection-heading'
-          className='bg-gradient-to-b from-blue-200 to-white mx-auto pt-24 px-4 sm:pt-32 sm:px-6 lg:px-8'
-        >
-          <h2
-            id='collection-heading'
-            className='text-2xl font-extrabold tracking-tight text-gray-900'
-          >
-            {pop_courses_section_title}
-          </h2>
-          <p className='mt-4 text-base text-gray-500'>
-            {pop_courses_section_text}
-          </p>
-
-          <div className='mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-8'>
-            {courses.map((collection) => (
-              <a
-                key={collection.name}
-                href={collection.href}
-                className='group block'
-              >
-                <div
-                  aria-hidden='true'
-                  className='aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6'
-                >
-                  <img
-                    src={collection.imageSrc}
-                    alt={collection.imageAlt}
-                    className='w-full h-full object-center object-cover'
-                  />
-                </div>
-                <h3 className='mt-4 text-base font-semibold text-gray-900'>
-                  {collection.name}
-                </h3>
-                <p className='mt-2 text-sm text-gray-500'>
-                  {collection.description}
-                </p>
-              </a>
-            ))}
+      <div className='mt-[2rem] flex justify-center'>
+        <div className='w-[40rem] grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-blue-100 shadow-lg'>
+          <div className='my-[1rem] ml-[1rem] mr-[0.5rem] flex justify-center items-center bg-white rounded-md shadow-md'>
+            <img alt='Statamic' src='/images/red-cross-picture.png' className='w-[12rem]' />
           </div>
-        </section>
-
-        {/* Featured section */}
-        <section
-          aria-labelledby='comfort-heading'
-          className=' mx-auto pt-24 pb-10 px-4  sm:px-6 lg:px-8'
-        >
-          <div className='relative rounded-lg overflow-hidden'>
-            <div className='absolute inset-0'>
-              <img
-                src='https://tailwindui.com/img/ecommerce-images/home-page-01-feature-section-02.jpg'
-                alt=''
-                className='w-full h-full object-center object-cover'
-              />
-            </div>
-            <div className='relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16'>
-              <div className='relative max-w-3xl mx-auto flex flex-col items-center text-center'>
-                <h2
-                  id='comfort-heading'
-                  className='text-3xl font-extrabold tracking-tight text-white sm:text-4xl'
-                >
-                  {contact_redirect_section_title}
-                </h2>
-                <p className='mt-3 text-xl text-white'>
-                  {contact_redirect_section_text}
-                </p>
-                <a
-                  href='/contact-us'
-                  className='mt-8 w-full block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto'
-                >
-                  {contact_redirect_section_button}
-                </a>
-              </div>
-            </div>
+          <div className='py-[1rem] pl-[0.5rem] pr-[1rem] flex justify-center items-center'>
+            <img alt='SavvyCal' src='/images/wsib_badge.png' className='rounded-md shadow-md' />
           </div>
-        </section>
-
-        <section className='bg-gradient-to-t from-blue-200 to-white w-full h-fit pt-10'>
-          <div className='relative'>
-            <div
-              className='absolute inset-0 flex items-center'
-              aria-hidden='true'
-            >
-              <div className='w-full border-t border-gray-300' />
-            </div>
-            <div className='relative flex justify-center'>
-              <span className='px-3 bg-white font-light text-3xl font-header text-gray-700'>
-                {authorizations_section_title}
-              </span>
-            </div>
-          </div>
-          <p className='max-w-xl mx-auto text-center mt-10 mb-14'>
-            {authorizations_section_text}
-          </p>
-          <div className='max-w-7xl mx-auto mt-6 grid grid-cols-2 md:grid-cols-3 lg:mt-8'>
-            <div className='col-span-1 flex justify-center items-center py-8 px-8 border-r-[1px] border-slate-300'>
-              <img
-                className='w-32 h-fit'
-                src='/images/logo-small-text.png'
-                alt='PMD Logo'
-              />
-            </div>
-            <div className='col-span-1 flex justify-center items-center py-8 px-8'>
-              <img
-                className='w-44 h-fit'
-                src='/images/red-cross-picture.png'
-                alt='Red Cross Logo'
-              />
-            </div>
-            <div className='col-span-1 flex justify-center items-center py-8 px-8 border-l-[1px] border-slate-300'>
-              <img
-                className='w-44'
-                src='/images/wsib-picture.svg'
-                alt='WSIB Logo'
-              />
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 export default Landing;
