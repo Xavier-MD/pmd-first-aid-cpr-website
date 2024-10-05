@@ -128,19 +128,19 @@ const Landing = function () {
               </a>
             </div>
           </div>
+          <div className='mt-[2rem] mb-[-1rem] mr-[6rem] flex justify-center'>
+            <div className='w-[40rem] grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-blue-100 shadow-inner shadow-blue-300'>
+              <div className='my-[1rem] ml-[1rem] mr-[0.5rem] flex justify-center items-center bg-white rounded-md shadow-md'>
+                <img alt='Statamic' src='/images/red-cross-picture.png' className='w-[12rem]' />
+              </div>
+              <div className='py-[1rem] pl-[0.5rem] pr-[1rem] flex justify-center items-center'>
+                <img alt='SavvyCal' src='/images/wsib_badge.png' className='rounded-md shadow-md' />
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <LandingGrid />
-        </div>
-      </div>
-      <div className='mt-[2rem] flex justify-center'>
-        <div className='w-[40rem] grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-blue-100 shadow-lg'>
-          <div className='my-[1rem] ml-[1rem] mr-[0.5rem] flex justify-center items-center bg-white rounded-md shadow-md'>
-            <img alt='Statamic' src='/images/red-cross-picture.png' className='w-[12rem]' />
-          </div>
-          <div className='py-[1rem] pl-[0.5rem] pr-[1rem] flex justify-center items-center'>
-            <img alt='SavvyCal' src='/images/wsib_badge.png' className='rounded-md shadow-md' />
-          </div>
         </div>
       </div>
     </>
