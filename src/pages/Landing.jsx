@@ -13,6 +13,8 @@ const Landing = function () {
   const pmd_company_slogan_1 = t('pmd_company_slogan_1');
   const pmd_company_slogan_2 = t('pmd_company_slogan_2');
   const pmd_company_slogan_3 = t('pmd_company_slogan_3');
+  const pmd_company_slogan_4 = t('pmd_company_slogan_4');
+  const pmd_company_slogan_5 = t('pmd_company_slogan_5');
   const browse_courses_button = t('browse_courses_button');
   const book_course_button = t('book_course_button');
   const pop_courses_section_title = t('pop_courses_section_title');
@@ -88,22 +90,22 @@ const Landing = function () {
 
   return (
     <>
-      <div className='grid grid-cols-2'>
+      <div className='grid grid-cols-1 lg:grid-cols-2'>
         <div className='flex flex-col justify-center'>
           <motion.div
             key='text1'
-            className='text-4xl font-font2 font-light text-slate-700'
+            className='text-3xl font-font2 font-light text-slate-700'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
             <div className=''>
-              <p className='mr-[0.35rem]'>Your first choice for</p>
+              <p className='mr-[0.35rem]'>{pmd_company_slogan_4}</p>
               <WordFlipAnimation
                 words={[pmd_company_slogan_1, pmd_company_slogan_2, pmd_company_slogan_3]}
                 duration={2500}
               />
-              <p className=''>first aid & cpr training</p>
+              <p className=''>{pmd_company_slogan_5}</p>
             </div>
           </motion.div>
           <div className='mt-[1rem] flex'>
@@ -128,7 +130,7 @@ const Landing = function () {
               </a>
             </div>
           </div>
-          <div className='mt-[2rem] mb-[-1rem] mr-[6rem] flex justify-center'>
+          <div className='mt-[2rem] mr-[6rem] flex justify-center'>
             <div className='w-[40rem] grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-blue-100 shadow-inner shadow-blue-300'>
               <div className='my-[1rem] ml-[1rem] mr-[0.5rem] flex justify-center items-center bg-white rounded-md shadow-md'>
                 <img alt='Statamic' src='/images/red-cross-picture.png' className='w-[12rem]' />

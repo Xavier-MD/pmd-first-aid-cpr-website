@@ -8,12 +8,12 @@ export const LandingGrid = () => {
           alt='woman performing cpr on mannequin'
         />
         <div className='h-full m-[0.5rem] flex items-center rounded-xl bg-white shadow-lg'>
-          <p>Learn more about what makes us special!</p>
+          
         </div>
       </div>
       <div className='h-full w-[12rem] flex flex-col'>
         <div className='h-full m-[0.5rem] flex items-center rounded-xl bg-white shadow-lg'>
-          <p>Questions? Message our team directly. </p>
+          
         </div>
         <img
           className='m-[0.5rem] rounded-2xl shadow-xl'
@@ -28,7 +28,7 @@ export const LandingGrid = () => {
           alt='group of students demonstrating proper cpr form'
         />
         <div className='h-full m-[0.5rem] flex items-center rounded-xl bg-white shadow-lg'>
-          <p>All services available in English and French.</p>
+          
         </div>
       </div>
     </div>
