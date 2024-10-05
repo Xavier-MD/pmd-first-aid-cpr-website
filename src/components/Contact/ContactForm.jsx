@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import toast from 'react-hot-toast';
 
 const ContactForm = function () {
   /* Translation Text Variables */
@@ -29,9 +30,15 @@ const ContactForm = function () {
       )
       .then(
         (result) => {
+          toast.success('Message Sent Successfully!', {
+            className: 'font-font4 rounded-md bg-green-100'
+          });
           console.log(result.text);
         },
         (error) => {
+          toast.error('Unable To Send Message. Please contact us directly.', {
+            className: 'font-font4 rounded-md bg-red-100'
+          });
           console.log(error.text);
         }
       );
