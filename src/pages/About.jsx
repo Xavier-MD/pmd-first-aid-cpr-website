@@ -22,7 +22,7 @@ const About = function() {
   const about_us_values_text = t('about_us_values_text');
 
   return (
-    <div className='flex flex-col grow bg-white mt-24 pb-20'>
+    <div className='flex flex-col grow  mt-24 pb-20'>
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20'>
         <div className='mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none -mb-8'>
           <div className='flex flex-col'>

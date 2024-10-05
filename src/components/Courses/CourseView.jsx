@@ -15,8 +15,8 @@ const CourseView = function ({ courseDetails }) {
   const course_info_subtitle_8 = t('course_info_subtitle_8');
 
   return (
-    <div className='py-20 bg-white overflow-hidden mt-24'>
-      <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
+    <div className='py-20 overflow-hidden mt-24'>
+      <div className='z-0 hidden lg:block  lg:inset-y-0 lg:h-full lg:w-full'>
         <div className='relative h-full text-lg max-w-prose mx-auto' aria-hidden='true'>
           <svg
             className='absolute top-12 left-full transform translate-x-32'
