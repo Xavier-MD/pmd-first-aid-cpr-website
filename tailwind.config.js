@@ -2,16 +2,15 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['Inter var'],
-      thick: ['Work Sans'],
-      header: ['Source Sans Pro'],
-      body: ['Roboto'],
-      font1: ['Catamaran'],
-      font2: ['Lato'],
-      font3: ['Merriweather'],
-      font4: ['Montserrat'],
-      font5: ['Pontano Sans'],
-      font6: ['Slabo 27px']
+      inter: ['Inter var'],
+      workSans: ['Work Sans'],
+      sourceSansPro: ['Source Sans Pro'],
+      catamaran: ['Catamaran'],
+      lato: ['Lato'],
+      montserrat: ['Montserrat'],
+      josefinSans: ['Josefin Sans'],
+      nunitoSans: ['Nunito Sans'],
+      quicksand: ['Quicksand']
     },
     extend: {
       animation: {
