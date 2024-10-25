@@ -10,11 +10,15 @@ module.exports = {
       montserrat: ['Montserrat'],
       josefinSans: ['Josefin Sans'],
       nunitoSans: ['Nunito Sans'],
-      quicksand: ['Quicksand']
+      quicksand: ['Quicksand'],
+      dmSans: ['DM Sans'],
+      libreBaskerville: ['Libre Baskerville'],
+      manrope: ['Manrope'],
+      poppins: ['Poppins'],
     },
     extend: {
       animation: {
-        gradient: 'animatedgradient 12s ease infinite alternate'
+        gradient: 'animatedgradient 16s ease infinite alternate'
       },
       keyframes: {
         animatedgradient: {
