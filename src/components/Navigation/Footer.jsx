@@ -42,21 +42,26 @@ const Footer = function () {
   const { t } = useTranslation();
 
   const copyright_text = t('copyright_text');
+  const image_copyright_text = t('image_copyright_text');
 
   return (
     <>
       {/* Footer */}
       <footer>
-        <div className='w-full bg-gradient-to-b from-blue-300 to-blue-400'>
+        <div className='w-full'>
           <div className='max-w-7xl h-[4rem] md:h-[3rem] mx-auto px-[2rem] py-[0.3rem] flex flex-col-reverse md:flex-row items-center justify-evenly md:justify-between'>
             {/* Copyright Text */}
-            <p className='text-center text-[0.8rem] text-blue-100'>&copy; {copyright_text}</p>
+            <div className='flex '>
+              <p className='text-center text-[0.70rem] text-white opacity-30'>
+                {copyright_text} {image_copyright_text}
+              </p>
+            </div>
             {/* Social Icons */}
             <div className='flex justify-center space-x-[2rem]'>
               {socialIcons.map((item) => (
                 <a key={item.name} href={item.href} className='text-blue-100 hover:text-blue-500'>
                   <span className='sr-only'>{item.name}</span>
-                  <item.icon className='w-[1.3rem] h-auto' aria-hidden='true' />
+                  <item.icon className='w-[1.2rem] h-auto opacity-40' aria-hidden='true' />
                 </a>
               ))}
             </div>
