@@ -331,7 +331,7 @@ const Course = function () {
     standardFirstAid: {
       title: course_info_sfa_title,
       summary: course_info_sfa_summary,
-      image: '/images/standard-first-aid-picture.jpg',
+      image: '/assets/images/standard-first-aid-picture.jpg',
       content: [
         course_info_sfa_content_1,
         course_info_sfa_content_2,
@@ -357,21 +357,14 @@ const Course = function () {
       duration: [course_info_sfa_duration_1, course_info_sfa_duration_2],
       instructor: [course_info_sfa_instructor_1],
       prerequisite: [course_info_sfa_prerequisite_1],
-      completion: [
-        course_info_sfa_completion_1,
-        course_info_sfa_completion_2,
-        course_info_sfa_completion_3
-      ],
+      completion: [course_info_sfa_completion_1, course_info_sfa_completion_2, course_info_sfa_completion_3],
       certification: [course_info_sfa_certification_1],
-      recertification: [
-        course_info_sfa_recertification_1,
-        course_info_sfa_recertification_2
-      ]
+      recertification: [course_info_sfa_recertification_1, course_info_sfa_recertification_2]
     },
     emergencyFirstAid: {
       title: course_info_efa_title,
       summary: course_info_efa_summary,
-      image: '/images/emergency-first-aid-picture.jpg',
+      image: '/assets/images/emergency-first-aid-picture.jpg',
       content: [
         course_info_efa_content_1,
         course_info_efa_content_2,
@@ -392,21 +385,14 @@ const Course = function () {
       duration: [course_info_efa_duration_1, course_info_efa_duration_2],
       instructor: [course_info_efa_instructor_1],
       prerequisite: [course_info_efa_prerequisite_1],
-      completion: [
-        course_info_efa_completion_1,
-        course_info_efa_completion_2,
-        course_info_efa_completion_3
-      ],
+      completion: [course_info_efa_completion_1, course_info_efa_completion_2, course_info_efa_completion_3],
       certification: [course_info_efa_certification_1],
-      recertification: [
-        course_info_efa_recertification_1,
-        course_info_efa_recertification_2
-      ]
+      recertification: [course_info_efa_recertification_1, course_info_efa_recertification_2]
     },
     cprAed: {
       title: course_info_cpraed_title,
       summary: course_info_cpraed_summary,
-      image: '/images/cpr-aed-picture.jpg',
+      image: '/assets/images/cpr-aed-picture.jpg',
       content: [
         course_info_cpraed_content_1,
         course_info_cpraed_content_2,
@@ -434,21 +420,14 @@ const Course = function () {
       duration: [course_info_cpraed_duration_1, course_info_cpraed_duration_2],
       instructor: [course_info_cpraed_instructor_1],
       prerequisite: [course_info_cpraed_prerequisite_1],
-      completion: [
-        course_info_cpraed_completion_1,
-        course_info_cpraed_completion_2,
-        course_info_cpraed_completion_3
-      ],
+      completion: [course_info_cpraed_completion_1, course_info_cpraed_completion_2, course_info_cpraed_completion_3],
       certification: [course_info_cpraed_certification_1],
-      recertification: [
-        course_info_cpraed_recertification_1,
-        course_info_cpraed_recertification_2
-      ]
+      recertification: [course_info_cpraed_recertification_1, course_info_cpraed_recertification_2]
     },
     basicLifeSupport: {
       title: course_info_bls_title,
       summary: course_info_bls_summary,
-      image: '/images/bls-picture.jpg',
+      image: '/assets/images/bls-picture.jpg',
       content: [
         course_info_bls_content_1,
         course_info_bls_content_2,
@@ -466,18 +445,14 @@ const Course = function () {
       ],
       instructor: [course_info_bls_instructor_1],
       prerequisite: [course_info_bls_prerequisite_1],
-      completion: [
-        course_info_bls_completion_1,
-        course_info_bls_completion_2,
-        course_info_bls_completion_3
-      ],
+      completion: [course_info_bls_completion_1, course_info_bls_completion_2, course_info_bls_completion_3],
       certification: [course_info_bls_certification_1],
       recertification: [course_info_bls_recertification_1]
     },
     marineBasicFirstAid: {
       title: course_info_mbfa_title,
       summary: course_info_mbfa_summary,
-      image: '/images/marine-sfa-picture.jpg',
+      image: '/assets/images/marine-sfa-picture.jpg',
       content: [
         course_info_mbfa_content_1,
         course_info_mbfa_content_2,
@@ -501,22 +476,15 @@ const Course = function () {
       ],
       duration: [course_info_mbfa_duration_1],
       instructor: [course_info_mbfa_instructor_1],
-      prerequisite: [
-        course_info_mbfa_prerequisite_1,
-        course_info_mbfa_prerequisite_2
-      ],
-      completion: [
-        course_info_mbfa_completion_1,
-        course_info_mbfa_completion_2,
-        course_info_mbfa_completion_3
-      ],
+      prerequisite: [course_info_mbfa_prerequisite_1, course_info_mbfa_prerequisite_2],
+      completion: [course_info_mbfa_completion_1, course_info_mbfa_completion_2, course_info_mbfa_completion_3],
       certification: [course_info_mbfa_certification_1],
       recertification: [course_info_mbfa_recertification_1]
     },
     standardFirstAidChild: {
       title: course_info_sfacc_title,
       summary: course_info_sfacc_summary,
-      image: '/images/sfa-child-picture.jpg',
+      image: '/assets/images/sfa-child-picture.jpg',
       content: [
         course_info_sfacc_content_1,
         course_info_sfacc_content_2,
@@ -535,26 +503,18 @@ const Course = function () {
         course_info_sfacc_content_15,
         course_info_sfacc_content_16
       ],
-      materials: [
-        course_info_sfacc_materials_1,
-        course_info_sfacc_materials_2,
-        course_info_sfacc_materials_3
-      ],
+      materials: [course_info_sfacc_materials_1, course_info_sfacc_materials_2, course_info_sfacc_materials_3],
       duration: [course_info_sfacc_duration_1],
       instructor: [course_info_sfacc_instructor_1],
       prerequisite: [course_info_sfacc_prerequisite_1],
-      completion: [
-        course_info_sfacc_completion_1,
-        course_info_sfacc_completion_2,
-        course_info_sfacc_completion_3
-      ],
+      completion: [course_info_sfacc_completion_1, course_info_sfacc_completion_2, course_info_sfacc_completion_3],
       certification: [course_info_sfacc_certification_1],
       recertification: [course_info_sfacc_recertification_1]
     },
     emergencyFirstAidChild: {
       title: course_info_efacc_title,
       summary: course_info_efacc_summary,
-      image: '/images/efa-child-picture.jpg',
+      image: '/assets/images/efa-child-picture.jpg',
       content: [
         course_info_efacc_content_1,
         course_info_efacc_content_2,
@@ -572,26 +532,18 @@ const Course = function () {
         course_info_efacc_content_14,
         course_info_efacc_content_15
       ],
-      materials: [
-        course_info_efacc_materials_1,
-        course_info_efacc_materials_2,
-        course_info_efacc_materials_3
-      ],
+      materials: [course_info_efacc_materials_1, course_info_efacc_materials_2, course_info_efacc_materials_3],
       duration: [course_info_efacc_duration_1],
       instructor: [course_info_efacc_instructor_1],
       prerequisite: [course_info_efacc_prerequisite_1],
-      completion: [
-        course_info_efacc_completion_1,
-        course_info_efacc_completion_2,
-        course_info_efacc_completion_3
-      ],
+      completion: [course_info_efacc_completion_1, course_info_efacc_completion_2, course_info_efacc_completion_3],
       certification: [course_info_efacc_certification_1],
       recertification: [course_info_efacc_recertification_1]
     },
     oxygenTherapy: {
       title: course_info_ot_title,
       summary: course_info_ot_summary,
-      image: '/images/oxygen-therapy-picture.jpg',
+      image: '/assets/images/oxygen-therapy-picture.jpg',
       content: [
         course_info_ot_content_1,
         course_info_ot_content_2,
@@ -604,18 +556,14 @@ const Course = function () {
       duration: [course_info_ot_duration_1, course_info_ot_duration_2],
       instructor: [course_info_ot_instructor_1],
       prerequisite: [course_info_ot_prerequisite_1],
-      completion: [
-        course_info_ot_completion_1,
-        course_info_ot_completion_2,
-        course_info_ot_completion_3
-      ],
+      completion: [course_info_ot_completion_1, course_info_ot_completion_2, course_info_ot_completion_3],
       certification: [course_info_ot_certification_1],
       recertification: [course_info_ot_recertification_1]
     },
     airwayManagement: {
       title: course_info_am_title,
       summary: course_info_am_summary,
-      image: '/images/airway-management-picture.jpg',
+      image: '/assets/images/airway-management-picture.jpg',
       content: [
         course_info_am_content_1,
         course_info_am_content_2,
@@ -630,18 +578,14 @@ const Course = function () {
       duration: [course_info_am_duration_1, course_info_am_duration_2],
       instructor: [course_info_am_instructor_1],
       prerequisite: [course_info_am_prerequisite_1],
-      completion: [
-        course_info_am_completion_1,
-        course_info_am_completion_2,
-        course_info_am_completion_3
-      ],
+      completion: [course_info_am_completion_1, course_info_am_completion_2, course_info_am_completion_3],
       certification: [course_info_am_certification_1],
       recertification: [course_info_am_recertification_1]
     },
     workshops: {
       title: course_info_ws_title,
       summary: course_info_ws_summary,
-      image: '/images/workshops-picture.jpg',
+      image: '/assets/images/workshops-picture.jpg',
       content: [
         course_info_ws_content_1,
         course_info_ws_content_2,
@@ -667,16 +611,9 @@ const Course = function () {
       duration: [course_info_ws_duration_1, course_info_ws_duration_2],
       instructor: [course_info_ws_instructor_1],
       prerequisite: [course_info_ws_prerequisite_1],
-      completion: [
-        course_info_ws_completion_1,
-        course_info_ws_completion_2,
-        course_info_ws_completion_3
-      ],
+      completion: [course_info_ws_completion_1, course_info_ws_completion_2, course_info_ws_completion_3],
       certification: [course_info_ws_certification_1],
-      recertification: [
-        course_info_ws_recertification_1,
-        course_info_ws_recertification_2
-      ]
+      recertification: [course_info_ws_recertification_1, course_info_ws_recertification_2]
     }
   };
 

@@ -51,28 +51,17 @@ const About = function() {
                   height={20}
                   patternUnits='userSpaceOnUse'
                 >
-                  <rect
-                    x={0}
-                    y={0}
-                    width={4}
-                    height={4}
-                    className='text-slate-200'
-                    fill='currentColor'
-                  />
+                  <rect x={0} y={0} width={4} height={4} className='text-slate-200' fill='currentColor' />
                 </pattern>
               </defs>
-              <rect
-                width={404}
-                height={384}
-                fill='url(#de316486-4a29-4312-bdfc-fbce2132a2c1)'
-              />
+              <rect width={404} height={384} fill='url(#de316486-4a29-4312-bdfc-fbce2132a2c1)' />
             </svg>
             <div className='relative text-base mx-auto max-w-prose lg:max-w-none'>
               <figure>
                 <div className='aspect-none'>
                   <img
                     className=''
-                    src='/images/paul-transparent-picture.png'
+                    src='/assets/images/paul-transparent-picture.png'
                     alt=''
                     width={1184}
                     height={1376}
@@ -84,14 +73,10 @@ const About = function() {
           <div className='mt-8 lg:mt-0'>
             <div className='mt-4 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1'>
               <div className='text-lg bg-blue-400 max-w-fit rounded-full flex justify-center px-3'>
-                <p className='text-lg text-white font-header my-1'>
-                  Paul Martin Demers – (HBPHE, CEP, FAI)
-                </p>
+                <p className='text-lg text-white font-header my-1'>Paul Martin Demers – (HBPHE, CEP, FAI)</p>
               </div>
               <p className='text-slate-600'>{about_us_text_1}</p>
-              <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>
-                {about_us_title_2}
-              </h3>
+              <h3 className='font-semibold font-header tracking-tight text-gray-900 text-3xl'>{about_us_title_2}</h3>
               <div className='h-[1px] w-2/3 bg-gradient-to-r from-blue-400 -mt-2'></div>
               <ul className='text-slate-600'>
                 <li>{about_us_text_2_item_1}</li>

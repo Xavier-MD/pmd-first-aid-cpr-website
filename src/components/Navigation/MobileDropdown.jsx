@@ -44,11 +44,7 @@ const MobileDropdown = function({ open, setOpen }) {
         <FontAwesomeIcon icon={faBars} className='h-[1.8rem]' aria-hidden='true' />
       </button>
       <Transition.Root show={open} as={Fragment}>
-        <Dialog
-          as='div'
-          className='fixed inset-0 z-50 overflow-scroll'
-          onClose={setOpen}
-        >
+        <Dialog as='div' className='fixed inset-0 z-50 overflow-scroll' onClose={setOpen}>
           <div className='absolute inset-0 overflow-hidden'>
             <Transition.Child
               as={Fragment}
@@ -81,17 +77,9 @@ const MobileDropdown = function({ open, setOpen }) {
                           onClick={() => setOpen(false)}
                         >
                           <span className='sr-only'>Close panel</span>
-                          <FontAwesomeIcon
-                            icon={faAngleUp}
-                            className='h-6 w-6'
-                            aria-hidden='true'
-                          />
+                          <FontAwesomeIcon icon={faAngleUp} className='h-6 w-6' aria-hidden='true' />
                         </button>
-                        <img
-                          className='w-14 h-auto'
-                          src='/images/logo-no-text.png'
-                          alt='PMD logo no text'
-                        />
+                        <img className='w-14 h-auto' src='/assets/images/logo-no-text.png' alt='PMD logo no text' />
                         <div className='w-14' />
                       </div>
                     </div>
@@ -101,12 +89,7 @@ const MobileDropdown = function({ open, setOpen }) {
                           <MobileTab
                             key={tabInfo.name}
                             tabInfo={tabInfo}
-                            tabIcon={
-                              <FontAwesomeIcon
-                                icon={tabInfo.icon}
-                                className='w-5 h-auto'
-                              />
-                            }
+                            tabIcon={<FontAwesomeIcon icon={tabInfo.icon} className='w-5 h-auto' />}
                           />
                         ))}
                       </div>
