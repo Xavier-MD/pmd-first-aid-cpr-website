@@ -15,6 +15,11 @@ module.exports = {
       libreBaskerville: ['Libre Baskerville'],
       manrope: ['Manrope'],
       poppins: ['Poppins'],
+      raleway: ['Raleway'],
+      afacadFlux: ['Afacad Flux'],
+      bonaNovaSC: ['Bona Nova SC'],
+      glacialIndifference: ['Glacial Indifference'],
+      timesNewRoman: ['Times New Roman']
     },
     extend: {
       animation: {
