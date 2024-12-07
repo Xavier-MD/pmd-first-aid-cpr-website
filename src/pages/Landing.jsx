@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import tailwindGradientMaskImage from 'tailwind-gradient-mask-image';
 import { LandingGrid } from '../components/Landing/LandingGrid';
+import NavigationBar from '../components/Navigation/NavigationBar';
+import Footer from '../components/Navigation/Footer';
+import StarRating from '../components/Landing/StarRating';
 
 const Landing = function () {
   const { t } = useTranslation();
@@ -15,6 +18,7 @@ const Landing = function () {
   const pmd_company_slogan_3 = t('pmd_company_slogan_3');
   const pmd_company_slogan_4 = t('pmd_company_slogan_4');
   const pmd_company_slogan_5 = t('pmd_company_slogan_5');
+  const pmd_reviews_text = t('pmd_reviews_text');
   const browse_courses_button = t('browse_courses_button');
   const book_course_button = t('book_course_button');
   const pop_courses_section_title = t('pop_courses_section_title');
@@ -64,16 +68,9 @@ const Landing = function () {
     }
   ];
 
-  const ratingIconFormatter = function (rating) {
-    if (rating) {
-      return [...Array(rating)].map((e, i) => (
-        <FontAwesomeIcon icon={faStar} className='w-[1.5rem] h-auto text-blue-500' />
-      ));
-    }
-  };
-
   return (
-    <div className='w-screen h-screen overflow-hidden'>
+    <div className='w-screen h-screen'>
+      {/* Video Background */}
       <video
         autoPlay={true}
         muted={true}
@@ -84,11 +81,103 @@ const Landing = function () {
         <source src='/assets/videos/city-background.mp4' type='video/mp4' />
         Your browser does not support the video tag.
       </video>
-      {/* Video Overlay */}
-      <div className='absolute inset-0 bg-gradient-to-b from-blue-200 from-0% via-transparent via-10% to-transparent to-100% pointer-events-none opacity-90' />
-      <div className='absolute inset-0 bg-gradient-to-t from-blue-200 from-0% via-transparent via-10% to-transparent to-100% pointer-events-none opacity-90' />
-      <div className='absolute inset-0 ////backdrop-blur-[0.1rem]'>
-
+      {/* Video Vignette Overlay */}
+      <div className='absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-transparent via-[45%] to-black'>
+        {/* Landing Page Content */}
+        <div className='w-full h-full flex flex-col'>
+          {/* Navigation Top Bar */}
+          <div className='w-full h-fit backdrop-blur-[1.4rem] shadow-md'>
+            <div className='absolute inset-0 bg-black opacity-20 z-0' />
+            <div className='relative z-10'>
+              <NavigationBar isLandingPage={true} />
+              <div className='w-full h-[0.05rem] bg-slate-600 opacity-50' />
+            </div>
+          </div>
+          {/* Main Content */}
+          <div className='w-full h-full flex flex-col justify-center items-center '>
+            {/* <motion.div
+              key='sloganText'
+              className='text-2xl font-afacadFlux font-bold text-slate-900'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <div className='text-center space-y-[0.1rem]'>
+                <p className='mr-[0.35rem]'>{pmd_company_slogan_4}</p>
+                <WordFlipAnimation
+                  words={[pmd_company_slogan_1, pmd_company_slogan_2, pmd_company_slogan_3]}
+                  duration={2500}
+                />
+                <p className=''>{pmd_company_slogan_5}</p>
+              </div>
+            </motion.div> */}
+            <img src='/assets/images/logo-text-bold.png' alt='PMD Logo' className='w-[17rem] pt-[3rem] pb-[0.8rem]' />
+            <div className='flex pb-[1.5rem] gap-[1rem]'>
+              <StarRating />
+              <p className='mt-[0.1rem] mr-[0.15rem] text-[0.95rem] font-glacialIndifference text-[#535353] tracking-[0.05rem]'>
+                100+ {pmd_reviews_text}
+              </p>
+            </div>
+            <div className='mb-[5rem] grid grid-flow-row grid-cols-2 gap-[1rem]'>
+              <motion.a
+                href='/courses'
+                style={{
+                  '--gradient-from': '#60a5fa', // Initial gradient 'from' color (blue-300)
+                  '--gradient-to': '#2563eb', // Initial gradient 'to' color (blue-500)
+                  '--text-color': '#dbeafe' // Initial text color (white)
+                }}
+                whileHover={{
+                  '--gradient-from': '#60a5fa', // Hover gradient 'from' color (blue-500)
+                  '--gradient-to': '#1d4ed8', // Hover gradient 'to' color (blue-800)
+                  '--text-color': '#ffffff' // Hover text color (light blue)
+                }}
+                transition={{
+                  duration: 0.3,
+                  ease: 'easeInOut'
+                }}
+                className='flex items-center justify-center px-8 py-3 rounded-md bg-gradient-to-b from-[var(--gradient-from)] to-[var(--gradient-to)] text-[color:var(--text-color)] shadow-lg shadow-gray-500 font-glacialIndifference'
+              >
+                {browse_courses_button}
+              </motion.a>
+              <motion.a
+                href='/contact'
+                style={{
+                  '--gradient-from': '#eff6ff',
+                  '--gradient-to': '#dbeafe', // Light blue
+                  '--text-color': '#3b82f6' // Initial text color (white)
+                }}
+                whileHover={{
+                  '--gradient-from': '#eff6ff',
+                  '--gradient-to': '#bfdbfe',
+                  '--text-color': '#2563eb' // Hover text color (light blue)// Darker blue
+                }}
+                transition={{
+                  duration: 0.3,
+                  ease: 'easeInOut'
+                }}
+                className='flex items-center justify-center px-8 py-3 rounded-md bg-gradient-to-b from-[var(--gradient-from)] to-[var(--gradient-to)] text-[color:var(--text-color)] shadow-lg shadow-gray-400 font-glacialIndifference'
+              >
+                {book_course_button}
+              </motion.a>
+            </div>
+          </div>
+          {/* Navigation Footer */}
+          <div className='w-full h-fit'>
+            <Footer />
+          </div>
+          {/*
+          <div className='mt-[2rem] mr-[6rem] flex justify-center'>
+            <div className='w-[40rem] grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-blue-100 shadow-inner shadow-blue-300'>
+              <div className='my-[1rem] ml-[1rem] mr-[0.5rem] flex justify-center items-center bg-white rounded-md shadow-md'>
+                <img alt='Statamic' src='/images/red-cross-picture.png' className='w-[12rem]' />
+              </div>
+              <div className='py-[1rem] pl-[0.5rem] pr-[1rem] flex justify-center items-center'>
+                <img alt='SavvyCal' src='/images/wsib_badge.png' className='rounded-md shadow-md' />
+              </div>
+            </div>
+          </div>
+          */}
+        </div>
       </div>
     </div>
   );
