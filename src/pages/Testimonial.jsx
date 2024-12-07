@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import TestimonialForm from '../components/Testimonials/TestimonialForm';
 import TestimonialCarousel from '../components/Testimonials/TestimonialCarousel';
 
-const Testimonial = function() {
+const Testimonial = function () {
   /* Translation Text Variables */
   const { t } = useTranslation();
   const testimonials_header_1 = t('testimonials_header_1');
@@ -14,18 +14,15 @@ const Testimonial = function() {
 
   return (
     <>
-      {/* Testimonial Page */}
-      <div className='flex flex-col items-center text-center'>
-        {/* Header Text */}
-        {/* <div className='mb-[2rem] flex justify-center items-center'>
+      {/* Header Text */}
+      {/* <div className='mb-[2rem] flex justify-center items-center'>
           <div className='w-[10rem] h-[0.1rem] bg-gradient-to-r from-transparent to-blue-300' />
           <h2 className='px-[1rem] text-2xl text-slate-600 font-font4 font-light'>{testimonials_header_1}</h2>
           <div className='w-[10rem] h-[0.1rem] bg-gradient-to-l from-transparent to-blue-300' />
         </div> */}
-        {/* <p className='text-xl font-thick font-extrabold text-slate-900 tracking-tight'>{testimonials_title_1}</p> */}
-        <TestimonialCarousel />
-        <TestimonialForm open={open} setOpen={setOpen} />
-      </div>
+      {/* <p className='text-xl font-thick font-extrabold text-slate-900 tracking-tight'>{testimonials_title_1}</p> */}
+      <TestimonialCarousel />
+      <TestimonialForm open={open} setOpen={setOpen} />
     </>
   );
 };
