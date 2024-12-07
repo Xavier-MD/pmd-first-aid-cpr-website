@@ -7,7 +7,7 @@
   "contact_us_tab": "Contact",
 
   "NAVIGATION_FOOTER": "//////////////////////////////////////////////////////////////",
-  "copyright_text": "2024 PMD First Aid & CPR. All rights reserved.",
+  "copyright_text": "© 2024 PMD First Aid & CPR. All rights reserved.",
   "image_copyright_text": "Building Stock Videos by Vecteezy",
 
   "HOME_PAGE": "//////////////////////////////////////////////////////////////////////",
@@ -15,10 +15,11 @@
   "pmd_company_slogan_1": "Bilingual",
   "pmd_company_slogan_2": "Accessible",
   "pmd_company_slogan_3": "Equitable",
-  "pmd_company_slogan_4": "Your first choice for",
-  "pmd_company_slogan_5": "First Aid & CPR training",
+  "pmd_company_slogan_4": "The GTA's First Choice For",
+  "pmd_company_slogan_5": "First Aid & CPR Training",
+  "pmd_reviews_text": "Reviews",
   "browse_courses_button": "Browse All Courses",
-  "book_course_button": "Book Now",
+  "book_course_button": "Contact Us",
   "pop_courses_section_title": "Popular Courses",
   "pop_courses_section_text": "Our clients spoke and we listened. Here are their favourite courses of 2022.",
   "pop_course_1_title": "Standard First Aid",
