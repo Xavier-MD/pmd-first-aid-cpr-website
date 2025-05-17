@@ -21,6 +21,7 @@ const Landing = function () {
   const pmd_reviews_text = t('pmd_reviews_text');
   const browse_courses_button = t('browse_courses_button');
   const book_course_button = t('book_course_button');
+  const pay_online_button = t('pay_online_button');
   const pop_courses_section_title = t('pop_courses_section_title');
   const pop_courses_section_text = t('pop_courses_section_text');
   const pop_course_1_title = t('pop_course_1_title');
@@ -120,7 +121,7 @@ const Landing = function () {
             </div>
             <div className='mb-[5rem] grid grid-flow-row grid-cols-2 gap-[1rem]'>
               <motion.a
-                href='/courses'
+                href='/contact'
                 style={{
                   '--gradient-from': '#60a5fa', // Initial gradient 'from' color (blue-300)
                   '--gradient-to': '#2563eb', // Initial gradient 'to' color (blue-500)
@@ -137,10 +138,10 @@ const Landing = function () {
                 }}
                 className='flex items-center justify-center px-8 py-3 rounded-md bg-gradient-to-b from-[var(--gradient-from)] to-[var(--gradient-to)] text-[color:var(--text-color)] shadow-lg shadow-gray-500 font-glacialIndifference'
               >
-                {browse_courses_button}
+                {book_course_button}
               </motion.a>
               <motion.a
-                href='/contact'
+                href='https://buy.stripe.com/28EdR8gwAgqcc7b6SWa7C00'
                 style={{
                   '--gradient-from': '#eff6ff',
                   '--gradient-to': '#dbeafe', // Light blue
@@ -157,7 +158,7 @@ const Landing = function () {
                 }}
                 className='flex items-center justify-center px-8 py-3 rounded-md bg-gradient-to-b from-[var(--gradient-from)] to-[var(--gradient-to)] text-[color:var(--text-color)] shadow-lg shadow-gray-400 font-glacialIndifference'
               >
-                {book_course_button}
+                {pay_online_button}
               </motion.a>
             </div>
           </div>
