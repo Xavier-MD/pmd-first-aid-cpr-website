@@ -8,16 +8,16 @@ import i18next from 'i18next';
 
 const languages = [
   {
-    code: 'en',
-    name: 'English',
-    country_code: 'en-ca',
-    flagSvg: 'ontario-flag.svg'
-  },
-  {
     code: 'fr',
     name: 'Français',
     country_code: 'fr-ca',
     flagSvg: 'québec-flag.svg'
+  },
+  {
+    code: 'en',
+    name: 'English',
+    country_code: 'en-ca',
+    flagSvg: 'ontario-flag.svg'
   }
 ];
 

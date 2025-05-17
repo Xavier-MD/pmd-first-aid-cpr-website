@@ -15,7 +15,7 @@ i18n
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'fr',
     detection: {
       order: ['cookie', 'querystring', 'localStorage', 'path', 'subdomain'],
       caches: ['cookie']
@@ -27,7 +27,7 @@ i18n
 
 function AppWithCallbackAfterRender() {
   useEffect(() => {
-    console.log('PMD First Aid & CPR | PMD Premiers Soins & RCR');
+    console.log('PMD Premiers Soins & RCR | PMD First Aid & CPR ');
   });
   return <App />;
 }
