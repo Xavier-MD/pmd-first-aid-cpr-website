@@ -10,6 +10,11 @@
   "copyright_text": "© 2024 PMD Premiers Soins & RCR. Tous droits réservés.",
   "image_copyright_text": "Vidéos de Bâtiments libres de droit par Vecteezy",
 
+  "CHATBOT_TEXT": "///////////////////////////////////////////////////////////////////",
+  "chatbot_header": "Service Client",
+  "chatbot_description": "Votre assistant virtuel pour tout ce qui concerne le support.",
+  "chatbot_placeholder": "Posez vos questions!",
+
   "HOME_PAGE": "//////////////////////////////////////////////////////////////////////",
   "pmd_company_name": "PMD Premiers Soins & RCR",
   "pmd_company_slogan_1": "Bilingue",

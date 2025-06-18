@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import Chatbot from '../Shared/Chatbot';
 
 const socialIcons = [
   {
@@ -56,15 +57,19 @@ const Footer = function () {
                 {copyright_text} {image_copyright_text}
               </p>
             </div>
-            {/* Social Icons */}
+            {/* Chatbot Popup */}
             <div className='flex justify-center space-x-[2rem]'>
+              <Chatbot />
+            </div>
+            {/* Social Icons */}
+            {/* <div className='flex justify-center space-x-[2rem]'>
               {socialIcons.map((item) => (
                 <a key={item.name} href={item.href} className='text-blue-100 hover:text-blue-500'>
                   <span className='sr-only'>{item.name}</span>
                   <item.icon className='w-[1.2rem] h-auto opacity-40' aria-hidden='true' />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

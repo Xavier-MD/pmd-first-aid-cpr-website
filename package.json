@@ -2,6 +2,7 @@
   "name": "pmd-first-aid-cpr-website",
   "version": "1.0.0",
   "dependencies": {
+    "@botpress/webchat": "^3.0.0",
     "@emailjs/browser": "^3.10.0",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
