@@ -30,14 +30,14 @@ const Landing = function () {
   const courses = [
     {
       name: pop_course_1_title,
-      href: '/courses/standard-first-aid',
+      href: '/courses/intermediate-standard-first-aid',
       imageSrc: '/images/standard-first-aid-picture.jpg',
       imageAlt: 'SFA Picture',
       description: pop_course_1_text
     },
     {
       name: pop_course_2_title,
-      href: '/courses/emergency-first-aid',
+      href: '/courses/basic-emergency-first-aid',
       imageSrc: '/images/emergency-first-aid-picture.jpg',
       imageAlt: 'EFA Picture',
       description: pop_course_2_text

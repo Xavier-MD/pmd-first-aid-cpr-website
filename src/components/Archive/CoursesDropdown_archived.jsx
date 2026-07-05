@@ -29,12 +29,12 @@ const CoursesDropdown = function({ setCourse, moveLeft }) {
   const popularCourses = [
     {
       name: pop_course_1_title,
-      href: '/courses/standard-first-aid',
+      href: '/courses/intermediate-standard-first-aid',
       icon: faHandHoldingMedical
     },
     {
       name: pop_course_2_title,
-      href: '/courses/emergency-first-aid',
+      href: '/courses/basic-emergency-first-aid',
       icon: faUserNurse
     },
     {

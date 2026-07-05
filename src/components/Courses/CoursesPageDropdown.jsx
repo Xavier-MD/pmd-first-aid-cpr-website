@@ -30,26 +30,26 @@ const CoursesPageDropdown = function () {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href='/courses/standard-first-aid'
+                  href='/courses/intermediate-standard-first-aid'
                   className={classNames(
                     active ? 'bg-slate-100 text-slate-900' : 'text-slate-700',
                     'block px-4 py-2 text-lg font-header'
                   )}
                 >
-                  Standard First Aid
+                  Intermediate/Standard First Aid
                 </a>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href='/courses/emergency-first-aid'
+                  href='/courses/basic-emergency-first-aid'
                   className={classNames(
                     active ? 'bg-slate-100 text-slate-900' : 'text-slate-700',
                     'block px-4 py-2 text-lg font-header'
                   )}
                 >
-                  Emergency First Aid
+                  Basic/Emergency First Aid
                 </a>
               )}
             </Menu.Item>
@@ -84,26 +84,26 @@ const CoursesPageDropdown = function () {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href='/courses/marine-standard-first-aid'
+                  href='/courses/marine-basic-first-aid'
                   className={classNames(
                     active ? 'bg-slate-100 text-slate-900' : 'text-slate-700',
                     'block px-4 py-2 text-lg font-header'
                   )}
                 >
-                  Marine Standard First Aid
+                  Marine Basic First Aid
                 </a>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href='/courses/standard-first-aid-child-care'
+                  href='/courses/intermediate-standard-first-aid-child-care'
                   className={classNames(
                     active ? 'bg-slate-100 text-slate-900' : 'text-slate-700',
                     'block px-4 py-2 text-lg font-header'
                   )}
                 >
-                  Standard First Aid (Child Care)
+                  Intermediate/Standard First Aid (Child Care)
                 </a>
               )}
             </Menu.Item>
@@ -112,13 +112,13 @@ const CoursesPageDropdown = function () {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href='/courses/emergency-first-aid-child-care'
+                  href='/courses/basic-emergency-first-aid-child-care'
                   className={classNames(
                     active ? 'bg-slate-100 text-slate-900' : 'text-slate-700',
                     'block px-4 py-2 text-lg font-header'
                   )}
                 >
-                  Emergency First Aid (Child Care)
+                  Basic/Emergency First Aid (Child Care)
                 </a>
               )}
             </Menu.Item>

@@ -618,9 +618,9 @@ const Course = function () {
   };
 
   const courseSelector = function () {
-    if (window.location.pathname === '/courses/standard-first-aid') {
+    if (window.location.pathname === '/courses/intermediate-standard-first-aid') {
       return <CourseView courseDetails={courseDetails.standardFirstAid} />;
-    } else if (window.location.pathname === '/courses/emergency-first-aid') {
+    } else if (window.location.pathname === '/courses/basic-emergency-first-aid') {
       return <CourseView courseDetails={courseDetails.emergencyFirstAid} />;
     } else if (window.location.pathname === '/courses/cpr-aed') {
       return <CourseView courseDetails={courseDetails.cprAed} />;
@@ -629,11 +629,11 @@ const Course = function () {
     } else if (window.location.pathname === '/courses/marine-basic-first-aid') {
       return <CourseView courseDetails={courseDetails.marineBasicFirstAid} />;
     } else if (
-      window.location.pathname === '/courses/standard-first-aid-child-care'
+      window.location.pathname === '/courses/intermediate-standard-first-aid-child-care'
     ) {
       return <CourseView courseDetails={courseDetails.standardFirstAidChild} />;
     } else if (
-      window.location.pathname === '/courses/emergency-first-aid-child-care'
+      window.location.pathname === '/courses/basic-emergency-first-aid-child-care'
     ) {
       return (
         <CourseView courseDetails={courseDetails.emergencyFirstAidChild} />

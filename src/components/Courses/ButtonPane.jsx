@@ -19,11 +19,11 @@ const ButtonPane = function() {
   const courses = [
     {
       name: courses_SFA_name,
-      href: '/courses/standard-first-aid'
+      href: '/courses/intermediate-standard-first-aid'
     },
     {
       name: courses_EFA_name,
-      href: '/courses/emergency-first-aid'
+      href: '/courses/basic-emergency-first-aid'
     },
     {
       name: courses_CPR_name,
@@ -35,11 +35,11 @@ const ButtonPane = function() {
     },
     {
       name: courses_SFACC_name,
-      href: '/courses/standard-first-aid-child-care'
+      href: '/courses/intermediate-standard-first-aid-child-care'
     },
     {
       name: courses_EFACC_name,
-      href: '/courses/emergency-first-aid-child-care'
+      href: '/courses/basic-emergency-first-aid-child-care'
     },
     {
       name: courses_MBFA_name,
