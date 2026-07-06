@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import i18n from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faChevronDown, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
@@ -22,24 +23,27 @@ const languages = [
 ];
 
 const LanguagesDropdown = function ({ isLandingPage }) {
+  const { t } = useTranslation();
+  const nav_language_menu = t('nav_language_menu');
+
   // Base classes
   const buttonBaseClasses = 'flex items-center transition ease-in-out duration-200';
   const iconBaseClasses =
     'w-[1.6rem] md:w-[0.9rem] h-auto mt-[0.1rem] md:mt-[0rem] md:mr-[0.4rem] transition ease-in-out duration-200';
 
-  // Landing page vs. non-landing page classes
-  const buttonLandingClasses = 'text-gray-300 group-hover:text-white'; // Example: lighter text on hover if on landing page
-  const buttonDefaultClasses = 'text-gray-600 group-hover:text-blue-500'; // Original classes for other pages
+  // Landing page (dark translucent nav) vs. non-landing page (light nav) classes
+  const buttonLandingClasses = 'text-[#D5E3F0] group-hover:text-white';
+  const buttonDefaultClasses = 'text-brand-ink group-hover:text-brand-green-deep';
 
-  const iconLandingClasses = 'text-gray-300 group-hover:text-white';
-  const iconDefaultClasses = 'text-gray-500 group-hover:text-blue-500 md:group-hover:text-blue-500';
+  const iconLandingClasses = 'text-[#D5E3F0] group-hover:text-white';
+  const iconDefaultClasses = 'text-brand-body group-hover:text-brand-green-deep md:group-hover:text-brand-green-deep';
 
   // Classes for Menu.Item based on landing page and active states
-  const activeLandingClasses = 'text-white'; // Example: active item on landing page is white text on blue background
-  const inactiveLandingClasses = 'text-gray-300';
+  const activeLandingClasses = 'text-white';
+  const inactiveLandingClasses = 'text-[#D5E3F0]';
 
-  const activeDefaultClasses = 'text-blue-500'; // Example: active item on default pages
-  const inactiveDefaultClasses = 'text-slate-600';
+  const activeDefaultClasses = 'text-brand-green-deep';
+  const inactiveDefaultClasses = 'text-brand-body';
 
   return (
     <>
@@ -50,11 +54,12 @@ const LanguagesDropdown = function ({ isLandingPage }) {
           <Menu.Button
             className={classNames(buttonBaseClasses, isLandingPage ? buttonLandingClasses : buttonDefaultClasses)}
           >
+            <span className='sr-only'>{nav_language_menu}</span>
             <FontAwesomeIcon
               icon={faEarthAmericas}
               className={classNames(iconBaseClasses, isLandingPage ? iconLandingClasses : iconDefaultClasses)}
             />
-            <h2 className='mr-[0.35rem] hidden md:block text-[0.90rem] font-lato capitalize'>{i18next.language}</h2>
+            <h2 className='mr-[0.35rem] hidden md:block text-[0.90rem] font-body capitalize'>{i18next.language}</h2>
             {/* Add your Chevron Icon here if needed */}
           </Menu.Button>
           {/* Menu.Items and Menu.Item code here */}

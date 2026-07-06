@@ -15,10 +15,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
-const MobileDropdown = function({ open, setOpen }) {
+const MobileDropdown = function({ open, setOpen, isLandingPage }) {
 
   const { t } = useTranslation();
 
+  const nav_open_menu = t('nav_open_menu');
+  const nav_close_menu = t('nav_close_menu');
   const home_tab = t('home_tab');
   const about_us_tab = t('about_us_tab');
   const courses_tab = t('courses_tab');
@@ -37,10 +39,12 @@ const MobileDropdown = function({ open, setOpen }) {
     <>
       <button
         type='button'
-        className='flex justify-center items-center rounded text-lg text-blue-400 active:text-blue-600 focus:outline-none'
+        className={`flex justify-center items-center rounded text-lg focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green ${
+          isLandingPage ? 'text-white active:text-brand-sky' : 'text-brand-ink active:text-brand-green-deep'
+        }`}
         onClick={() => setOpen(true)}
       >
-        <span className='sr-only'>Close panel</span>
+        <span className='sr-only'>{nav_open_menu}</span>
         <FontAwesomeIcon icon={faBars} className='h-[1.8rem]' aria-hidden='true' />
       </button>
       <Transition.Root show={open} as={Fragment}>
@@ -55,7 +59,7 @@ const MobileDropdown = function({ open, setOpen }) {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <Dialog.Overlay className='absolute inset-0 bg-blue-900 bg-opacity-50 transition-opacity' />
+              <Dialog.Overlay className='absolute inset-0 bg-brand-ink bg-opacity-60 transition-opacity' />
             </Transition.Child>
             <div className='pointer-events-none fixed inset-y-0 left-0 flex max-w-full'>
               <Transition.Child
@@ -68,18 +72,18 @@ const MobileDropdown = function({ open, setOpen }) {
                 leaveTo='-translate-y-full'
               >
                 <div className='pointer-events-auto w-screen h-fit'>
-                  <div className='w-full flex flex-col py-6 bg-gradient-to-bl from-sky-50 to-blue-300 opacity-95 shadow-md shadow-slate-700 backdrop-blur-sm'>
+                  <div className='w-full flex flex-col py-6 bg-white border-b border-brand-line shadow-xl'>
                     <div className='px-6'>
                       <div className='flex items-center justify-between'>
                         <button
                           type='button'
-                          className='h-16 flex items-center justify-between ml-[6px] -mt-16 px-4 py-4 border-2 bg-slate-200 shadow-lg shadow-blue-300 rounded-b-lg text-blue-500 active:text-blue-600 focus:outline-none'
+                          className='h-16 flex items-center justify-between ml-[6px] -mt-16 px-4 py-4 border border-brand-line bg-white shadow-md rounded-b-lg text-brand-green-deep active:text-brand-green focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green'
                           onClick={() => setOpen(false)}
                         >
-                          <span className='sr-only'>Close panel</span>
+                          <span className='sr-only'>{nav_close_menu}</span>
                           <FontAwesomeIcon icon={faAngleUp} className='h-6 w-6' aria-hidden='true' />
                         </button>
-                        <img className='w-14 h-auto' src='/assets/images/logo-no-text.png' alt='PMD logo no text' />
+                        <img className='w-14 h-auto' src='/assets/images/logo-no-text.png' alt={t('nav_logo_alt')} />
                         <div className='w-14' />
                       </div>
                     </div>
