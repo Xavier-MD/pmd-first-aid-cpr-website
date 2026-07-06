@@ -32,16 +32,16 @@ const NavigationBar = function ({ isLandingPage }) {
         <div className='w-full max-w-7xl z-50 mx-auto px-[2rem] grid grid-cols-3 md:grid-cols-9 lg:grid-cols-9'>
           {/* Mobile Menu */}
           <div className='ml-[4vw] flex flex-1 md:hidden justify-start'>
-            <MobileDropdown open={open} setOpen={setOpen} />
+            <MobileDropdown open={open} setOpen={setOpen} isLandingPage={isLandingPage} />
           </div>
           {/* PMD Logo */}
           <a href='/' className='flex justify-center items-center md:justify-start lg:col-span-2'>
             <img
               className='w-auto h-[4rem] md:h-[1.6rem] mr-[0.3rem] my-[0.4rem]'
               src='/assets/images/logo-no-text.png'
-              alt='PMD Logo'
+              alt={t('nav_logo_alt')}
             />
-            <div className='hidden md:flex items-baseline bg-gradient-to-r from-green-600 to-blue-600 text-transparent bg-clip-text bg-300% animate-gradient'>
+            <div className='hidden md:flex items-baseline bg-gradient-to-r from-brand-green to-brand-blue text-transparent bg-clip-text bg-300% animate-gradient motion-reduce:animate-none'>
               <p className='text-[1.4rem] font-header font-medium tracking-tight'>PMD</p>
             </div>
           </a>

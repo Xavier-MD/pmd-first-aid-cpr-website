@@ -15,8 +15,10 @@ export const riseItem = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: riseEase } }
 };
 
-// Scroll reveal: used by the Shared/Reveal component.
+// Scroll reveal: used by the Shared/Reveal component. `visible` is a function
+// of `custom` (the delay) — a variant's own transition overrides any
+// component-level transition prop, so the delay must live inside the variant.
 export const fadeUp = {
   hidden: { opacity: 0, y: 14 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+  visible: (delay = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut', delay } })
 };

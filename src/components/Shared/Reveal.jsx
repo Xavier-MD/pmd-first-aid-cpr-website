@@ -44,10 +44,10 @@ const Reveal = function ({ children, className, delay = 0 }) {
     <motion.div
       ref={ref}
       className={className}
+      custom={delay}
       variants={fadeUp}
       initial={reducedMotion ? 'visible' : 'hidden'}
       animate={shown ? 'visible' : 'hidden'}
-      transition={{ delay }}
     >
       {children}
     </motion.div>

@@ -11,7 +11,7 @@ module.exports = {
           blue: '#1D86EB',
           'blue-deep': '#0F5FAE',
           green: '#23AB39',
-          'green-deep': '#178A2C',
+          'green-deep': '#16842A',
           ink: '#24322C',
           body: '#54655D',
           line: '#DFE9E2',

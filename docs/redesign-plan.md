@@ -66,10 +66,9 @@ Done: brand tokens + Fraunces/Nunito in `tailwind.config.js`; font loads cut fro
 - Delete `Archive/` + `Landing2.jsx` (confirm first).
 - **Deliverable:** PR with tokens + primitives (site look mostly unchanged until pages adopt them).
 
-### Phase 3 — Home page implementation (branch `redesign/home`) — GO/NO-GO GATE
-- Rebuild Landing with the new system per the chosen direction.
-- Before/after screenshots (mobile + desktop, EN + FR), console clean, integrations intact.
-- **Deliverable:** PR + screenshot comparison for sign-off. Rollout starts only after approval.
+### Phase 3 — Home page implementation — ✅ IMPLEMENTED 2026-07-06 on `redesign/foundation` (GO/NO-GO gate: awaiting Xavier)
+Landing rebuilt to the approved mockup: video hero kept (with poster + autoplay fix for React's muted-attribute quirk + reduced-motion gate), WordFlip reused in the hero H1, staggered entrance, lifeline (now draws on scroll-into-view), course cards with optimized images (`public/assets/images/home/`, ~40MB originals avoided), testimonial/founder/booking/authorizations sections, restyled nav (both variants), mobile menu, and footer (dark ink, socials re-enabled, Chatbot preserved). 15 new i18n keys in EN+FR (incl. a11y labels for icon-only buttons — fixes the Lighthouse button-name failure).
+**Adversarial review (2 workflow rounds, 32 agents):** 9 confirmed findings, all fixed — notable: `brand-green-deep` retuned to **#16842A** so white-on-green action surfaces pass WCAG AA 4.5:1 (bright #23AB39 stays for lifeline/checks/accents; primary buttons now use green-deep), booking-band + footer text contrast fixes, video force-play gated on reduced-motion, Reveal stagger delay was a silent no-op (variant transition overrides component transition prop in framer-motion — fixed via `custom`), i18n'd logo alts. Stagger verified empirically in-browser.
 
 ### Phase 4 — Page-by-page rollout (one PR per page/group)
 Order: CourseSelect (buttons + dropdown) → Course/CourseView template (all 10 course pages at once) → About → Testimonials → Contact (EmailJS intact) → Error + leftovers. Same checks every PR.

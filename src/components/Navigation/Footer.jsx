@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Chatbot from '../Shared/Chatbot';
+import Container from '../Shared/Container';
 
 const socialIcons = [
   {
@@ -45,35 +46,53 @@ const Footer = function () {
   const copyright_text = t('copyright_text');
   const image_copyright_text = t('image_copyright_text');
 
+  const footerLinks = [
+    { name: t('home_tab'), href: '/' },
+    { name: t('about_us_tab'), href: '/about-us' },
+    { name: t('courses_tab'), href: '/courses' },
+    { name: t('testimonials_tab'), href: '/testimonials' },
+    { name: t('contact_us_tab'), href: '/contact' }
+  ];
+
   return (
-    <>
-      {/* Footer */}
-      <footer>
-        <div className='w-full'>
-          <div className='max-w-7xl h-[4rem] md:h-[3rem] mx-auto px-[2rem] py-[0.3rem] flex flex-col-reverse md:flex-row items-center justify-evenly md:justify-between'>
-            {/* Copyright Text */}
-            <div className='flex '>
-              <p className='text-center text-[0.70rem] text-white opacity-30'>
-                {copyright_text} {image_copyright_text}
-              </p>
-            </div>
-            {/* Chatbot Popup */}
-            <div className='flex justify-center space-x-[2rem]'>
-              <Chatbot />
-            </div>
-            {/* Social Icons */}
-            {/* <div className='flex justify-center space-x-[2rem]'>
-              {socialIcons.map((item) => (
-                <a key={item.name} href={item.href} className='text-blue-100 hover:text-blue-500'>
-                  <span className='sr-only'>{item.name}</span>
-                  <item.icon className='w-[1.2rem] h-auto opacity-40' aria-hidden='true' />
-                </a>
-              ))}
-            </div> */}
+    <footer className='w-full bg-brand-ink'>
+      <Container className='py-11'>
+        <div className='flex flex-wrap items-center justify-between gap-x-8 gap-y-6'>
+          <a href='/' className='shrink-0'>
+            <img className='h-10 w-auto' src='/assets/images/logo-no-text.png' alt={t('nav_logo_alt')} />
+          </a>
+          <nav className='flex flex-wrap items-center gap-x-6 gap-y-2'>
+            {footerLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className='text-[0.95rem] font-bold text-[#E8F1EA] transition-colors hover:text-white hover:underline'
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+          <div className='flex items-center gap-5'>
+            {socialIcons.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className='text-[#7E9284] transition-colors hover:text-white'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <span className='sr-only'>{item.name}</span>
+                <item.icon className='h-auto w-5' aria-hidden='true' />
+              </a>
+            ))}
           </div>
         </div>
-      </footer>
-    </>
+        <div className='mt-9 border-t border-white/10 pt-5 text-[0.8rem] text-[#A3B4A8]'>
+          {copyright_text} · {image_copyright_text}
+        </div>
+      </Container>
+      <Chatbot />
+    </footer>
   );
 };
 

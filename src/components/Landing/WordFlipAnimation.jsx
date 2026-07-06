@@ -25,7 +25,8 @@ export const WordFlipAnimation = ({ words, duration = 3000, className }) => {
         setIsAnimating(false);
       }}
     >
-      <motion.div
+      <motion.span
+        className={className ? `inline-block ${className}` : 'inline-block'}
         initial={{
           width: 0,
           opacity: 0,
@@ -78,7 +79,7 @@ export const WordFlipAnimation = ({ words, duration = 3000, className }) => {
             ))}
           </motion.span>
         ))}
-      </motion.div>
+      </motion.span>
     </AnimatePresence>
   );
 };

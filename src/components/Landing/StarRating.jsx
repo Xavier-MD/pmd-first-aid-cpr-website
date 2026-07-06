@@ -32,12 +32,12 @@ function StarIcon({ gradientId, fromColor, toColor, hoverFromColor, hoverToColor
   );
 }
 
-function StarRating() {
-  const fromColor = '#93c5fd'; // Blue-300
-  const toColor = '#3b82f6'; // Blue-500
-  const hoverFromColor = '#93c5fd'; // Blue-500
-  const hoverToColor = '#1d4ed8'; // Blue-800
-
+function StarRating({
+  fromColor = '#FFE28A',
+  toColor = '#F0A800',
+  hoverFromColor = '#FFF1B8',
+  hoverToColor = '#F5B301'
+}) {
   return (
     <div className='flex space-x-[0.1rem]'>
       {Array.from({ length: 5 }).map((_, index) => (

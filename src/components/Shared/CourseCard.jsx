@@ -5,7 +5,7 @@ const CourseCard = function ({ href, image, imageAlt, title, cta, children }) {
   return (
     <a
       href={href}
-      className='group flex flex-col overflow-hidden rounded-2xl border border-brand-line bg-white transition duration-150 hover:-translate-y-[3px] hover:shadow-card motion-reduce:transition-none motion-reduce:hover:translate-y-0'
+      className='group flex h-full flex-col overflow-hidden rounded-2xl border border-brand-line bg-white transition duration-150 hover:-translate-y-[3px] hover:shadow-card motion-reduce:transition-none motion-reduce:hover:translate-y-0'
     >
       <div className='overflow-hidden'>
         <img
