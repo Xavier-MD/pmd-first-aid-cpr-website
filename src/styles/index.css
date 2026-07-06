@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body text-brand-body antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-header text-brand-ink;
+    text-wrap: balance;
+  }
+}
+
+/* Lifeline (ECG divider) draw-on-load — pairs with the Shared/Lifeline component */
+@keyframes lifeline-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

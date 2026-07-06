@@ -42,7 +42,7 @@ const NavigationBar = function ({ isLandingPage }) {
               alt='PMD Logo'
             />
             <div className='hidden md:flex items-baseline bg-gradient-to-r from-green-600 to-blue-600 text-transparent bg-clip-text bg-300% animate-gradient'>
-              <p className='text-[1.4rem] font-timesNewRoman font-medium tracking-tight'>PMD</p>
+              <p className='text-[1.4rem] font-header font-medium tracking-tight'>PMD</p>
             </div>
           </a>
           {/* Desktop Tabs */}

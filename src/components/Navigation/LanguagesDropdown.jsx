@@ -54,7 +54,7 @@ const LanguagesDropdown = function ({ isLandingPage }) {
               icon={faEarthAmericas}
               className={classNames(iconBaseClasses, isLandingPage ? iconLandingClasses : iconDefaultClasses)}
             />
-            <h2 className='mr-[0.35rem] hidden md:block text-[0.90rem] font-lato capitalize'>{i18next.language}</h2>
+            <h2 className='mr-[0.35rem] hidden md:block text-[0.90rem] font-body capitalize'>{i18next.language}</h2>
             {/* Add your Chevron Icon here if needed */}
           </Menu.Button>
           {/* Menu.Items and Menu.Item code here */}

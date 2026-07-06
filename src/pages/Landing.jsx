@@ -98,7 +98,7 @@ const Landing = function () {
           <div className='w-full h-full flex flex-col justify-center items-center '>
             {/* <motion.div
               key='sloganText'
-              className='text-2xl font-afacadFlux font-bold text-slate-900'
+              className='text-2xl font-header font-bold text-slate-900'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
@@ -115,7 +115,7 @@ const Landing = function () {
             <img src='/assets/images/logo-text-bold.png' alt='PMD Logo' className='w-[17rem] pt-[3rem] pb-[0.8rem]' />
             <div className='flex pb-[1.5rem] gap-[1rem]'>
               <StarRating />
-              <p className='mt-[0.1rem] mr-[0.15rem] text-[0.95rem] font-glacialIndifference text-[#535353] tracking-[0.05rem]'>
+              <p className='mt-[0.1rem] mr-[0.15rem] text-[0.95rem] font-body text-[#535353] tracking-[0.05rem]'>
                 100+ {pmd_reviews_text}
               </p>
             </div>
@@ -136,7 +136,7 @@ const Landing = function () {
                   duration: 0.3,
                   ease: 'easeInOut'
                 }}
-                className='flex items-center justify-center px-8 py-3 rounded-md bg-gradient-to-b from-[var(--gradient-from)] to-[var(--gradient-to)] text-[color:var(--text-color)] shadow-lg shadow-gray-500 font-glacialIndifference'
+                className='flex items-center justify-center px-8 py-3 rounded-md bg-gradient-to-b from-[var(--gradient-from)] to-[var(--gradient-to)] text-[color:var(--text-color)] shadow-lg shadow-gray-500 font-body'
               >
                 {book_course_button}
               </motion.a>
@@ -156,7 +156,7 @@ const Landing = function () {
                   duration: 0.3,
                   ease: 'easeInOut'
                 }}
-                className='flex items-center justify-center px-8 py-3 rounded-md bg-gradient-to-b from-[var(--gradient-from)] to-[var(--gradient-to)] text-[color:var(--text-color)] shadow-lg shadow-gray-400 font-glacialIndifference'
+                className='flex items-center justify-center px-8 py-3 rounded-md bg-gradient-to-b from-[var(--gradient-from)] to-[var(--gradient-to)] text-[color:var(--text-color)] shadow-lg shadow-gray-400 font-body'
               >
                 {pay_online_button}
               </motion.a>

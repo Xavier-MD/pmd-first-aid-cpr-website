@@ -26,7 +26,7 @@ const DesktopTab = function ({ isLandingPage, tabInfo }) {
       <h2
         className={classNames(
           appliedClasses,
-          'text-[0.9rem] font-lato transition ease-in-out group-hover:scale-[105%] duration-300'
+          'text-[0.9rem] font-body transition ease-in-out group-hover:scale-[105%] duration-300'
         )}
       >
         {tabInfo.name}

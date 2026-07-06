@@ -15,3 +15,6 @@
 npm-debug.log*
 .mcp.json
 .claude/
+CLAUDE.md
+# firebase deploy cache
+/.firebase/
